@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // COMPONENTS
 import SportCategoryItem from "./SportCategoryItem.jsx";

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // COMPONENTS
 import { Home, Sports, Infos } from '../../assets/icons/all-icons'

@@ -21,6 +21,14 @@
         max-width: 90px;
       }
     }
+
+    .card--restaurant & {
+      .card-front {
+        &__ranking {
+          order: -1
+        }
+      }
+    }
   }
 
   &__count {
@@ -75,6 +83,19 @@
   }
 
   &__graphic {
-    background-color: $purple3;
+    width: 170px;
+    height: 110px;
+
+    text[text-anchor="end"] {
+      font-size: rem(12px) !important;
+      font-weight: bold;
+      fill: $purple1 !important;
+    }
+
+    text[text-anchor="middle"] {
+      font-size: rem(12px) !important;
+      font-weight: bold;
+      fill: $white !important;
+    }
   }
 }
