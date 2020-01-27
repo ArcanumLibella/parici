@@ -1,5 +1,5 @@
 # Parici - Front
-The webapp to organize your trip during 2024 Olympic games in Paris
+The webapp to organize your trip during 2024 Olympic games in Paris.
 
 ### Install project :
 `git clone` project
