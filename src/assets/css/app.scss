@@ -1,0 +1,39 @@
+// GLOBAL
+@import 'global/_reset.scss';
+@import 'global/_utilities.scss';
+@import 'global/_variables.scss';
+@import 'global/_fonts.scss';
+@import 'global/_typography.scss';
+@import 'global/_icon.scss';
+
+// COMPONENTS
+@import 'components/_cards.scss';
+@import 'components/_card-front.scss';
+@import 'components/_card-back.scss';
+@import 'components/_card.scss';
+@import 'components/_podium.scss';
+@import 'components/_sports.scss';
+@import 'components/_dropdown.scss';
+
+// TEMPLATES
+@import 'layouts/_menu.scss';
+@import 'layouts/_map.scss';
+@import 'layouts/_dashboard.scss';
+
+// PAGES
+@import 'pages/_webapp.scss';
+@import 'pages/_homepage.scss';
+
+body {
+  overflow-x: hidden;
+  color: $purple1;
+  font-family: $font;
+  background-color: $white;
+}
+
+// .content-wrapper {
+//   margin: 0 auto;
+//   padding: 0 20px;
+//   width: 100vw;
+//   max-width: 1024px;
+// }

@@ -1,0 +1,61 @@
+.menu-title {
+  color: $purple1;
+  font-size: rem(12px);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu-subtitle {
+  color: $purple1;
+  font-size: rem(9px);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.dropdown-label {
+  font-size: rem(12px);
+  font-weight: normal;
+}
+
+.dashboard-title {
+  color: $black;
+  font-size: rem(18px);
+  font-weight: bold;
+}
+
+.card-title {
+  color: $black;
+  font-size: rem(16px);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.card-count,
+.card-data {
+  font-size: rem(14px);
+  font-weight: 600;
+  text-transform: lowercase;
+
+  span {
+    font-size: rem(20px);
+    font-weight: bold;
+  }
+}
+
+.card-ranking {
+  font-size: rem(14px);
+  font-weight: bold;
+  
+  span {
+    font-size: rem(50px);
+    font-weight: 900;
+  }
+
+  sup {
+    font-size: rem(14px);
+    vertical-align: super;
+  }
+}
+
+.button-text {
+}

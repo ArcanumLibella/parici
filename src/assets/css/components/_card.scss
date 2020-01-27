@@ -1,0 +1,68 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  background-color: $white;
+  border-radius: 15px;
+  
+  &--podium {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  &--nature {
+    grid-area: 2 / 1 / 4 / 2;
+  }
+
+  &--hostel {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  &--culture {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+  &--restaurant {
+    grid-area: 4 / 1 / 5 / 3;
+  }
+
+  &__front,
+  &__back {
+    display: block;
+    transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+    transition-duration: .5s;
+    transition-property: transform, opacity;
+  }
+
+  &__front {
+    background-color: $white;
+    transform: rotateY(0deg);
+  }
+
+  &:hover &__front {
+    transform: rotateX(180deg);
+  }
+
+  &__back {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: $purple1;
+    transform: rotateX(-180deg);
+    opacity: 0;
+  }
+
+  &:hover &__back {
+    color: $white;
+    border-radius: 15px;
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
