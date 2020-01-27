@@ -43,7 +43,7 @@
       height: 80px;
       fill: $purple1;
 
-      &--monument {
+      &-monument {
         height: 100px;
       }
     }
@@ -62,6 +62,7 @@
     span {
       position: relative;
       left: 20px;
+      margin-left: -20px;
       color: $purple1;
       font-size: rem(35px);
       font-weight: 900;
@@ -71,5 +72,9 @@
     .icon {
       fill: $purple1;
     }
+  }
+
+  &__graphic {
+    background-color: $purple3;
   }
 }

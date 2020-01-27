@@ -1,7 +1,7 @@
 import React from 'react'
 
 // COMPONENTS
-import { Museum, Concert, Theater } from '../../../../assets/icons/all-icons'
+import { Museum, Monument, Theater } from '../../../../assets/icons/all-icons'
 
 
 
@@ -41,9 +41,9 @@ const BackCulture = ( props ) => {
         <div className='card-back__icon'>
           <div className='card-back__hexagon'>
             {/* {handleIconCulture()} */}
-            <Concert/>
+            <Monument/>
           </div>
-          <p className='card-back__data card-data'>8 concerts</p>
+          <p className='card-back__data card-data'>8 monuments</p>
         </div>
 
       </div>
