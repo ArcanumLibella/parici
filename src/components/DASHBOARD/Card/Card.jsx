@@ -3,13 +3,14 @@ import React from 'react'
 // COMPONENTS
 import CardCount from './CardCount.jsx'
 import CardRanking from './CardRanking.jsx'
-import GraphicRestaurant from './GraphicRestaurant.jsx'
+import RestaurantChart from './Charts/RestaurantChart.jsx'
 import BackCulture from './Back/BackCulture.jsx'
 import BackHostel from './Back/BackHostel.jsx'
 import BackRestaurant from './Back/BackRestaurant.jsx'
 import BackNature from './Back/BackNature.jsx'
 import { Food, Hostel, Monument, Tree, Stadium } from '../../../assets/icons/all-icons'
 
+// DATA
 import { restaurantPrices } from '../../../data/restaurantPricesList'
 
 const Card = (props) => {
@@ -58,12 +59,11 @@ const Card = (props) => {
     if(cardType === 'restaurant') {
       return (
         <div className='card-front__graphic'>
-          {GraphicRestaurant(restaurantPrices)}
+          {RestaurantChart(restaurantPrices)}
         </div>
       )
     }
   }
-
 
   return (
     <div className={'card card--' + cardType}>

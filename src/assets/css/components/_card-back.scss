@@ -17,6 +17,23 @@
     align-items: center;
   }
 
+  &__graphic {
+    width: 100%;
+    height: calc(100% - 15px);
+
+    text[text-anchor="middle"] {
+      font-size: rem(12px) !important;
+      font-weight: bold;
+      fill: $white !important;
+    }
+
+    text[dominant-baseline="central"] {
+      font-size: rem(12px) !important;
+      font-weight: bold;
+      fill: $purple1 !important;
+    }
+  }
+
   &__hexagon {
     position: relative;
     display: flex;

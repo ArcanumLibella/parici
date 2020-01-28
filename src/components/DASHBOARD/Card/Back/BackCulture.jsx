@@ -19,7 +19,7 @@ const BackCulture = ( props ) => {
   // }
 
   return (
-    <div className='card-back card-back--culture'>
+    <div className={'card-back card-back--' + cardType}>
       <h3 className='card-back__title card-title'>{ cardType }</h3>
 
       <div className='card-back__wrapper'>
