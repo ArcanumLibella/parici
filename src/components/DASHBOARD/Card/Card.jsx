@@ -15,6 +15,8 @@ import { Food, Hostel, Monument, Tree, Stadium } from '../../../assets/icons/all
 // DATA
 import { restaurantPrices } from '../../../data/restaurantPricesList'
 
+
+
 const Card = (props) => {
   const { cardType, dataType, rankingType } = props
 

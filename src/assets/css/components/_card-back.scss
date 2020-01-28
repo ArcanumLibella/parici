@@ -8,7 +8,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: calc(100% + 5px);
+    height: calc(100% - 15px);
+
+    .card-back--culture & {
+      height: calc(100% + 5px);
+    }
   }
 
   &__icon {
@@ -42,6 +46,14 @@
         font-family: $font !important;
         font-size: rem(12px) !important;
         fill: $white !important;
+
+        // &::before {
+        //   display: block;
+        //   width: 16px;
+        //   height: 16px;
+        //   background-size: 16px 16px;
+        //   content: url("../../icons/flower.svg");
+        // }
       }
 
       text[text-anchor="middle"] {
