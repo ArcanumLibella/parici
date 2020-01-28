@@ -1,6 +1,6 @@
 import React from 'react'
 
-// COMPONENTS
+// SVG
 import { Home, Sports, Infos } from '../../assets/icons/all-icons'
 
 

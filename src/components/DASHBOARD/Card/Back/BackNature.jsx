@@ -1,13 +1,21 @@
 import React from 'react'
 
+// COMPONENTS
+import NatureChart from '../Charts/NatureChart.jsx'
 
+
+// DATA
+import {natureSpaces} from '../../../../data/natureSpaces'
 
 const BackNature = ( props ) => {
   const { cardType } = props
 
   return (
     <div className={'card-back card-back--' + cardType}>
-      <p>BackNature !</p>
+      <h3 className='card-back__title card-title'>{ cardType }</h3>  
+      <div className='card-back__graphic'>
+        {NatureChart(natureSpaces)}
+      </div>
     </div>
   )
 }

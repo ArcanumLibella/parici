@@ -1,22 +1,22 @@
 export const hostelsStars = [
   {
-    "stars": "€",
+    "stars": "*",
     "total": 62
   },
   {
-    "stars": "€€",
+    "stars": "**",
     "total": 95
   },
   {
-    "stars": "€€€",
+    "stars": "***",
     "total": 76
   },
   {
-    "stars": "€€€€",
+    "stars": "****",
     "total": 38
   },
   {
-    "stars": "€€€€€",
+    "stars": "*****",
     "total": 3
   }
 ];

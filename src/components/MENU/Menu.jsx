@@ -3,6 +3,8 @@ import React from 'react'
 // COMPONENTS
 import MenuItem from './MenuItem.jsx'
 import SportCategoryItems from './SportCategoryItems.jsx'
+
+// SVG
 import { Logo } from '../../assets/icons/all-icons'
 
 

@@ -8,6 +8,8 @@ import BackCulture from './Back/BackCulture.jsx'
 import BackHostel from './Back/BackHostel.jsx'
 import BackRestaurant from './Back/BackRestaurant.jsx'
 import BackNature from './Back/BackNature.jsx'
+
+// SVG
 import { Food, Hostel, Monument, Tree, Stadium } from '../../../assets/icons/all-icons'
 
 // DATA

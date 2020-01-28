@@ -21,16 +21,34 @@
     width: 100%;
     height: calc(100% - 15px);
 
-    text[text-anchor="middle"] {
-      font-size: rem(12px) !important;
-      font-weight: bold;
-      fill: $white !important;
+    .card-back--hostel & {
+      text[text-anchor="middle"] {
+        font-family: $font !important;
+        font-size: rem(12px) !important;
+        font-weight: bold;
+        fill: $white !important;
+      }
+  
+      text[dominant-baseline="central"] {
+        font-family: $font !important;
+        font-size: rem(12px) !important;
+        font-weight: bold;
+        fill: $purple1 !important;
+      }
     }
 
-    text[dominant-baseline="central"] {
-      font-size: rem(12px) !important;
-      font-weight: bold;
-      fill: $purple1 !important;
+    .card-back--nature & {
+      text[text-anchor="end"], [text-anchor="start"] {
+        font-family: $font !important;
+        font-size: rem(12px) !important;
+        fill: $white !important;
+      }
+
+      text[text-anchor="middle"] {
+        font-size: rem(10px) !important;
+        font-weight: bold;
+        fill: $purple1 !important;
+      }
     }
   }
 

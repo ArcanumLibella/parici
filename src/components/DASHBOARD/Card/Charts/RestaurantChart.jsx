@@ -10,7 +10,7 @@ const RestaurantChart = ( data ) => {
       data={data}
       keys={[ 'total' ]}
       indexBy="price"
-      margin={{ top: 0, right: 0, bottom: 0, left: 40 }}
+      margin={{ top: 0, right: 0, bottom: 0, left: 45 }}
       padding={0.3}
       layout="horizontal"
       colors={ colors }
@@ -27,6 +27,7 @@ const RestaurantChart = ( data ) => {
       animate={true}
       motionStiffness={90}
       motionDamping={15}
+      isInteractive={false}
     />
   )
 }

@@ -83,16 +83,18 @@
   }
 
   &__graphic {
-    width: 170px;
+    width: 180px;
     height: 110px;
 
     text[text-anchor="end"] {
+      font-family: $font !important;
       font-size: rem(12px) !important;
       font-weight: bold;
       fill: $purple1 !important;
     }
 
     text[text-anchor="middle"] {
+      font-family: $font !important;
       font-size: rem(12px) !important;
       font-weight: bold;
       fill: $white !important;

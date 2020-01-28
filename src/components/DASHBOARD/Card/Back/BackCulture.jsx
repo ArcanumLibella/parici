@@ -1,6 +1,6 @@
 import React from 'react'
 
-// COMPONENTS
+// SVG
 import { Museum, Monument, Theater } from '../../../../assets/icons/all-icons'
 
 

@@ -23,6 +23,7 @@ const HostelChart = ( data ) => {
       animate={true}
       motionStiffness={90}
       motionDamping={15}
+      isInteractive={false}
     />
   )
 }
