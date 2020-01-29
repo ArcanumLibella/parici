@@ -2,6 +2,8 @@ import React from "react";
 
 // COMPONENTS
 import SportItems from './SportItems'
+
+// SVG
 import { Artistic,  Athletics, Biking, Fight, Others, Racket, Sailing, Shoot, Swimming, Team } from '../../assets/icons/all-icons'
 
 

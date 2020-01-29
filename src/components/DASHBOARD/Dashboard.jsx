@@ -3,6 +3,8 @@ import React from 'react'
 // COMPONENTS
 import Card from './Card/Card.jsx'
 import Podium from './Card/Podium.jsx'
+
+// SVG
 import { Tuto, Cross } from '../../assets/icons/all-icons'
 
 

@@ -8,13 +8,60 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: calc(100% + 5px);
+    height: calc(100% - 15px);
+
+    .card-back--culture & {
+      height: calc(100% + 5px);
+    }
   }
 
   &__icon {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  &__graphic {
+    width: 100%;
+    height: calc(100% - 15px);
+
+    .card-back--hostel & {
+      text[text-anchor="middle"] {
+        font-family: $font !important;
+        font-size: rem(12px) !important;
+        font-weight: bold;
+        fill: $white !important;
+      }
+  
+      text[dominant-baseline="central"] {
+        font-family: $font !important;
+        font-size: rem(12px) !important;
+        font-weight: bold;
+        fill: $purple1 !important;
+      }
+    }
+
+    .card-back--nature & {
+      text[text-anchor="end"], [text-anchor="start"] {
+        font-family: $font !important;
+        font-size: rem(12px) !important;
+        fill: $white !important;
+
+        // &::before {
+        //   display: block;
+        //   width: 16px;
+        //   height: 16px;
+        //   background-size: 16px 16px;
+        //   content: url("../../icons/flower.svg");
+        // }
+      }
+
+      text[text-anchor="middle"] {
+        font-size: rem(10px) !important;
+        font-weight: bold;
+        fill: $purple1 !important;
+      }
+    }
   }
 
   &__hexagon {

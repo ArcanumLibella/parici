@@ -1,11 +1,21 @@
 import React from 'react'
 
 
+// COMPONENTS
+import CardRestaurant from './CardRestaurant'
 
-const BackRestaurant = () => {
+const BackRestaurant = (props) => {
+  const { cardType } = props
+
   return (
-    <div className='card-back card-back--restaurant'>
-      <p>BackRestaurant !</p>
+    <div className={'card-back card-back--' + cardType}>
+      <h3 className='card-back__title card-title'>{ cardType }</h3>
+
+      <div className='card-back__wrapper'>
+        <CardRestaurant/>
+        <CardRestaurant/>
+        <CardRestaurant/>
+      </div>
     </div>
   )
 }

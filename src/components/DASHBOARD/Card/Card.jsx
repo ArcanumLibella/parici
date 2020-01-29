@@ -3,14 +3,19 @@ import React from 'react'
 // COMPONENTS
 import CardCount from './CardCount.jsx'
 import CardRanking from './CardRanking.jsx'
-import GraphicRestaurant from './GraphicRestaurant.jsx'
+import RestaurantChart from './Charts/RestaurantChart.jsx'
 import BackCulture from './Back/BackCulture.jsx'
 import BackHostel from './Back/BackHostel.jsx'
 import BackRestaurant from './Back/BackRestaurant.jsx'
 import BackNature from './Back/BackNature.jsx'
+
+// SVG
 import { Food, Hostel, Monument, Tree, Stadium } from '../../../assets/icons/all-icons'
 
+// DATA
 import { restaurantPrices } from '../../../data/restaurantPricesList'
+
+
 
 const Card = (props) => {
   const { cardType, dataType, rankingType } = props
@@ -43,11 +48,11 @@ const Card = (props) => {
 
   // Function to add icon-stadium to nature card 
   const handleCardNature = (cardType) => {
-    if(cardType === 'nature') {
+    if (cardType === 'nature') {
       return (
         <div className='card-front__stadium'>
           <span>42x</span>
-          <Stadium/>
+          <Stadium />
         </div>
       )
     }
@@ -55,15 +60,14 @@ const Card = (props) => {
 
   // Function to add icon-stadium to nature card 
   const handleCardRestaurant = (cardType) => {
-    if(cardType === 'restaurant') {
+    if (cardType === 'restaurant') {
       return (
         <div className='card-front__graphic'>
-          {GraphicRestaurant(restaurantPrices)}
+          {RestaurantChart(restaurantPrices)}
         </div>
       )
     }
   }
-
 
   return (
     <div className={'card card--' + cardType}>
@@ -75,12 +79,12 @@ const Card = (props) => {
           <CardCount dataType={dataType} />
 
           <div className='card-front__icon'>
-            { handleCardIcon(cardType) }
+            {handleCardIcon(cardType)}
           </div>
 
           {handleCardNature(cardType)}
 
-          <CardRanking rankingType={ rankingType }/>
+          <CardRanking rankingType={rankingType} />
 
           {handleCardRestaurant(cardType)}
         </div>
