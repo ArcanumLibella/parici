@@ -57,6 +57,25 @@
   }
 }
 
+.ranking-title {
+  font-size: rem(12px);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $purple1;
+}
+
+.ranking-data {
+  font-size: rem(30px);
+  font-weight: 900;
+  line-height: 0;
+  color: $white;
+
+  sup {
+    font-size: rem(10px);
+    vertical-align: super;
+  }
+}
+
 .restaurant-price {
   color: $purple1;
   font-size: rem(12px);

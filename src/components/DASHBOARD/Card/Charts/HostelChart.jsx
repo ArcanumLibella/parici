@@ -6,17 +6,19 @@ import { colors } from '../../../../data/colors'
 
 
 
-const HostelChart = ( data ) => {
-  return(
+const HostelChart = (data) => {
+  return (
     <ResponsiveBar
       data={data}
-      keys={[ 'total' ]}
+      keys={['total']}
       indexBy="stars"
-      margin={{ top: 0, right: 0, bottom: 30, left: 0 }}
-      padding={0.3}
-      colors={ colors[5] }
+      margin={{ top: 20, right: 30, bottom: 20, left: 30 }}
+      padding={0.1}
+      colors={colors[5]}
       borderRadius={5}
       borderWidth={0}
+      axisLeft={null}
+      tickSize={0}
       enableGridY={false}
       labelTextColor={colors[1]}
       // legends={[]} 

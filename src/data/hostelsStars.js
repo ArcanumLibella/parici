@@ -17,6 +17,6 @@ export const hostelsStars = [
   },
   {
     "stars": "*****",
-    "total": 3
+    "total": 23
   }
 ];

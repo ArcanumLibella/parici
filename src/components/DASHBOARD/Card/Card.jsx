@@ -48,11 +48,11 @@ const Card = (props) => {
 
   // Function to add icon-stadium to nature card 
   const handleCardNature = (cardType) => {
-    if(cardType === 'nature') {
+    if (cardType === 'nature') {
       return (
         <div className='card-front__stadium'>
           <span>42x</span>
-          <Stadium/>
+          <Stadium />
         </div>
       )
     }
@@ -60,7 +60,7 @@ const Card = (props) => {
 
   // Function to add icon-stadium to nature card 
   const handleCardRestaurant = (cardType) => {
-    if(cardType === 'restaurant') {
+    if (cardType === 'restaurant') {
       return (
         <div className='card-front__graphic'>
           {RestaurantChart(restaurantPrices)}
@@ -79,12 +79,12 @@ const Card = (props) => {
           <CardCount dataType={dataType} />
 
           <div className='card-front__icon'>
-            { handleCardIcon(cardType) }
+            {handleCardIcon(cardType)}
           </div>
 
           {handleCardNature(cardType)}
 
-          <CardRanking rankingType={ rankingType }/>
+          <CardRanking rankingType={rankingType} />
 
           {handleCardRestaurant(cardType)}
         </div>

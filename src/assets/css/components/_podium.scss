@@ -8,8 +8,9 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: space-around;
     width: 100%;
-    height: calc(100% - 15px);
+    height: calc(100% - 8px);
   }
 }
