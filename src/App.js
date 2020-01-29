@@ -1,18 +1,26 @@
 import React from 'react';
+// import axios from "axios";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './assets/css/app.scss';
 
-// COMPONENTS
-import { Menu, Dashboard, Map } from './components'
+// ROUTES
+import { Landing, WebApp } from "./routes";
 
 function App() {
   return (
-    <div className="App">
-      <main className='webapp'>
-        <Menu />
-        {/* <Map /> */}
-        <Dashboard />
-      </main>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/webapp">
+            <WebApp />
+          </Route>
+          <Route path="/">
+            <Landing />
+          </Route>
+          <Route path='*'>404 - Sorry no content</Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
