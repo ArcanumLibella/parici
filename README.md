@@ -1,6 +1,9 @@
 # Parici - Front
 The webapp to organize your trip during 2024 Olympic games in Paris.
 
+
+**You can take a look over here (desktop only) : https://parici.netlify.com/ (WORK IN PROGRESS)**
+
 ### Install project :
 `git clone` project
 
