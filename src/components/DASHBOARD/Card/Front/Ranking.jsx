@@ -23,8 +23,10 @@ const Ranking = (props) => {
   return (
     <div className='ranking'>
       <p className='ranking__title ranking-title'>{rankingType}</p>
-      <span className='ranking__data ranking-data'>{dataRanking}<sup>th</sup></span>
-      {handleIconRanking(rankingType)}
+      <div className='ranking__inner'>
+        <span className='ranking__data ranking-data'>{dataRanking}<sup>th</sup></span>
+        {handleIconRanking(rankingType)}
+      </div>
     </div>
   )
 }

@@ -1,18 +1,28 @@
-$first: 110px;
-$second: 90px;
-$third: 70px;
-$fourth: 50px;
+$first: 100px;
+$second: 80px;
+$third: 60px;
+$fourth: 40px;
 
 .ranking {
   position: relative;
+  padding-top: 10px;
   width: 50px;
-  height: $first;
+  height: calc(100% - 25px);
+  // max-height: $first;
   background-color: $purple1;
   border-radius: 8px 8px 0 0;
 
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -11px;
+    height: 100%;
+  }
+
   &__title {
     position: relative;
-    top: -15px;
+    top: -25px;
   }
 
   &__data {
@@ -23,12 +33,11 @@ $fourth: 50px;
 
   .icon {
     position: relative;
-    bottom: -47px;
     right: -18px;
     fill: $white;
 
     &-food {
-      bottom: -50px;
+      bottom: -2px;
     }
   }
 }
