@@ -1,3 +1,16 @@
+// LANDING
+.h1 {
+  font-size: rem(120px);
+  font-weight: bold;
+}
+
+// CTA
+.cta-text {
+  font-size: rem(16px);
+  font-weight: normal;
+}
+
+// MENU
 .menu-title {
   color: $purple1;
   font-size: rem(12px);
@@ -17,6 +30,7 @@
   font-weight: normal;
 }
 
+// DASHBOARD
 .dashboard-title {
   color: $black;
   font-size: rem(18px);
@@ -65,10 +79,10 @@
 }
 
 .ranking-data {
+  color: $white;
   font-size: rem(30px);
   font-weight: 900;
   line-height: 0;
-  color: $white;
 
   sup {
     font-size: rem(10px);
@@ -86,7 +100,4 @@
   color: $purple1;
   font-size: rem(10px);
   font-weight: normal;
-}
-
-.button-text {
 }

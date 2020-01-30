@@ -1,8 +1,8 @@
 import React from 'react'
 
 // COMPONENTS
-import CardCount from './CardCount.jsx'
-import CardRanking from './CardRanking.jsx'
+import CardCount from './Front/CardCount.jsx'
+import CardRanking from './Front/CardRanking.jsx'
 import RestaurantChart from './Charts/RestaurantChart.jsx'
 import BackCulture from './Back/BackCulture.jsx'
 import BackHostel from './Back/BackHostel.jsx'

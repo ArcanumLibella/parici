@@ -1,0 +1,30 @@
+.concept {
+  position: relative;
+  width: 100vw;
+  height: 600px;
+  background-color: $purple6;
+
+  &::before {
+    position: absolute;
+    bottom: 600px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 80px solid $purple6;
+    content: '';
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    top: 600px;
+    width: 0;
+    height: 0;
+    border-top: 80px solid $purple6;
+    border-left: 100vw solid transparent;
+    content: '';
+    z-index: 0;
+  }
+}
