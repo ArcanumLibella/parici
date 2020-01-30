@@ -1,0 +1,25 @@
+.cta {
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &--primary {
+    background-color: $purple5;
+
+    &:hover {
+      background-color: $purple1;
+
+      .cta__link {
+        color: $white;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 8px 20px;
+    -webkit-appearance: none;
+    background: transparent;
+  }
+}

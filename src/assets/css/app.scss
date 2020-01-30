@@ -5,6 +5,7 @@
 @import 'global/_fonts.scss';
 @import 'global/_typography.scss';
 @import 'global/_icon.scss';
+@import 'global/_cta.scss';
 
 // COMPONENTS
 @import 'components/_cards.scss';
@@ -17,7 +18,8 @@
 @import 'components/_sports.scss';
 @import 'components/_dropdown.scss';
 
-// TEMPLATES
+// LAYOUTS
+@import 'layouts/_header.scss';
 @import 'layouts/_menu.scss';
 @import 'layouts/_map.scss';
 @import 'layouts/_dashboard.scss';
@@ -26,6 +28,12 @@
 @import 'pages/_app.scss';
 @import 'pages/_landing.scss';
 
+// SECTIONS
+@import 'sections/_hero.scss';
+@import 'sections/_concept.scss';
+@import 'sections/_selection.scss';
+
+
 body {
   overflow-x: hidden;
   color: $purple1;
@@ -33,9 +41,9 @@ body {
   background-color: $white;
 }
 
-// .content-wrapper {
-//   margin: 0 auto;
-//   padding: 0 20px;
-//   width: 100vw;
-//   max-width: 1024px;
-// }
+.content-wrapper {
+  // padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}

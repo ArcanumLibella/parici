@@ -1,0 +1,18 @@
+.header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: $headerHeight;
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .cta {
+      margin: 0 25px;
+    }
+  }
+}
