@@ -11,11 +11,11 @@ const MenuItem = (props) => {
   // Function to handle menu icons
   const handleIconsMenu = (label) => {
     if (label === 'home') {
-      return <Home/>
+      return <Home />
     } else if (label === 'sports') {
-      return <Sports/>
+      return <Sports />
     } else if (label === 'infos') {
-      return <Infos/>
+      return <Infos />
     }
   }
 
