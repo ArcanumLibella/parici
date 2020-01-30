@@ -1,5 +1,8 @@
 .concept {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 600px;
   background-color: $purple6;
@@ -26,5 +29,31 @@
     border-left: 100vw solid transparent;
     content: '';
     z-index: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    margin-right: 60px;
+    width: 450px;
+    height: 450px;
+    background-color: $purple4;
+    border-radius: 30px;
+  } 
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+  } 
+
+  &__text {
+    padding: 30px 0;
   }
 }
