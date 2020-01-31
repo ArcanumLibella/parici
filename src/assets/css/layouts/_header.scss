@@ -1,10 +1,15 @@
 .header {
-  position: sticky;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: fixed;
   width: 100%;
   height: $headerHeight;
+  z-index: 10;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   &__navigation {
     display: flex;
@@ -14,5 +19,9 @@
     .cta {
       margin: 0 25px;
     }
+  }
+
+  &.is-fixed {
+    background-color: $purple6;
   }
 }
