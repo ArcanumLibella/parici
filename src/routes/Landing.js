@@ -10,7 +10,6 @@ import { Logo } from '../assets/icons/all-icons'
 import Mockup from '../assets/images/mockup.png'
 import France from '../assets/images/france.png'
 
-
 const Landing = (props) => {
   return (
     <main className='landing'>
@@ -33,9 +32,9 @@ const Landing = (props) => {
         <div className='concept__wrapper content-wrapper'>
           <div className='concept__image'></div>
           <div className='concept__texts'>
-            <h3 className='concept__text h3'>Choose the Olympic events you wish to attend</h3>
-            <h3 className='concept__text h3'>We tell you which district of Paris allows you to get there the fastest</h3>
-            <h3 className='concept__text h3'>Compare districts to see which one is most suitable for you</h3>
+            <h3 id="test" className='concept__text h3' data-text='Choose the Olympic events you wish to attend'>Choose the Olympic events you wish to attend</h3>
+            <h3 id="test" className='concept__text h3' data-text='We tell you which district of Paris allows you to get there the fastest'>We tell you which district of Paris allows you to get there the fastest</h3>
+            <h3 id="test" className='concept__text h3' data-text='Compare districts to see which one is most suitable for you'>Compare districts to see which one is most suitable for you</h3>
           </div>
         </div>
       </section>

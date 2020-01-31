@@ -17,7 +17,9 @@ function App() {
           <Route path="/">
             <Landing />
           </Route>
-          <Route path='*'>404 - Sorry no content</Route>
+          <Route path='/*'>
+            404 - Sorry no content
+          </Route>
         </Switch>
       </div>
     </Router>
