@@ -1,0 +1,44 @@
+.alert {
+  @include desktop-up {
+    display: none;
+  }
+}
+
+.alert {
+  @include desktop-down {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    width: 100vw;
+    height: 100vh;
+    background-color: $purple6;
+    z-index: 10;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 800px;
+    font-size: rem(30px);
+    font-weight: 600;
+    text-align: center;
+
+    @include tablet-up {
+      font-size: rem(50px);
+    }
+  }
+
+  strong {
+    font-weight: 900;
+  }
+
+  .icon {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 80%;
+    max-width: 500px;
+    transform: translate(-50%, -50%);
+  }
+}
