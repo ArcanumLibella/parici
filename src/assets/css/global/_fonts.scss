@@ -42,7 +42,7 @@
 
 .dropdown-label {
   font-size: rem(12px);
-  font-weight: normal;
+  font-weight: bold;
 }
 
 // DASHBOARD
@@ -87,10 +87,10 @@
 }
 
 .ranking-title {
+  color: $purple1;
   font-size: rem(12px);
   font-weight: 600;
   text-transform: uppercase;
-  color: $purple1;
 }
 
 .ranking-data {
