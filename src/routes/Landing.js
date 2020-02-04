@@ -15,8 +15,14 @@ const Landing = (props) => {
     <main className='landing'>
       <Header/>
 
-
       <div className='icons-jo'>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Athletic/>
+        <Archery/>
+        <Archery/>
+        <Archery/>
         <Archery/>
         <Badminton/>
         <Canoe/>
@@ -56,7 +62,6 @@ const Landing = (props) => {
         <Weightlifting/>
         <Wrestling/>
       </div> 
-
 
       <section className='hero'>
         <div className='content-wrapper'>
