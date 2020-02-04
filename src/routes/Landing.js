@@ -7,10 +7,89 @@ import Header from '../components/GLOBAL/Header'
 import Mockup from '../assets/images/mockup.png'
 import France from '../assets/images/france.png'
 
+// SVG
+import { Archery, Badminton, Canoe } from '../assets/icons/all-icons'
+
 const Landing = (props) => {
   return (
     <main className='landing'>
       <Header/>
+
+      <div className='icons-jo icons-jo--left'>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+      </div>
+
+      <div className='icons-jo icons-jo--right'>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+        <Badminton/>
+        <Canoe/>
+        <Archery/>
+      </div>
+
 
       <section className='hero'>
         <div className='content-wrapper'>

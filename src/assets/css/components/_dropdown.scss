@@ -15,67 +15,39 @@
   }
 
   &__label {
+    display: flex;
+    align-items: center;
     margin-left: 5px;
     transform: translate3d(0,0,0);
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 
-    svg {
-      position: relative;
-      top: 2px;
-      margin-right: 8px;
-      transform: translate3d(0,0,0);
-      transition: all .2s ease;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke: $purple4;
-      stroke-width: 1.5;
-      z-index: 1;
-
-      path {
-        stroke-dasharray: 60;
-        stroke-dashoffset: 0;
-      }
-
-      polyline {
-        stroke-dasharray: 22;
-        stroke-dashoffset: 66;
-      }
-    }
-
     &:hover {
-      &:before {
-        opacity: 1;
-      }
+      .icon {
+        fill: $purple1;
 
-      svg {
-        stroke: $purple1;
+        path {
+          fill: $white;
+        }
       }
     }
   }
 
   &__checkbox {
     display: none;
+  }
 
-    &:checked + label {
-      font-weight: 600;
-      
-      svg {
-        margin-right: 8px;
-        stroke: $purple1;
-        
-        path {
-          stroke-dashoffset: 60;
-          transition: all .3s linear;
-        }
+  .icon {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
 
-        polyline {
-          stroke-dashoffset: 42;
-          transition: all .2s linear;
-          transition-delay: .15s;
-        }
-      }
+    circle, path {
+      stroke: none;
+    }
+
+    path {
+      fill: $purple1;
     }
   }
 }

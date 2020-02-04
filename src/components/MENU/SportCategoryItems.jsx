@@ -37,7 +37,7 @@ const SportCategoryItems = (props) => {
       (
         sportCategoryItem => (
           <SportCategoryItem
-            key={sportCategoryItem.id}
+            key={sportCategoryItem.categoryId}
             selected={sportCategoryItem.selected}
             sportCategoryItem={sportCategoryItem}
           />

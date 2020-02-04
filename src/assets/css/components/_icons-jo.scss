@@ -1,0 +1,36 @@
+// @import "compass/css3";
+
+@for $i from 1 through 150 {
+  .icons-jo--left {
+    .icon:nth-child(#{$i}) {
+      top: random(320) + vh; // A tester en JS avec la hauteur du viewport
+      left: random(30) + vw;
+      width: random(50) + px;
+      opacity: random();
+    }
+  }
+
+  .icons-jo--right {
+    .icon:nth-child(#{$i}) {
+      top: random(320) + vh; // A tester en JS avec la hauteur du viewport
+      right: random(30) + vw;
+      width: random(50) + px;
+      opacity: random();
+    }
+  }
+}
+
+.icons-jo {
+  .icon {
+    position: absolute;
+    width: 40px;
+    min-width: 30px;
+    height: auto;
+    fill: $white;
+    z-index: 10;
+
+    circle {
+      fill: $purple1; // Couleur random
+    }
+  }
+}

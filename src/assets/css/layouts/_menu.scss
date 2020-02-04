@@ -22,8 +22,7 @@
 
       &.is-selected, &:hover {
         background-color: $white;
-        border-left: 5px solid $purple1;
-
+ 
         .menu__dropdown {
           position: absolute;
           left: 135px;

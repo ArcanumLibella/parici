@@ -1,126 +1,209 @@
 module.exports = {
   sportsCategory: [
     {
-      id: 1,
-      sportCategory: 'shoot',
-      color: '#D29B85',
-      items: [
-        'Tir - Stand de tir du Bourget',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'blabla',
-        'Tir à l\'arc - Esplanade des Invalides'
-      ]
+      categoryId: 1,
+      categoryName: 'shoot',
+      categoryColor: '#D29B85',
       // TODO: add id + address for each sports
-      // sports: [
-      //   {
-      //     sportId: 1,
-      //     sportName: 'Sport 1'
-      //   },
-      //   {
-      //     sportId: 2,
-      //     sportName: 'Sport 2'
-      //   },
-      //   {
-      //     sportId: 3,
-      //     sportName: 'Sport 3'
-      //   }
-      // ]
-    },
-    {
-      id: 2,
-      sportCategory: 'team',
-      color: '#64E0B9',
-      items: [
-        'ezfrgtr',
-        'vevvvrt',
+      sports: [
+        {
+          sportId: 11,
+          sportName: 'Shooting',
+          sportAddress: 'Stand de tir du Bourget',
+          sportCity: 'Le Bourget'
+        },
+        {
+          sportId: 12,
+          sportName: 'Archery',
+          sportAddress: 'Esplanade des Invalides',
+          sportCity: 'Paris'
+        }
       ]
     },
     {
-      id: 3,
-      sportCategory: 'swimming',
-      color: '#95E1EC',
-      items: [
-        'Tir - Stand de tir du Bourget',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'fezferg',
-        'Tir à l\'arc - Esplanade des Invalides'
+      categoryId: 2,
+      categoryName: 'team',
+      categoryColor: '#64E0B9',
+      // TODO: add id + address for each sports
+      sports: [
+        {
+          sportId: 21,
+          sportName: 'Shoot',
+          sportAddress: 'Stand de tir du Bourget',
+          sportCity: 'Le Bourget'
+        },
+        {
+          sportId: 22,
+          sportName: 'Archery',
+          sportAddress: 'Esplanade des Invalides',
+          sportCity: 'Paris'
+        }
       ]
     },
     {
-      id: 4,
-      sportCategory: 'sailing',
-      color: '#219AAA',
-      items: [
-        'Tir - Stand de tir du Bourget',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides'
+      categoryId: 3,
+      categoryName: 'swimming',
+      categoryColor: '#95E1EC',
+      // TODO: add id + address for each sports
+      sports: [
+        {
+          sportId: 31,
+          sportName: 'Shoot',
+          sportAddress: 'Stand de tir du Bourget',
+          sportCity: 'Le Bourget'
+        },
+        {
+          sportId: 32,
+          sportName: 'Archery',
+          sportAddress: 'Esplanade des Invalides',
+          sportCity: 'Paris'
+        }
       ]
     },
     {
-      id: 5,
-      sportCategory: 'athletics',
-      color: '#F4C61E',
-      items: [
-        'Tir - Stand de tir du Bourget',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides'
+      categoryId: 4,
+      categoryName: 'sailing',
+      categoryColor: '#219AAA',
+      // TODO: add id + address for each sports
+      sports: [
+        {
+          sportId: 41,
+          sportName: 'Shoot',
+          sportAddress: 'Stand de tir du Bourget',
+          sportCity: 'Le Bourget'
+        },
+        {
+          sportId: 42,
+          sportName: 'Archery',
+          sportAddress: 'Esplanade des Invalides',
+          sportCity: 'Paris'
+        }
       ]
     },
     {
-      id: 6,
-      sportCategory: 'artistic',
-      color: '#F3A2A2',
-      items: [
-        'Tir - Stand de tir du Bourget',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides'
+      categoryId: 5,
+      categoryName: 'athletics',
+      categoryColor: '#F4C61E',
+      // TODO: add id + address for each sports
+      sports: [
+        {
+          sportId: 51,
+          sportName: 'Shoot',
+          sportAddress: 'Stand de tir du Bourget',
+          sportCity: 'Le Bourget'
+        },
+        {
+          sportId: 52,
+          sportName: 'Archery',
+          sportAddress: 'Esplanade des Invalides',
+          sportCity: 'Paris'
+        }
       ]
     },
     {
-      id: 7,
-      sportCategory: 'fight',
-      color: '#2C3950',
-      items: [
-        'Tir - Stand de tir du Bourget',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides'
+      categoryId: 6,
+      categoryName: 'artistic',
+      categoryColor: '#F3A2A2',
+      // TODO: add id + address for each sports
+      sports: [
+        {
+          sportId: 61,
+          sportName: 'Shoot',
+          sportAddress: 'Stand de tir du Bourget',
+          sportCity: 'Le Bourget'
+        },
+        {
+          sportId: 62,
+          sportName: 'Archery',
+          sportAddress: 'Esplanade des Invalides',
+          sportCity: 'Paris'
+        }
       ]
     },
     {
-      id: 8,
-      sportCategory: 'racket',
-      color: '#E972DD',
-      items: [
-        'Tir - Stand de tir du Bourget',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides'
+      categoryId: 7,
+      categoryName: 'fight',
+      categoryColor: '#2C3950',
+      // TODO: add id + address for each sports
+      sports: [
+        {
+          sportId: 71,
+          sportName: 'Shoot',
+          sportAddress: 'Stand de tir du Bourget',
+          sportCity: 'Le Bourget'
+        },
+        {
+          sportId: 72,
+          sportName: 'Archery',
+          sportAddress: 'Esplanade des Invalides',
+          sportCity: 'Paris'
+        }
       ]
     },
     {
-      id: 9,
-      sportCategory: 'biking',
-      color: '#FD8F51',
-      items: [
-        'Tir - Stand de tir du Bourget',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides'
+      categoryId: 8,
+      categoryName: 'racket',
+      categoryColor: '#E972DD',
+      // TODO: add id + address for each sports
+      sports: [
+        {
+          sportId: 81,
+          sportName: 'Badminton',
+          sportAddress: 'Paris Arena II',
+          sportCity: 'Paris'
+        },
+        {
+          sportId: 82,
+          sportName: 'Table Tennis',
+          sportAddress: 'Paris Expo Porte de Versailles',
+          sportCity: 'Paris'
+        },
+        {
+          sportId: 83,
+          sportName: 'Tennis',
+          sportAddress: 'Rolland-Garros',
+          sportCity: 'Paris'
+        }
       ]
     },
     {
-      id: 10,
-      sportCategory: 'others',
-      color: '#06FB85',
-      items: [
-        'Tir - Stand de tir du Bourget',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides',
-        'Tir à l\'arc - Esplanade des Invalides'
+      categoryId: 9,
+      categoryName: 'biking',
+      categoryColor: '#FD8F51',
+      // TODO: add id + address for each sports
+      sports: [
+        {
+          sportId: 91,
+          sportName: 'Shoot',
+          sportAddress: 'Stand de tir du Bourget',
+          sportCity: 'Le Bourget'
+        },
+        {
+          sportId: 92,
+          sportName: 'Archery',
+          sportAddress: 'Esplanade des Invalides',
+          sportCity: 'Paris'
+        }
+      ]
+    },
+    {
+      categoryId: 10,
+      categoryName: 'others',
+      categoryColor: '#06FB85',
+      // TODO: add id + address for each sports
+      sports: [
+        {
+          sportId: 101,
+          sportName: 'Shoot',
+          sportAddress: 'Stand de tir du Bourget',
+          sportCity: 'Le Bourget'
+        },
+        {
+          sportId: 102,
+          sportName: 'Archery',
+          sportAddress: 'Esplanade des Invalides',
+          sportCity: 'Paris'
+        }
       ]
     }
   ]
