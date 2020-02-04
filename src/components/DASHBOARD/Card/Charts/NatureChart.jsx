@@ -2,7 +2,7 @@ import React from 'react'
 import { ResponsivePie } from '@nivo/pie'
 
 // SVG
-import { Bench, Flower, Leaves } from '../../../../assets/icons/all-icons'
+// import { Bench, Flower, Leaves } from '../../../../assets/icons/all-icons'
 
 // DATA
 import { colors } from '../../../../data/colors'

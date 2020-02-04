@@ -6,7 +6,7 @@ import { Museum, Monument, Theater } from '../../../../assets/icons/all-icons'
 
 
 const BackCulture = ( props ) => {
-  const { cardType, text, cultureActivity } = props
+  const { cardType, /* text, cultureActivity */ } = props
 
   // const handleIconCulture = (cultureActivity) => {
   //   if (cultureActivity === 'museum') {
