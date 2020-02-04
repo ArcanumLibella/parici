@@ -10,7 +10,7 @@ import { Artistic,  Athletics, Biking, Fight, Others, Racket, Sailing, Shoot, Sw
 const SportCategoryItem = ({ sportCategoryItem, /* setItemSelected, */ selected }) => {
   const { categoryColor, categoryName } = sportCategoryItem 
 
-  const [isHovered, setIsHovered] = React.useState(false)
+  const [isHovered, setIsHovered] = useState(false)
   // const [isSelected, setIsSelected] = React.useState(selected)
 
   // Function to handle hover on menu__item--sport

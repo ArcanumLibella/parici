@@ -8,87 +8,54 @@ import Mockup from '../assets/images/mockup.png'
 import France from '../assets/images/france.png'
 
 // SVG
-import { Archery, Badminton, Canoe } from '../assets/icons/all-icons'
+import { Archery, Athletic, BMX, BMXFreestyle, Badminton, Basketball, Basketball3, Beachvolley, Boxing, Breakdance, Canoe, Climbing, Equestrian, Fencing, Football, Golf, Gymnastic, Handball, Hockey, Judo, MountainBike, OpenWaterSwimming, Pentathlon, RoadBike, Rowing, Rugby, Shooting, Skateboarding, IndoorSwimming, TableTennis, Taekwendo, Tennis, Track, Triathlon, Volleyball, Weightlifting, Wrestling } from '../assets/icons/all-icons'
 
-const Landing = (props) => {
+const Landing = (props) => {  
   return (
     <main className='landing'>
       <Header/>
 
-      <div className='icons-jo icons-jo--left'>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-      </div>
 
-      <div className='icons-jo icons-jo--right'>
+      <div className='icons-jo'>
         <Archery/>
         <Badminton/>
         <Canoe/>
-        <Archery/>
+        <Athletic/>
+        <BMX/>
+        <BMXFreestyle/>
         <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-        <Badminton/>
-        <Canoe/>
-        <Archery/>
-      </div>
+        <Basketball/>
+        <Basketball3/>
+        <Beachvolley/>
+        <Boxing/>
+        <Breakdance/>
+        <Climbing/>
+        <Equestrian/>
+        <Fencing/>
+        <Football/>
+        <Golf/>
+        <Gymnastic/>
+        <Handball/>
+        <Hockey/>
+        <Judo/>
+        <MountainBike/>
+        <OpenWaterSwimming/>
+        <Pentathlon/>
+        <RoadBike/>
+        <Rowing/>
+        <Rugby/>
+        <Shooting/>
+        <Skateboarding/>
+        <IndoorSwimming/>
+        <TableTennis/>
+        <Taekwendo/>
+        <Tennis/>
+        <Track/>
+        <Triathlon/>
+        <Volleyball/>
+        <Weightlifting/>
+        <Wrestling/>
+      </div> 
 
 
       <section className='hero'>

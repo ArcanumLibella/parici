@@ -1,36 +1,171 @@
-// @import "compass/css3";
-
-@for $i from 1 through 150 {
-  .icons-jo--left {
-    .icon:nth-child(#{$i}) {
-      top: random(320) + vh; // A tester en JS avec la hauteur du viewport
-      left: random(30) + vw;
-      width: random(50) + px;
-      opacity: random();
-    }
-  }
-
-  .icons-jo--right {
-    .icon:nth-child(#{$i}) {
-      top: random(320) + vh; // A tester en JS avec la hauteur du viewport
-      right: random(30) + vw;
-      width: random(50) + px;
-      opacity: random();
-    }
-  }
-}
-
 .icons-jo {
-  .icon {
-    position: absolute;
-    width: 40px;
-    min-width: 30px;
-    height: auto;
-    fill: $white;
-    z-index: 10;
+  @for $i from 1 through 100 {
+    .icon {
+      position: absolute;
+      min-width: 30px;
+      height: auto;
+      fill: $white;
+      z-index: 10;
+  
+      circle {
+        fill: $purple1; // Couleur random
+      }
 
-    circle {
-      fill: $purple1; // Couleur random
+      &:nth-child(#{$i}) {
+        top: random(370) + vh;
+        width: random(60) + px;
+        opacity: random();
+      }
+    }
+  }
+
+  .icon {
+    &:nth-child(1) {
+      left: 3%;
+    }
+
+    &:nth-child(2) {
+      left: 10%;
+    }
+
+    &:nth-child(3) {
+      left: 25%;
+    }
+
+    &:nth-child(4) {
+      left: 12%;
+    }
+
+    &:nth-child(5) {
+      left: 17%;
+    }
+
+    &:nth-child(6) {
+      left: 23%;
+    }
+
+    &:nth-child(7) {
+      left: 1%;
+    }
+
+    &:nth-child(8) {
+      left: 15%;
+    }
+
+    &:nth-child(9) {
+      left: 18%;
+    }
+
+    &:nth-child(10) {
+      left: 5%;
+    }
+
+    &:nth-child(11) {
+      left: 25%;
+    }
+
+    &:nth-child(12) {
+      left: 7%;
+    }
+
+    &:nth-child(13) {
+      left: 9%;
+    }
+
+    &:nth-child(14) {
+      left: 2%;
+    }
+
+    &:nth-child(15) {
+      left: 24%;
+    }
+
+    &:nth-child(16) {
+      left: 19%;
+    }
+
+    &:nth-child(17) {
+      left: 2%;
+    }
+
+    &:nth-child(18) {
+      left: 23%;
+    }
+
+    &:nth-child(19) {
+      left: 12%;
+    }
+
+    &:nth-child(25) {
+      left: 14%;
+    }
+
+    &:nth-child(21) {
+      left: 2%;
+    }
+
+    &:nth-child(22) {
+      left: 8%;
+    }
+
+    &:nth-child(23) {
+      left: 3%;
+    }
+
+    &:nth-child(24) {
+      left: 16%;
+    }
+
+    &:nth-child(25) {
+      left: 11%;
+    }
+
+    &:nth-child(26) {
+      left: 22%;
+    }
+
+    &:nth-child(27) {
+      left: 19%;
+    }
+
+    &:nth-child(28) {
+      left: 7%;
+    }
+
+    &:nth-child(29) {
+      left: 9%;
+    }
+
+    &:nth-child(30) {
+      left: 11%;
+    }
+
+    &:nth-child(31) {
+      left: 16%;
+    }
+
+    &:nth-child(32) {
+      left: 6%;
+    }
+
+    &:nth-child(33) {
+      left: 19%;
+    }
+
+    &:nth-child(34) {
+      left: 14%;
+    }
+
+    &:nth-child(35) {
+      left: 15%;
+    }
+
+    &:nth-child(36) {
+      left: 13%;
+    }
+
+    &:nth-child(37) {
+      left: 8%;
     }
   }
 }

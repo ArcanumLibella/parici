@@ -1,7 +1,7 @@
 import React from "react";
 
 // SVG
-import { Archery, Athletic, BMX, BMXFreestyle, Badminton, Basketball, Basketball3, Beachvolley, Boxing, Breakdance, Canoe, Climbing, Equestrian, Fencing, Football, Golf, Gymnastic, Handball, Hockey, Judo, MountainBike, OpenWaterSwiming, Pentathlon, RoadBike, Rowing, Rugby, Shooting, Skateboarding, IndoorSwimming, TableTennis, Taekwendo, Tennis, Track, Triathlon, Volleyball, Weightlifting, Wrestling } from '../../assets/icons/all-icons'
+import { Archery, Athletic, BMX, BMXFreestyle, Badminton, Basketball, Basketball3, Beachvolley, Boxing, Breakdance, Canoe, Climbing, Equestrian, Fencing, Football, Golf, Gymnastic, Handball, Hockey, Judo, MountainBike, OpenWaterSwimming, Pentathlon, RoadBike, Rowing, Rugby, Shooting, Skateboarding, IndoorSwimming, TableTennis, Taekwendo, Tennis, Track, Triathlon, Volleyball, Weightlifting, Wrestling } from '../../assets/icons/all-icons'
 
 const SportItem = ({ sport, categoryColor }) => {
   const { sportId, sportName } = sport
@@ -14,7 +14,7 @@ const SportItem = ({ sport, categoryColor }) => {
       return <Athletic/>
     } else if (sportName === 'BMX') {
       return <BMX/>
-    } else if (sportName === 'BMXFreestyle') {
+    } else if (sportName === 'BMX Freestyle') {
       return <BMXFreestyle/>
     } else if (sportName === 'Badminton') {
       return <Badminton/>
@@ -48,10 +48,10 @@ const SportItem = ({ sport, categoryColor }) => {
       return <Hockey/>
     } else if (sportName === 'Judo') {
       return <Judo/>
-    } else if (sportName === 'MountainBike') {
+    } else if (sportName === 'Mountain Bike') {
       return <MountainBike/>
-    } else if (sportName === 'OpenWaterSwiming') {
-      return <OpenWaterSwiming/>
+    } else if (sportName === 'Open Water Swimming') {
+      return <OpenWaterSwimming/>
     } else if (sportName === 'Pentathlon') {
       return <Pentathlon/>
     } else if (sportName === 'RoadBike') {
@@ -64,7 +64,7 @@ const SportItem = ({ sport, categoryColor }) => {
       return <Shooting/>
     } else if (sportName === 'Skateboarding') {
       return <Skateboarding/>
-    } else if (sportName === 'IndoorSwimming') {
+    } else if (sportName === 'Indoor Swimming') {
       return <IndoorSwimming/>
     } else if (sportName === 'Table Tennis') {
       return <TableTennis/>
