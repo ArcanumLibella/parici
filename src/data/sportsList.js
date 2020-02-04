@@ -4,7 +4,6 @@ module.exports = {
       categoryId: 1,
       categoryName: 'shoot',
       categoryColor: '#D29B85',
-      // TODO: add id + address for each sports
       sports: [
         {
           sportId: 11,
@@ -24,7 +23,6 @@ module.exports = {
       categoryId: 2,
       categoryName: 'team',
       categoryColor: '#64E0B9',
-      // TODO: add id + address for each sports
       sports: [
         {
           sportId: 21,
@@ -44,7 +42,6 @@ module.exports = {
       categoryId: 3,
       categoryName: 'swimming',
       categoryColor: '#95E1EC',
-      // TODO: add id + address for each sports
       sports: [
         {
           sportId: 31,
@@ -64,7 +61,6 @@ module.exports = {
       categoryId: 4,
       categoryName: 'sailing',
       categoryColor: '#219AAA',
-      // TODO: add id + address for each sports
       sports: [
         {
           sportId: 41,
@@ -84,7 +80,6 @@ module.exports = {
       categoryId: 5,
       categoryName: 'athletics',
       categoryColor: '#F4C61E',
-      // TODO: add id + address for each sports
       sports: [
         {
           sportId: 51,
@@ -104,7 +99,6 @@ module.exports = {
       categoryId: 6,
       categoryName: 'artistic',
       categoryColor: '#F3A2A2',
-      // TODO: add id + address for each sports
       sports: [
         {
           sportId: 61,
@@ -124,7 +118,6 @@ module.exports = {
       categoryId: 7,
       categoryName: 'fight',
       categoryColor: '#2C3950',
-      // TODO: add id + address for each sports
       sports: [
         {
           sportId: 71,
@@ -144,7 +137,6 @@ module.exports = {
       categoryId: 8,
       categoryName: 'racket',
       categoryColor: '#E972DD',
-      // TODO: add id + address for each sports
       sports: [
         {
           sportId: 81,
@@ -170,7 +162,6 @@ module.exports = {
       categoryId: 9,
       categoryName: 'biking',
       categoryColor: '#FD8F51',
-      // TODO: add id + address for each sports
       sports: [
         {
           sportId: 91,
@@ -190,7 +181,6 @@ module.exports = {
       categoryId: 10,
       categoryName: 'others',
       categoryColor: '#06FB85',
-      // TODO: add id + address for each sports
       sports: [
         {
           sportId: 101,
