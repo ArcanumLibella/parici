@@ -61,7 +61,7 @@ const IconsParallax = () => {
   
   // Function to generate icons with parallax
   const handleIconsParallax = () => {
-    const n = 30 // Or something else
+    const n = 50 // Number of icons in background (max 100)
     return ([...Array(n)].map
       (
         (icons, i) => (
