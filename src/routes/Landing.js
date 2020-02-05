@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 // COMPONENTS
 import Header from '../components/GLOBAL/Header'
@@ -11,9 +11,36 @@ import France from '../assets/images/france.png'
 import { Archery, Athletic, BMX, BMXFreestyle, Badminton, Basketball, Basketball3, Beachvolley, Boxing, Breakdance, Canoe, Climbing, Equestrian, Fencing, Football, Golf, Gymnastic, Handball, Hockey, Judo, MountainBike, OpenWaterSwimming, Pentathlon, RoadBike, Rowing, Rugby, Shooting, Skateboarding, IndoorSwimming, TableTennis, Taekwendo, Tennis, Track, Triathlon, Volleyball, Weightlifting, Wrestling } from '../assets/icons/all-icons'
 
 const Landing = (props) => {  
+  const ref = useRef();
+  const [isScrolling, SetIsScrolling] = useState(false);
+
+  // Scroll listener
+  const handleScroll = () => {
+    const posY = ref.current.getBoundingClientRect().top;
+    const offset = window.pageYOffset - posY;
+
+    // To check if header is scrolling
+    if (offset !== 0) {
+      SetIsScrolling(true)
+    } else {
+      SetIsScrolling(false)
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
   return (
-    <main className='landing'>
-      <Header/>
+    <main className='landing' ref={ref}>
+      <header 
+        className={isScrolling ? 'header is-scrolling' : 'header'}
+        onScroll={() => handleScroll()}>
+        <Header/>
+      </header>
 
       <div className='icons-jo'>
         <Archery/>
@@ -65,7 +92,7 @@ const Landing = (props) => {
 
       <section className='hero'>
         <div className='content-wrapper'>
-          <h1 className='hero__title h1'>Olympic stay Optimized</h1>
+          <h1 className='hero__title h1' >Olympic stay Optimized</h1>
           <img className='hero__image' src={ Mockup } alt='app mockup'/>
         </div>
       </section>
