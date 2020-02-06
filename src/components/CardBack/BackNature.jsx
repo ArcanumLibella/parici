@@ -1,7 +1,7 @@
 import React from 'react'
 
 // COMPONENTS
-import NatureChart from '../CardChart/NatureChart.jsx'
+import { NatureChart } from '../CardChart'
 
 
 // DATA

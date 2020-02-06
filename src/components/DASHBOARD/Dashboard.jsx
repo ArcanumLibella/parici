@@ -1,8 +1,8 @@
 import React from 'react'
 
 // COMPONENTS
-import Card from '../Card/Card'
-import Podium from '../CardFront/Podium'
+import { Card } from '../../components'
+import { Podium } from '../CardFront'
 
 // SVG
 import { Tuto, Cross } from '../../assets/icons/all-icons'

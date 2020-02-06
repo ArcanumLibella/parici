@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SportItem from './SportItem';
+import { SportItem } from './';
 
 
 

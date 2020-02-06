@@ -1,7 +1,7 @@
 import React from 'react'
 
 // COMPONENTS
-import Ranking from './Ranking'
+import { Ranking } from './'
 
 
 

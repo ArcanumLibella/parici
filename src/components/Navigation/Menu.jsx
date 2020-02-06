@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 // COMPONENTS
-import MenuItem from './MenuItem'
-import MenuSelection from './MenuSelection'
-import SportCategoryItems from './SportCategoryItems'
+import { MenuItem, MenuSelection, SportCategoryItems } from './'
 
 // SVG
 import { Logo } from '../../assets/icons/all-icons'

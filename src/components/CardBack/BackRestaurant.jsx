@@ -2,7 +2,7 @@ import React from 'react'
 
 
 // COMPONENTS
-import CardRestaurant from './CardRestaurant'
+import { CardRestaurant } from './'
 
 const BackRestaurant = (props) => {
   const { cardType } = props
