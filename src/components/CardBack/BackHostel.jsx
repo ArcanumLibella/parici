@@ -1,7 +1,7 @@
 import React from 'react'
 
 // COMPONENTS
-import HostelChart from '../CardChart/HostelChart.jsx'
+import { HostelChart } from '../CardChart'
 
 // DATA
 import { hostelsStars } from '../../data/hostelsStars'

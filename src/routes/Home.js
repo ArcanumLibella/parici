@@ -1,13 +1,14 @@
 import React from 'react'
 
 // COMPONENTS
-import { Menu, Dashboard, /* Map,*/ Alert } from '../components'
+import { Dashboard, /* Map,*/ Alert } from '../components'
+import { Menu } from '../components/Navigation'
 
 
 
 const Home = (props) => {
   return (
-    <main className='app'>
+    <main className='home'>
       <Alert/>
       <Menu />
       {/* <Map /> */}

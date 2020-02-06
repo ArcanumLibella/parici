@@ -1,13 +1,9 @@
 import React from 'react'
 
 // COMPONENTS
-import CardCount from '../CardFront/CardCount.jsx'
-import CardRanking from '../CardFront/CardRanking.jsx'
-import RestaurantChart from '../CardChart/RestaurantChart.jsx'
-import BackCulture from '../CardBack/BackCulture.jsx'
-import BackHostel from '../CardBack/BackHostel.jsx'
-import BackRestaurant from '../CardBack/BackRestaurant.jsx'
-import BackNature from '../CardBack/BackNature.jsx'
+import { BackCulture, BackHostel, BackRestaurant, BackNature } from '../CardBack'
+import { CardCount, CardRanking } from '../CardFront'
+import { RestaurantChart } from '../CardChart'
 
 // SVG
 import { Food, Hostel, Monument, Tree, Stadium } from '../../assets/icons/all-icons'

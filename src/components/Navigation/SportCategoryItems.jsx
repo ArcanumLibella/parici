@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 // COMPONENTS
-import SportCategoryItem from './SportCategoryItem';
+import { SportCategoryItem } from './';
 
 // DATA
 const sportsList = require('../../data/sportsList');
