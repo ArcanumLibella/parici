@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // COMPONENTS
 import { Card } from '../../components'
@@ -10,7 +10,7 @@ import { Tuto, Cross } from '../../assets/icons/all-icons'
 
 
 const Dashboard = (props) => {
-  const [isClosed, setIsClosed] = React.useState('true')
+  const [isClosed, setIsClosed] = useState('true')
 
   // function to toggle dashboard display
   const handleDashboardDisplay = () => {

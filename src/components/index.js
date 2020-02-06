@@ -2,7 +2,7 @@
 import Card from './Card/Card'
 
 // DASHBOARD
-// import Dashboard from './Dashboard/Dashboard.jsx'
+import Dashboard from './Dashboard/Dashboard'
 
 // MAP
 import Map from './Map/Map'
@@ -14,8 +14,8 @@ import Header from './Commons/Header/Header'
 import IconsParallax from './Commons/IconsParallax/IconsParallax'
 
 export { 
-  // Dashboard, 
   Card,
+  Dashboard, 
   Map,
   Alert,
   Button,
