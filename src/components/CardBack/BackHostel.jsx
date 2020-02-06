@@ -1,10 +1,10 @@
 import React from 'react'
 
 // COMPONENTS
-import HostelChart from '../Charts/HostelChart.jsx'
+import HostelChart from '../CardChart/HostelChart.jsx'
 
 // DATA
-import { hostelsStars } from '../../../../data/hostelsStars'
+import { hostelsStars } from '../../data/hostelsStars'
 
 const BackHostel = ( props ) => {
   const { cardType } = props

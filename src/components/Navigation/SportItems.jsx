@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SportItem from "./SportItem.jsx";
+import SportItem from './SportItem';
 
 
 
@@ -11,6 +11,7 @@ const SportItems = ({ sportCategoryItem }) => {
       sport => (
         <SportItem 
           key={sport.sportId}
+          color={sportCategoryItem.categoryColor}
           sport={sport}
         />
       )

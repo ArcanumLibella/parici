@@ -5,7 +5,7 @@ import { ResponsivePie } from '@nivo/pie'
 // import { Bench, Flower, Leaves } from '../../../../assets/icons/all-icons'
 
 // DATA
-import { colors } from '../../../../data/colors'
+import { colors } from '../../data/colors'
 
 
 

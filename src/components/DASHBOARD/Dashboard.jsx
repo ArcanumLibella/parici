@@ -1,8 +1,8 @@
 import React from 'react'
 
 // COMPONENTS
-import Card from './Card/Card.jsx'
-import Podium from './Card/Front/Podium.jsx'
+import Card from '../Card/Card'
+import Podium from '../CardFront/Podium'
 
 // SVG
 import { Tuto, Cross } from '../../assets/icons/all-icons'
@@ -21,12 +21,15 @@ const Dashboard = (props) => {
     <section 
       className={
         isClosed 
-        ? 'dashboard' 
-        : 'dashboard is-closed'}>
+          ? 'dashboard' 
+          : 'dashboard is-closed'
+      }
+    >
       <h2 className='dashboard__title dashboard-title'>8th district</h2>
       <div 
         className='cross'
-        onClick={() => handleDashboardDisplay()}>
+        onClick={() => handleDashboardDisplay()}
+      >
         <Cross/>
       </div>
       <div className='dashboard__wrapper cards'>

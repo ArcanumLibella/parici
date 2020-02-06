@@ -1,14 +1,14 @@
 // DASHBOARD
-import Dashboard from './DASHBOARD/Dashboard'
+import Dashboard from './Dashboard/Dashboard'
 
 // MAP
-import Map from './MAP/Map'
+import Map from './Map/Map'
 
 // MENU
-import Menu from './MENU/Menu'
+import Menu from './Navigation/Menu'
 
 // ALERT
-import Alert from './GLOBAL/Alert'
+import Alert from './Commons/Alert/Alert'
 
 export { 
   Dashboard, 

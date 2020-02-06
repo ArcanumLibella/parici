@@ -1,7 +1,7 @@
 import React from 'react'
 
 // SVG
-import { Share } from '../../../../assets/icons/all-icons'
+import { Share } from '../../assets/icons/all-icons'
 
 
 

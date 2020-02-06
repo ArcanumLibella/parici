@@ -7,11 +7,11 @@ import SportItems from './SportItems'
 import { Artistic,  Athletics, Biking, Fight, Others, Racket, Sailing, Shoot, Swimming, Team } from '../../assets/icons/all-icons'
 
 
-const SportCategoryItem = ({ sportCategoryItem, /* setItemSelected, */ selected }) => {
-  const { categoryColor, categoryName } = sportCategoryItem 
+const SportCategoryItem = ({ sportCategoryItem, handleSelectedSportCategory/* , setItemSelected,*/, selected, color  }) => {
+  const { categoryColor, categoryName, categoryId } = sportCategoryItem 
 
   const [isHovered, setIsHovered] = useState(false)
-  // const [isSelected, setIsSelected] = React.useState(selected)
+  // const [isSelected, setIsSelected] = useState(selected)
 
   // Function to handle hover on menu__item--sport
   const handleHover = () => {
@@ -19,12 +19,13 @@ const SportCategoryItem = ({ sportCategoryItem, /* setItemSelected, */ selected 
   }
 
   // Déclaration d'une fonction eventListener
-  // const handleSportDisplay = () => {
+  // const handleSportSelected = () => {
   //   setIsSelected(!isSelected)
-  //   // setItemSelected(sportItem.id)
+  //   handleSelectedSportCategory(categoryId)
   // }
 
     // Function to handle sports icons
+    // TODO: Use switch
     const handleIconsSports = (categoryName) => {
       if (categoryName === 'artistic') {
         return <Artistic/>
@@ -48,14 +49,17 @@ const SportCategoryItem = ({ sportCategoryItem, /* setItemSelected, */ selected 
         return <Team/>
       }
     }
-  
 
   return (
     <li 
       className="menu__item menu__item--sport"
-      style={ isHovered ? {borderLeft: '5px solid ' + categoryColor} : {borderLeft: '5px solid transparent' }}
-      onMouseEnter={() => handleHover()} 
-      onMouseLeave={() => handleHover()}>
+      style={ 
+        isHovered 
+        ? {borderLeft: '5px solid ' + categoryColor} 
+        : {borderLeft: '5px solid transparent' }}
+      // onClick={() => handleSportSelected() }
+      onMouseEnter={() => handleHover() } 
+      onMouseLeave={() => handleHover() }>
       <div
         className='menu__icon'
         style={{ backgroundColor: categoryColor }}>

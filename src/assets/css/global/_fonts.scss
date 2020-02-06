@@ -40,6 +40,17 @@
   text-transform: uppercase;
 }
 
+.menu-selection-title {
+  color: $black;
+  font-size: rem(12px);
+  font-weight: bold;
+}
+
+.menu-selection-subtitle {
+  font-size: rem(12px);
+  font-weight: 600;
+}
+
 .dropdown-label {
   font-size: rem(12px);
   font-weight: bold;

@@ -1,4 +1,4 @@
 import Landing from "./Landing";
-import WebApp from "./WebApp";
+import Home from "./Home";
 
-export { Landing, WebApp };
+export { Landing, Home };

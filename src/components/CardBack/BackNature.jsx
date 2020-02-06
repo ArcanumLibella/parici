@@ -1,11 +1,11 @@
 import React from 'react'
 
 // COMPONENTS
-import NatureChart from '../Charts/NatureChart.jsx'
+import NatureChart from '../CardChart/NatureChart.jsx'
 
 
 // DATA
-import {natureSpaces} from '../../../../data/natureSpaces'
+import {natureSpaces} from '../../data/natureSpaces'
 
 const BackNature = ( props ) => {
   const { cardType } = props
