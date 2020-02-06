@@ -2,7 +2,7 @@
 import Card from './Card/Card'
 
 // DASHBOARD
-import Dashboard from './Dashboard/Dashboard'
+import Dashboard from './Dashboard/Dashboard.jsx'
 
 // MAP
 import Map from './Map/Map'
