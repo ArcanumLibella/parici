@@ -13,10 +13,6 @@
           opacity: random();
           fill: $white;
           z-index: 10;
-      
-          circle {
-            fill: $purple1; // Couleur random
-          }
         }
       }
     }

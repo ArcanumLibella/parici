@@ -136,7 +136,7 @@ module.exports = {
     {
       categoryId: 8,
       categoryName: 'racket',
-      categoryColor: '#E972DD',
+      categoryColor: '#AF4751',
       sports: [
         {
           sportId: 81,
@@ -161,7 +161,7 @@ module.exports = {
     {
       categoryId: 9,
       categoryName: 'biking',
-      categoryColor: '#FD8F51',
+      categoryColor: '#E7904D',
       sports: [
         {
           sportId: 91,
@@ -180,7 +180,7 @@ module.exports = {
     {
       categoryId: 10,
       categoryName: 'others',
-      categoryColor: '#06FB85',
+      categoryColor: '#8D488B',
       sports: [
         {
           sportId: 101,
