@@ -68,6 +68,7 @@ const IconsParallax = () => {
           <Parallax 
             key={i}
             speed={generateRandomSpeed()}
+            // color={}
           >
             {generateRandomIcons()}
           </Parallax>

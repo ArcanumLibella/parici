@@ -25,28 +25,30 @@ const SportCategoryItem = ({ sportCategoryItem, handleSelectedSportCategory/* , 
   // }
 
     // Function to handle sports icons
-    // TODO: Use switch
     const handleIconsSports = (categoryName) => {
-      if (categoryName === 'artistic') {
-        return <Artistic/>
-      } else if (categoryName === 'athletics') {
-        return <Athletics/>
-      } else if (categoryName === 'biking') {
-        return <Biking/>
-      }  else if (categoryName === 'fight') {
-        return <Fight/>
-      }  else if (categoryName === 'others') {
-        return <Others/>
-      }  else if (categoryName === 'racket') {
-        return <Racket/>
-      }  else if (categoryName === 'sailing') {
-        return <Sailing/>
-      }  else if (categoryName === 'shoot') {
-        return <Shoot/>
-      }  else if (categoryName === 'swimming') {
-        return <Swimming/>
-      }  else if (categoryName === 'team') {
-        return <Team/>
+      switch (categoryName) {
+        case 'artistic':
+          return <Artistic/>
+        case 'athletics':
+          return <Athletics/>
+        case 'biking':
+          return <Biking/>
+        case 'fight':
+          return <Fight/>
+        case 'others':
+          return <Others/>
+        case 'racket':
+          return <Racket/>
+        case 'sailing':
+          return <Sailing/>
+        case 'shoot':
+          return <Shoot/>
+        case 'swimming':
+          return <Swimming/>
+        case 'team':
+          return <Team/>
+        default:
+          return 'No icons'
       }
     }
 

@@ -18,27 +18,33 @@ const Card = (props) => {
 
   // Function to handle card icon
   const handleCardIcon = (cardType) => {
-    if (cardType === 'culture') {
-      return <Monument />
-    } else if (cardType === 'restaurant') {
-      return <Food />
-    } else if (cardType === 'hostel') {
-      return <Hostel />
-    } else if (cardType === 'nature') {
-      return <Tree />
+    switch (cardType) {
+      case 'culture':
+        return <Monument />
+      case 'restaurant':
+        return <Food />
+      case 'hostel':
+        return <Hostel />
+      case 'nature':
+        return <Tree />
+      default:
+        return 'No icons'
     }
   }
 
   // Function to check card type
   const handleCardBack = (cardType) => {
-    if (cardType === 'culture') {
-      return <BackCulture cardType={cardType} />
-    } else if (cardType === 'restaurant') {
-      return <BackRestaurant cardType={cardType} />
-    } else if (cardType === 'hostel') {
-      return <BackHostel cardType={cardType} />
-    } else if (cardType === 'nature') {
-      return <BackNature cardType={cardType} />
+    switch (cardType) {
+      case 'culture':
+        return <BackCulture cardType={cardType} />
+      case 'restaurant':
+        return <BackRestaurant cardType={cardType} />
+      case 'hostel':
+        return <BackHostel cardType={cardType} />
+      case 'nature':
+        return <BackNature cardType={cardType} />
+      default:
+        return 'Error back card'
     }
   }
 

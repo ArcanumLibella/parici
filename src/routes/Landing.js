@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 // COMPONENTS
-import Header from '../components/Commons/Header/Header'
-import IconsParallax from '../components/Commons/IconsParallax/IconsParallax'
+import { Header, IconsParallax } from '../components'
 
 // IMAGES
 import Mockup from '../assets/images/mockup.png'
 import France from '../assets/images/france.png'
+
+
 
 const Landing = (props) => {  
   const ref = useRef();

@@ -13,82 +13,122 @@ const SportItem = ({ sport, color }) => {
     setIsClicked(!isClicked)
   }
 
-  // TODO: Mettre le path à l'intérieur en white
-  const displaySportsIcon = (color) => {
-    if (sportName === 'Archery') {
-      return <Archery className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Athletic') {
-      return <Athletic className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'BMX') {
-      return <BMX className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'BMX Freestyle') {
-      return <BMXFreestyle className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Badminton') {
-      return <Badminton className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Basketball') {
-      return <Basketball className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Basketball3') {
-      return <Basketball3 className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Beachvolley') {
-      return <Beachvolley className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Boxing') {
-      return <Boxing className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Breakdance') {
-      return <Breakdance className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Canoe') {
-      return <Canoe className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Climbing') {
-      return <Climbing className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Equestrian') {
-      return <Equestrian className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Fencing') {
-      return <Fencing className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Football') {
-      return <Football className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Golf') {
-      return <Golf className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Gymnastic') {
-      return <Gymnastic className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Handball') {
-      return <Handball className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Hockey') {
-      return <Hockey className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Judo') {
-      return <Judo className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Mountain Bike') {
-      return <MountainBike className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Open Water Swimming') {
-      return <OpenWaterSwimming className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Pentathlon') {
-      return <Pentathlon className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'RoadBike') {
-      return <RoadBike className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Rowing') {
-      return <Rowing className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Rugby') {
-      return <Rugby className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Shooting') {
-      return <Shooting className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Skateboarding') {
-      return <Skateboarding className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Indoor Swimming') {
-      return <IndoorSwimming className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Table Tennis') {
-      return <TableTennis className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Taekwendo') {
-      return <Taekwendo className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Tennis') {
-      return <Tennis className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Track') {
-      return <Track className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Triathlon') {
-      return <Triathlon className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Volleyball') {
-      return <Volleyball className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Weightlifting') {
-      return <Weightlifting className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
-    } else if (sportName === 'Wrestling') {
-      return <Wrestling className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+  // Function to handle icons sports and color onClick
+  const handleSportsIcon = (sportName, color) => {
+    switch (sportName) {
+      case 'Archery':
+        return <Archery className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Athletic':
+        return <Athletic className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'BMX':
+        return <BMX className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'BMX Freestyle':
+        return <BMXFreestyle className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Badminton':
+        return <Badminton className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Basketball':
+        return <Basketball className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Basketball3':
+        return <Basketball3 className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Beachvolley':
+        return <Beachvolley className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Boxing':
+        return <Boxing className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Breakdance':
+        return <Breakdance className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Canoe':
+        return <Canoe className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Climbing':
+        return <Climbing className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Equestrian':
+        return <Equestrian className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Fencing':
+        return <Fencing className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Football':
+        return <Football className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Golf':
+        return <Golf className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Gymnastic':
+        return <Gymnastic className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Handball':
+        return <Handball className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Hockey':
+        return <Hockey className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Judo':
+        return <Judo className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Mountain Bike':
+        return <MountainBike className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Open Water Swimming':
+        return <OpenWaterSwimming className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Pentathlon':
+        return <Pentathlon className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Roadbike':
+        return <RoadBike className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Rowing':
+        return <Rowing className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Rugby':
+        return <Rugby className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+        
+      case 'Shooting':
+        return <Shooting className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Skateboarding':
+        return <Skateboarding className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Indoor Swimming':
+        return <IndoorSwimming className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Table Tennis':
+        return <TableTennis className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Taekwendo':
+        return <Taekwendo className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Tennis':
+        return <Tennis className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Track':
+        return <Track className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Triathlon':
+        return <Triathlon className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Volleyball':
+        return <Volleyball className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Weightlifting':
+        return <Weightlifting className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      case 'Wrestling':
+        return <Wrestling className={ isClicked ? 'is-selected' : '' } style={ isClicked ? {fill: color} : {fill: 'white'} }/>
+
+      default:
+        return 'No icons ! '
     }
   }
 
@@ -101,7 +141,7 @@ const SportItem = ({ sport, color }) => {
       {/* TODO: add an id for each sport and use it for id and htmlFor */}
       {/* <input className='dropdown__checkbox' type="checkbox" id={sportId} name={sportId}></input> */}
       <label className='dropdown__label dropdown-label' htmlFor={sportId}>
-        { displaySportsIcon(color) }
+        { handleSportsIcon(sportName, color) }
         { sportName }
       </label>
     </li>
