@@ -55,7 +55,7 @@ const SportCategoryItems = (props) => {
   //   setSports(selectedSports);
   // }
 
-  // Déclaration d'une fontion qui map sur chaque sport de sportsList
+  // Function to get each category sports of sportsList
   const displaySportCategories = () => {
     return sportsList.sportsCategory.map
       (

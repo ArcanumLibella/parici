@@ -9,16 +9,21 @@ const Ranking = (props) => {
   const { rankingType, dataRanking } = props
 
   const handleIconRanking = (rankingType) => {
-    if (rankingType === 'nature') {
-      return <Tree />
-    } else if (rankingType === 'culture') {
-      return <Monument />
-    } else if (rankingType === 'hostel') {
-      return <Hostel />
-    } else if (rankingType === 'restaurant') {
-      return <Food />
+    switch (rankingType) {
+      case 'culture':
+        return <Monument />
+      case 'restaurant':
+        return <Food />
+      case 'hostel':
+        return <Hostel />
+      case 'nature':
+        return <Tree />
+      default:
+        return 'No icons'
     }
   }
+
+  
 
   return (
     <div className='ranking'>
