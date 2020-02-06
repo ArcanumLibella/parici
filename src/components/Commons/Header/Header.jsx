@@ -1,10 +1,10 @@
 import React from 'react'
 
 // COMPONENTS
-import Button from './Button'
+import Button from '../Button/Button'
 
 // SVG
-import { Logo } from '../../assets/icons/all-icons'
+import { Logo } from '../../../assets/icons/all-icons'
 
 
 
@@ -14,7 +14,7 @@ const Header = () => {
       <Logo />
       <nav className='header__navigation'>
         <Button textCta='Credits' linkCta='/credits'/>
-        <Button textCta='Go to map' linkCta='/webapp'/>
+        <Button textCta='Go to map' linkCta='/home'/>
       </nav>
     </div>
   )

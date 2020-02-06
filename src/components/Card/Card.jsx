@@ -1,19 +1,19 @@
 import React from 'react'
 
 // COMPONENTS
-import CardCount from './Front/CardCount.jsx'
-import CardRanking from './Front/CardRanking.jsx'
-import RestaurantChart from './Charts/RestaurantChart.jsx'
-import BackCulture from './Back/BackCulture.jsx'
-import BackHostel from './Back/BackHostel.jsx'
-import BackRestaurant from './Back/BackRestaurant.jsx'
-import BackNature from './Back/BackNature.jsx'
+import CardCount from '../CardFront/CardCount.jsx'
+import CardRanking from '../CardFront/CardRanking.jsx'
+import RestaurantChart from '../CardChart/RestaurantChart.jsx'
+import BackCulture from '../CardBack/BackCulture.jsx'
+import BackHostel from '../CardBack/BackHostel.jsx'
+import BackRestaurant from '../CardBack/BackRestaurant.jsx'
+import BackNature from '../CardBack/BackNature.jsx'
 
 // SVG
-import { Food, Hostel, Monument, Tree, Stadium } from '../../../assets/icons/all-icons'
+import { Food, Hostel, Monument, Tree, Stadium } from '../../assets/icons/all-icons'
 
 // DATA
-import { restaurantPrices } from '../../../data/restaurantPricesList'
+import { restaurantPrices } from '../../data/restaurantPricesList'
 
 
 

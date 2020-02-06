@@ -2,7 +2,7 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 
 // DATA
-import { colors } from '../../../../data/colors'
+import { colors } from '../../data/colors'
 
 
 

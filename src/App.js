@@ -4,15 +4,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './assets/css/app.scss';
 
 // ROUTES
-import { Landing, WebApp } from "./routes";
+import { Landing, Home } from "./routes";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/webapp">
-            <WebApp />
+          <Route path="/home">
+            <Home />
           </Route>
           <Route path="/">
             <Landing />

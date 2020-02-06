@@ -1,7 +1,7 @@
 import React from 'react'
 
 // SVG
-import { Tree, Monument, Food, Hostel } from '../../../../assets/icons/all-icons'
+import { Tree, Monument, Food, Hostel } from '../../assets/icons/all-icons'
 
 
 

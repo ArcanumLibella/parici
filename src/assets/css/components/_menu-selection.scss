@@ -1,0 +1,27 @@
+.menu-selection {
+  padding: 10px;
+  margin: 10px;
+  width: calc(100% - 20px);
+  background-color: $white;
+  border-radius: 5px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__sport {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-right: 5px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    background-color: $purple1;
+    border-radius: 50%;
+  }
+}

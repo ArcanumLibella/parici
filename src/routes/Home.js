@@ -5,7 +5,7 @@ import { Menu, Dashboard, /* Map,*/ Alert } from '../components'
 
 
 
-const WebApp = (props) => {
+const Home = (props) => {
   return (
     <main className='app'>
       <Alert/>
@@ -16,4 +16,4 @@ const WebApp = (props) => {
   )
 }
 
-export default WebApp
+export default Home

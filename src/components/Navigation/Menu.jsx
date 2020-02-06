@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 // COMPONENTS
-import MenuItem from './MenuItem.jsx'
-import SportCategoryItems from './SportCategoryItems.jsx'
+import MenuItem from './MenuItem'
+import MenuSelection from './MenuSelection'
+import SportCategoryItems from './SportCategoryItems'
 
 // SVG
 import { Logo } from '../../assets/icons/all-icons'
@@ -20,9 +21,10 @@ const Menu = (props) => {
         <MenuItem label='home' />
       </Link>
 
-      {/* <MenuItem label='sports' /> */}
+      <MenuSelection/>
+
       <SportCategoryItems />
-      {/* <MenuItem label='infos' /> */}
+
     </aside>
   )
 }

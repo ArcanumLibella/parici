@@ -21,16 +21,6 @@
     transform: translate3d(0,0,0);
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-
-    &:hover {
-      .icon {
-        fill: $purple1;
-
-        path {
-          fill: $white;
-        }
-      }
-    }
   }
 
   &__checkbox {
@@ -41,6 +31,12 @@
     margin-right: 10px;
     width: 30px;
     height: 30px;
+
+    &.is-selected {
+      path {
+        fill: $white;
+      }
+    }
 
     circle, path {
       stroke: none;
