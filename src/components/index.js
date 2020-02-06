@@ -5,7 +5,7 @@ import Card from './Card/Card'
 import Dashboard from './Dashboard/Dashboard'
 
 // MAP
-import Map from './Map/Map'
+// import Map from './Map/Map'
 
 // COMMONS
 import Alert from './Commons/Alert/Alert'
@@ -16,7 +16,7 @@ import IconsParallax from './Commons/IconsParallax/IconsParallax'
 export { 
   Card,
   Dashboard, 
-  Map,
+  // Map,
   Alert,
   Button,
   Header,
