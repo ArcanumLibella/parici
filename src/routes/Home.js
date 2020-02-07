@@ -1,10 +1,10 @@
 import React from 'react'
 
 // COMPONENTS
-import Alert from '../components/Commons/Alert/Alert'
-import Menu from '../components/Navigation/Menu'
+import Alert from '../components/Commons/Alert/Alert.jsx'
+import Menu from '../components/Navigation/Menu.jsx'
 // import Map from '../components/Map/Map'
-import Dashboard from '../components/Dashboard/Dashboard'
+import Dashboard from '../components/Dashboard/Dashboard.jsx'
 
 
 
