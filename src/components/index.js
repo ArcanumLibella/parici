@@ -1,24 +1,24 @@
 // CARD
-import Card from './Card/Card'
+// import Card from './Card/Card'
 
 // DASHBOARD
-import Dashboard from './Dashboard/Dashboard'
+// import Dashboard from './Dashboard/Dashboard'
 
 // MAP
 // import Map from './Map/Map'
 
 // COMMONS
-import Alert from './Commons/Alert/Alert'
-import Button from './Commons/Button/Button'
-import Header from './Commons/Header/Header'
-import IconsParallax from './Commons/IconsParallax/IconsParallax'
+// import Alert from './Commons/Alert/Alert'
+// import Button from './Commons/Button/Button'
+// import Header from './Commons/Header/Header'
+// import IconsParallax from './Commons/IconsParallax/IconsParallax'
 
-export { 
-  Card,
-  Dashboard, 
+// export { 
+  // Card,
+  // Dashboard, 
   // Map,
-  Alert,
-  Button,
-  Header,
-  IconsParallax
-};
+  // Alert,
+  // Button,
+//   Header,
+//   IconsParallax
+// };

@@ -1,8 +1,10 @@
 import React from 'react'
 
 // COMPONENTS
-import { Dashboard, /* Map,*/ Alert } from '../components'
-import { Menu } from '../components/Navigation'
+import Alert from '../components/Commons/Alert/Alert'
+import Menu from '../components/Navigation/Menu'
+// import Map from '../components/Map/Map'
+import Dashboard from '../components/Dashboard/Dashboard'
 
 
 

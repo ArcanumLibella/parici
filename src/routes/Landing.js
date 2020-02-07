@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 // COMPONENTS
-import { Header, IconsParallax } from '../components'
+import Header from '../components/Commons/Header/Header'
+import IconsParallax from '../components/Commons/IconsParallax/IconsParallax'
 
 // IMAGES
 import Mockup from '../assets/images/mockup.png'
