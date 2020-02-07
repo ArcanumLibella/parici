@@ -1,7 +1,7 @@
 import React from 'react'
 
 // COMPONENTS
-import { Button } from '../../../components'
+import Button from '../Button/Button'
 
 // SVG
 import { Logo } from '../../../assets/icons/all-icons'
