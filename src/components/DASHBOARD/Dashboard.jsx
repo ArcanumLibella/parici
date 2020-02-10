@@ -18,31 +18,31 @@ const Dashboard = (props) => {
   }
 
   return (
-    <section 
+    <section
       className={
-        isClosed 
-          ? 'dashboard' 
+        isClosed
+          ? 'dashboard'
           : 'dashboard is-closed'
       }
     >
       <h2 className='dashboard__title dashboard-title'>8th district</h2>
-      <div 
+      <div
         className='cross'
         onClick={() => handleDashboardDisplay()}
       >
-        <Cross/>
+        <Cross />
       </div>
       <div className='dashboard__wrapper cards'>
 
         <Podium cardType='podium' />
-        <Card cardType='nature' dataType=' of green space' rankingType='largest green spaces'/>
-        <Card cardType='hostel' dataType='hostels' rankingType='most hotels'/>
-        <Card cardType='culture' dataType='points of interest' rankingType='most points of interest'/>
-        <Card cardType='restaurant' dataType='restaurants' rankingType='most restaurants'/>
+        <Card cardType='nature' dataType=' of green space' rankingType='largest green spaces' />
+        <Card cardType='hostel' dataType='hostels' rankingType='most hotels' />
+        <Card cardType='culture' dataType='points of interest' rankingType='most points of interest' />
+        <Card cardType='restaurant' dataType='restaurants' rankingType='most restaurants' />
 
       </div>
       <div className='tuto'>
-        <Tuto/>
+        <Tuto />
       </div>
     </section>
   )
