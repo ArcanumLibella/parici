@@ -7,11 +7,12 @@ import { SportCategoryItem } from './';
 const sportsList = require('../../data/sportsList');
 
 
+
 // TODO: A TESTER AVEC CONTEXT API
 const SportCategoryItems = (props) => {
   sportsList.sportsCategory.map(
     sport => Object.assign(
-      sport, 
+      sport,
       { selected: false }
     )
   )
@@ -19,18 +20,17 @@ const SportCategoryItems = (props) => {
   // To add selected props into sportsList
   const [sports, setSports] = useState(sportsList.sportsCategory);
 
-  const handleSelectedSportCategory = id => () =>
-  {      
-    const sportsSettings 
-        = sports.map
+  const handleSelectedSportCategory = id => () => {
+    const sportsSettings
+      = sports.map
         (
-            s => 
-                id === s.categoryId 
-                ? Object.assign( s, { selected : true } )
-                : Object.assign( s, { selected : false } )
+          s =>
+            id === s.categoryId
+              ? Object.assign(s, { selected: true })
+              : Object.assign(s, { selected: false })
         );
-    console.log( sportsSettings );    
-    setSports( sportsSettings );
+    console.log(sportsSettings);
+    setSports(sportsSettings);
   }
 
   // const handleSelectedSportCategory = () => {
