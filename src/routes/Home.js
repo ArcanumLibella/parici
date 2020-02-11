@@ -4,8 +4,7 @@ import React from 'react'
 import Alert from '../components/Commons/Alert/Alert.jsx'
 import Menu from '../components/Navigation/Menu.jsx'
 // import Map from '../components/Map/Map'
-// import Dashboard from '../components/Dashboard/Dashboard.jsx'
-
+import Dashboard from '../components/Dashboard/Dashboard'
 
 
 const Home = (props) => {
@@ -14,7 +13,7 @@ const Home = (props) => {
       <Alert />
       <Menu />
       {/* <Map /> */}
-      {/* <Dashboard /> */}
+      <Dashboard />
     </main>
   )
 }
