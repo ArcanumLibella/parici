@@ -9,10 +9,11 @@ import Dashboard from '../components/Dashboard/Dashboard.jsx'
 
 
 const Home = (props) => {
+  const { sportsList } = props
   return (
     <main className='home'>
-      <Alert/>
-      <Menu />
+      <Alert />
+      <Menu sportsList={sportsList} />
       {/* <Map /> */}
       <Dashboard />
     </main>
