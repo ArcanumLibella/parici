@@ -39,6 +39,10 @@ module.exports = {
     {
       categoryId: 10,
       categoryColor: '#8D488B',
+    },
+    {
+      categoryId: 11,
+      categoryColor: '#8D488B',
     }
   ]
 }

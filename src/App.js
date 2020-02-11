@@ -36,7 +36,7 @@ function App() {
         let sportsInFamily = []
         sports.forEach((sport) => {
           // The api response with route instead of id
-          // Fix later
+          // FIXME: later
           const familyId = sport.idFamily.replace("/api/families/", "")
           if (familyId == sportsList2.sportsCategory[i].categoryId) {
             sportsInFamily.push(sport.name)
@@ -46,62 +46,9 @@ function App() {
         })
         // Set sports for a family
         sportsList2.sportsCategory[i].sports = sportsInFamily
+        // setSportsList(sportsInFamily)
       });
     }))
-
-
-  // const fetchSportsList = () => {
-  //   axios
-  //     .all([requestFamilies, requestCompetitions])
-  //     .then(
-  //       axios.spread((...responses) => {
-  //         const responseFamilies = responses[0];
-  //         const responseCompetitions = responses[1];
-
-  //         const dataFamilies = responseFamilies.data
-  //         const dataCompetitions = responseCompetitions.data
-  //         //console.log(dataFamilies)
-          
-  //         sportsList2.sportsCategory.map(
-  //           (sportCategory, indexCategory) => {
-  //             dataFamilies.map(
-  //               (family, indexFamily) => {
-  //                 if (indexCategory === indexFamily) {
-  //                   sportCategory.CategoryName = family.name
-  //                 }
-  //                 dataCompetitions.map(
-  //                   (competition, indexCompetition) => {
-  //                     // //console.log('family', family.idFamily)
-  //                     // //console.log('competition',  parseInt(competition.idFamily.split('/')[3]))
-
-  //                     if (family.idFamily === parseInt(competition.idFamily.split('/')[3])) {
-  //                       // FIXME: pourvoir ajouter chaque sport au lieu de les écraser
-  //                       sportCategory.sports = Object.assign(
-  //                         {}, 
-  //                         {
-  //                           sportId: competition.idCompetition,
-  //                           sportName: competition.name
-  //                         }
-  //                       )
-  //                     }
-  //                   }
-  //                 )
-  //               }
-  //             )
-  //             // //console.log(sportsList2.sportsCategory)
-  //           }
-  //         )
-
-  //         //console.log(dataCompetitions)
-  //         //console.log(sportsList2.sportsCategory)
-
-  //         setSportsList(sportsList2.sportsCategory)
-  //       })
-  //     )
-  //     .catch(errors => {
-  //       console.error(errors);
-  //     });
-  // }
 
   // useEffect(() => {
   //   fetchSportsList()
