@@ -3,8 +3,8 @@ import React from 'react'
 // COMPONENTS
 import Alert from '../components/Commons/Alert/Alert.jsx'
 import Menu from '../components/Navigation/Menu.jsx'
-// import Map from '../components/Map/Map'
-import Dashboard from '../components/Dashboard/Dashboard.jsx'
+import Map from '../components/MAP/Map.jsx'
+import Dashboard from '../components/DASHBOARD/Dashboard.jsx'
 
 
 
@@ -13,7 +13,7 @@ const Home = (props) => {
     <main className='home'>
       <Alert/>
       <Menu />
-      {/* <Map /> */}
+      <Map />
       <Dashboard />
     </main>
   )
