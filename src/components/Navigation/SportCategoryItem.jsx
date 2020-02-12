@@ -1,75 +1,84 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // COMPONENTS
 import { SportItems } from './'
 
 // SVG
-import { Artistic,  Athletics, Biking, Fight, Others, Racket, Sailing, Shoot, Swimming, Team } from '../../assets/icons/all-icons'
+import { Artistic, Athletics, Biking, Fight, Others, Racket, Sailing, Shoot, Swimming, Team } from '../../assets/icons/all-icons'
 
 
-const SportCategoryItem = ({ sportCategoryItem, handleSelectedSportCategory/* , setItemSelected,*/, selected, color  }) => {
-  const { categoryColor, categoryName, categoryId } = sportCategoryItem 
+const SportCategoryItem = ({ familySport /* sportCategoryItem */, handleSelectedSportCategory/* , setItemSelected,*/, selected }) => {
+  // PROPS
+  // const { color, name } = familySport
 
+  // STATES
   const [isHovered, setIsHovered] = useState(false)
+  const [name, setName] = useState(false)
+  const [color, setColor] = useState(false)
   // const [isSelected, setIsSelected] = useState(selected)
 
-  // Function to handle hover on menu__item--sport
+  // FUNCTIONS
+  // To handle hover on menu__item--sport
   const handleHover = () => {
     setIsHovered(!isHovered)
   }
 
-  // Déclaration d'une fonction eventListener
-  // const handleSportSelected = () => {
-  //   setIsSelected(!isSelected)
-  //   handleSelectedSportCategory(categoryId)
-  // }
+  // To update data
+  const updateData = () => {
+    setName(familySport.name)
+    setColor(familySport.color)
+  }
 
-    // Function to handle sports icons
-    const handleIconsSports = (categoryName) => {
-      switch (categoryName) {
-        case 'artistic':
-          return <Artistic/>
-        case 'athletics':
-          return <Athletics/>
-        case 'biking':
-          return <Biking/>
-        case 'fight':
-          return <Fight/>
-        case 'others':
-          return <Others/>
-        case 'racket':
-          return <Racket/>
-        case 'sailing':
-          return <Sailing/>
-        case 'shoot':
-          return <Shoot/>
-        case 'swimming':
-          return <Swimming/>
-        case 'team':
-          return <Team/>
-        default:
-          return 'No icons'
-      }
+  useEffect(() => {
+    updateData()
+  })
+
+  // Function to handle sports icons
+  const handleIconsSports = (name) => {
+    switch (name) {
+      case 'artistics':
+        return <Artistic />
+      case 'athletics':
+        return <Athletics />
+      case 'cycling':
+        return <Biking />
+      case 'martial arts':
+        return <Fight />
+      case 'others':
+        return <Others />
+      case 'rackets':
+        return <Racket />
+      case 'sailing':
+        return <Sailing />
+      case 'precisions':
+        return <Shoot />
+      case 'aquatics':
+        return <Swimming />
+      case 'teams':
+        return <Team />
+      default:
+        return 'No icons'
     }
+  }
 
   return (
-    <li 
+    <li
       className="menu__item menu__item--sport"
-      style={ 
-        isHovered 
-        ? {borderLeft: '5px solid ' + categoryColor} 
-        : {borderLeft: '5px solid transparent' }}
+      style={
+        isHovered
+          ? { borderLeft: '5px solid ' + color }
+          : { borderLeft: '5px solid transparent' }}
       // onClick={() => handleSportSelected() }
-      onMouseEnter={() => handleHover() } 
-      onMouseLeave={() => handleHover() }>
+      onMouseEnter={() => handleHover()}
+      onMouseLeave={() => handleHover()}>
       <div
         className='menu__icon'
-        style={{ backgroundColor: categoryColor }}>
-          {handleIconsSports(categoryName)}
+        style={{ backgroundColor: color }}>
+        {handleIconsSports(name)}
       </div>
-      <p className='menu__title menu-subtitle'>{ categoryName }</p>
-      
-      <SportItems sportCategoryItem={ sportCategoryItem }/>
+      <p className='menu__title menu-subtitle'>{name}</p>
+
+      {/* <SportItems familySport={familySport} /> */}
     </li >
   )
 }

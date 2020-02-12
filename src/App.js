@@ -21,48 +21,46 @@ function App() {
   const requestFamilies = axios.get(host + apiFamilies, apiHeader)
   const requestCompetitions = axios.get(host + apiCompetitions, apiHeader)
 
-  axios
-    .all([requestFamilies, requestCompetitions])
-    .then(axios.spread((...res) => {
-      // Responses arrays
-      const families = res[0].data
-      const sports = res[1].data
+  const fetchSportsList = () => {
+    axios
+      .all([requestFamilies, requestCompetitions])
+      .then(axios.spread((...res) => {
+        // Responses arrays
+        const families = res[0].data
+        const sports = res[1].data
 
-      families.forEach((family, i) => {
-        // Set category name key/value
-        sportsList2.sportsCategory[i].name = family.name
+        families.forEach((family, i) => {
+          // Set category name key/value
+          sportsList2.sportsCategory[i].name = family.name
 
-        let sportsInFamily = []
-        sports.forEach((sport) => {
-          // The api response with route instead of id
-          // FIXME: later
-          const familyId = sport.idFamily.replace("/api/families/", "")
-          if (familyId == sportsList2.sportsCategory[i].categoryId) {
-            sportsInFamily.push(sport.name)
-            // We attribute that sport to a family so no need to keep it in sports array
-            sports.slice(sport, 1)
-          }
-        })
-        // Set sports for a family
-        sportsList2.sportsCategory[i].sports = sportsInFamily
-        // setSportsList(sportsInFamily)
-      });
-    }))
+          let sportsInFamily = []
+          sports.forEach((sport) => {
+            // The api response with route instead of id
+            // FIXME: later
+            const familyId = sport.idFamily.replace("/api/families/", "")
+            if (familyId === sportsList2.sportsCategory[i].id) {
+              sportsInFamily.push(sport.name)
+              // We attribute that sport to a family so no need to keep it in sports array
+              sports.slice(sport, 1)
+            }
+          })
+          // Set sports for a family
+          sportsList2.sportsCategory[i].sports = sportsInFamily
+          setSportsList(sportsList2.sportsCategory)
+        });
+      }))
+  }
 
-  // useEffect(() => {
-  //   fetchSportsList()
-  // }, [])
+  useEffect(() => {
+    fetchSportsList()
+  })
 
   return (
     <Router>
       <div className="App">
         <Switch>
           <Route path="/home">
-            {/* {sportsList
-              ? <Home sportsList={sportsList} />
-              : <div className='loading'>LOADING...</div>
-            } */}
-            <Home />
+            <Home sportsList={sportsList} />
           </Route>
           <Route path="/">
             <Landing />
