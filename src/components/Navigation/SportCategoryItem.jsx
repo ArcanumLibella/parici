@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // COMPONENTS
 import { SportItems } from './'
@@ -9,10 +9,12 @@ import { Artistic, Athletics, Biking, Fight, Others, Racket, Sailing, Shoot, Swi
 
 const SportCategoryItem = ({ familySport /* sportCategoryItem */, handleSelectedSportCategory/* , setItemSelected,*/, selected }) => {
   // PROPS
-  const { color, name } = familySport
+  // const { color, name } = familySport
 
   // STATES
   const [isHovered, setIsHovered] = useState(false)
+  const [name, setName] = useState(false)
+  const [color, setColor] = useState(false)
   // const [isSelected, setIsSelected] = useState(selected)
 
   // FUNCTIONS
@@ -21,28 +23,38 @@ const SportCategoryItem = ({ familySport /* sportCategoryItem */, handleSelected
     setIsHovered(!isHovered)
   }
 
+  // To update data
+  const updateData = () => {
+    setName(familySport.name)
+    setColor(familySport.color)
+  }
+
+  useEffect(() => {
+    updateData()
+  })
+
   // Function to handle sports icons
   const handleIconsSports = (name) => {
     switch (name) {
-      case 'artistic':
+      case 'artistics':
         return <Artistic />
       case 'athletics':
         return <Athletics />
       case 'cycling':
         return <Biking />
-      case 'fight':
+      case 'martial arts':
         return <Fight />
       case 'others':
         return <Others />
-      case 'racket':
+      case 'rackets':
         return <Racket />
       case 'sailing':
         return <Sailing />
-      case 'shoot':
+      case 'precisions':
         return <Shoot />
-      case 'swimming':
+      case 'aquatics':
         return <Swimming />
-      case 'team':
+      case 'teams':
         return <Team />
       default:
         return 'No icons'
@@ -50,7 +62,6 @@ const SportCategoryItem = ({ familySport /* sportCategoryItem */, handleSelected
   }
 
   return (
-    // FIXME: name visible only if hovered, why ? -> state
     <li
       className="menu__item menu__item--sport"
       style={

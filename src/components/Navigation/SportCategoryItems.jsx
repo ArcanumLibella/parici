@@ -79,16 +79,6 @@ const SportCategoryItems = (props) => {
   //         sportCategoryItem={sportCategoryItem}
   //         handleSelectedSportCategory={handleSelectedSportCategory}
   //       />
-
-  //       // sportCategoryItem => (
-  //       //   <SportCategoryItem
-  //       //     key={sportCategoryItem.categoryId}
-  //       //     selected={sportCategoryItem.selected}
-  //       //     sportCategoryItem={sportCategoryItem}
-  //       //     setItemSelected={setItemSelected} // <-- FIXME from child to parent
-  //       //   />
-  //     )
-  //   )
   // }
 
   return (

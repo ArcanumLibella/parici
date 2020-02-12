@@ -13,7 +13,7 @@ const Home = (props) => {
 
   return (
     <main className='home'>
-      {/* <Alert /> */}
+      <Alert />
       <Menu sportsList={sportsList} />
       {/* <Map /> */}
       <Dashboard />
