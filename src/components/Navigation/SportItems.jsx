@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 // COMPONENT
 import { SportItem } from './';
@@ -6,16 +6,17 @@ import { SportItem } from './';
 
 
 const SportItems = ({ familySport }) => {
-  // PROPS
-  const { color, name, id } = familySport
+  // STATE
+  const [sports, setSports] = useState()
 
+  // FUNCTIONS
+  // To display each family sport
   const displaySports = () => {
-    console.log(familySport);
     return (
-      familySport && familySport.sports.map(
-        sport => (
+      sports && sports.map(
+        (sport, id) => (
           <SportItem
-            key={sport.id}
+            key={id}
             color={familySport.color}
             sport={sport}
           />
@@ -23,6 +24,15 @@ const SportItems = ({ familySport }) => {
       )
     )
   }
+
+  // To update data
+  const updateData = () => {
+    setSports(familySport.sports)
+  }
+
+  useEffect(() => {
+    updateData()
+  })
 
   return (
     <ul className='menu__dropdown dropdown'>{displaySports()}</ul>

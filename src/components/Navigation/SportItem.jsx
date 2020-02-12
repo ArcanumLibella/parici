@@ -7,7 +7,7 @@ import { Archery, Athletic, BMX, BMXFreestyle, Badminton, Basketball, Basketball
 
 const SportItem = ({ sport, color }) => {
   // PROPS
-  const { id, name } = sport
+  const { id } = sport
 
   // STATE
   const [isClicked, setIsClicked] = useState(false)
@@ -19,30 +19,30 @@ const SportItem = ({ sport, color }) => {
   }
 
   // To handle icons sports and color onClick
-  const handleSportsIcon = (name, color) => {
-    switch (name) {
+  const handleSportsIcon = (sport, color) => {
+    switch (sport) {
       case 'Archery':
         return <Archery className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Athletic':
+      case 'Athletics':
         return <Athletic className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
       case 'BMX':
         return <BMX className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'BMX Freestyle':
+      case 'Freestyle BMX':
         return <BMXFreestyle className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
       case 'Badminton':
         return <Badminton className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Basketball':
+      case 'Basket-ball':
         return <Basketball className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Basketball3':
+      case 'Basket-ball 3X3':
         return <Basketball3 className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Beachvolley':
+      case 'Beach volley':
         return <Beachvolley className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
       case 'Boxing':
@@ -51,13 +51,13 @@ const SportItem = ({ sport, color }) => {
       case 'Breakdance':
         return <Breakdance className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Canoe':
+      case 'Canoe Kayak':
         return <Canoe className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
       case 'Climbing':
         return <Climbing className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Equestrian':
+      case 'Horse riding':
         return <Equestrian className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
       case 'Fencing':
@@ -75,22 +75,22 @@ const SportItem = ({ sport, color }) => {
       case 'Handball':
         return <Handball className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Hockey':
+      case 'Filed hockey':
         return <Hockey className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
       case 'Judo':
         return <Judo className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Mountain Bike':
+      case 'VTT':
         return <MountainBike className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Open Water Swimming':
+      case 'Open water swimming':
         return <OpenWaterSwimming className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Pentathlon':
+      case 'Modern pentathlon':
         return <Pentathlon className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Roadbike':
+      case 'Road cycling':
         return <RoadBike className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
       case 'Rowing':
@@ -102,28 +102,28 @@ const SportItem = ({ sport, color }) => {
       case 'Shooting':
         return <Shooting className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Skateboarding':
+      case 'Skateboard':
         return <Skateboarding className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Indoor Swimming':
+      case 'Swimming':
         return <IndoorSwimming className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Table Tennis':
+      case 'Table tennis':
         return <TableTennis className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Taekwendo':
+      case 'Taekwondo':
         return <Taekwendo className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
       case 'Tennis':
         return <Tennis className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Track':
+      case 'Track cycling':
         return <Track className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
       case 'Triathlon':
         return <Triathlon className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
-      case 'Volleyball':
+      case 'Volley-ball indoor':
         return <Volleyball className={isClicked ? 'is-selected' : ''} style={isClicked ? { fill: color } : { fill: 'white' }} />
 
       case 'Weightlifting':
@@ -146,8 +146,8 @@ const SportItem = ({ sport, color }) => {
       {/* TODO: add an id for each sport and use it for id and htmlFor */}
       {/* <input className='dropdown__checkbox' type="checkbox" id={sportId} name={sportId}></input> */}
       <label className='dropdown__label dropdown-label' htmlFor={id}>
-        {handleSportsIcon(name, color)}
-        {name}
+        {handleSportsIcon(sport, color)}
+        {sport}
       </label>
     </li>
   )

@@ -7,10 +7,7 @@ import { SportItems } from './'
 import { Artistic, Athletics, Biking, Fight, Others, Racket, Sailing, Shoot, Swimming, Team } from '../../assets/icons/all-icons'
 
 
-const SportCategoryItem = ({ familySport /* sportCategoryItem */, handleSelectedSportCategory/* , setItemSelected,*/, selected }) => {
-  // PROPS
-  // const { color, name } = familySport
-
+const SportCategoryItem = ({ familySport /*handleSelectedSportCategory , setItemSelected,*/, selected }) => {
   // STATES
   const [isHovered, setIsHovered] = useState(false)
   const [name, setName] = useState(false)
@@ -78,7 +75,7 @@ const SportCategoryItem = ({ familySport /* sportCategoryItem */, handleSelected
       </div>
       <p className='menu__title menu-subtitle'>{name}</p>
 
-      {/* <SportItems familySport={familySport} /> */}
+      <SportItems familySport={familySport} />
     </li >
   )
 }

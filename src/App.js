@@ -7,7 +7,7 @@ import './assets/css/app.scss';
 import { Landing, Home } from "./routes";
 
 // DATA
-let sportsList2 = require('./data/sportList2');
+let olympicsList = require('./data/olympicsList');
 
 function App() {
   // STATE
@@ -31,29 +31,29 @@ function App() {
 
         families.forEach((family, i) => {
           // Set category name key/value
-          sportsList2.sportsCategory[i].name = family.name
+          olympicsList.sportsCategory[i].name = family.name
 
           let sportsInFamily = []
           sports.forEach((sport) => {
             // The api response with route instead of id
             // FIXME: later
             const familyId = sport.idFamily.replace("/api/families/", "")
-            if (familyId === sportsList2.sportsCategory[i].id) {
+            if (familyId == olympicsList.sportsCategory[i].id) {
               sportsInFamily.push(sport.name)
               // We attribute that sport to a family so no need to keep it in sports array
               sports.slice(sport, 1)
             }
           })
           // Set sports for a family
-          sportsList2.sportsCategory[i].sports = sportsInFamily
-          setSportsList(sportsList2.sportsCategory)
+          olympicsList.sportsCategory[i].sports = sportsInFamily
+          setSportsList(olympicsList.sportsCategory)
         });
       }))
   }
 
   useEffect(() => {
     fetchSportsList()
-  })
+  }, [])
 
   return (
     <Router>
