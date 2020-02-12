@@ -1,19 +1,25 @@
 import React from 'react'
 
+// COMPONENT
 import { SportItem } from './';
 
 
 
-const SportItems = ({ sportCategoryItem }) => {
+const SportItems = ({ familySport }) => {
+  // PROPS
+  const { color, name, id } = familySport
+
   const displaySports = () => {
-    return sportCategoryItem.sports.map
-    (
-      sport => (
-        <SportItem 
-          key={sport.sportId}
-          color={sportCategoryItem.categoryColor}
-          sport={sport}
-        />
+    console.log(familySport);
+    return (
+      familySport && familySport.sports.map(
+        sport => (
+          <SportItem
+            key={sport.id}
+            color={familySport.color}
+            sport={sport}
+          />
+        )
       )
     )
   }

@@ -9,6 +9,9 @@ import { Logo } from '../../assets/icons/all-icons'
 
 
 const Menu = (props) => {
+  // PROPS
+  const { sportsList } = props
+
   return (
     <aside className='menu'>
       <Link to="/">
@@ -19,9 +22,9 @@ const Menu = (props) => {
         <MenuItem label='home' />
       </Link>
 
-      <MenuSelection/>
+      <MenuSelection />
 
-      <SportCategoryItems />
+      <SportCategoryItems sportsList={sportsList} />
 
     </aside>
   )
