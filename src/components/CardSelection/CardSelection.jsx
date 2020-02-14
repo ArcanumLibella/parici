@@ -6,9 +6,15 @@ import SportItems from '../Selection/SportItems'
 // SVG
 import { Shoot, Artistic, Athletics, Biking, Fight, Others, Racket, Sailing, Swimming, Team } from '../../assets/icons/all-icons'
 
-const CardSelection = ({ familySport }) => {
+const CardSelection = ({ familySport, updateSportSelection }) => {
   const [name, setName] = useState(false)
   const [color, setColor] = useState(false)
+
+  // FUNCTIONS
+  // To handle sports selected
+  const handleSelectedSport = (sport) => {
+    updateSportSelection(sport)
+  }
 
   // To update data
   const updateData = () => {
@@ -20,7 +26,7 @@ const CardSelection = ({ familySport }) => {
     updateData()
   })
 
-  // Function to handle sports icons
+  // To handle sports icons
   const handleIconsSports = (name) => {
     switch (name) {
       case 'artistics':
@@ -60,7 +66,7 @@ const CardSelection = ({ familySport }) => {
         <h5 className='sports-family__title family-title'>{name}</h5>
       </div>
 
-      <SportItems familySport={familySport} />
+      <SportItems familySport={familySport} updateSportSelection={handleSelectedSport} />
 
     </div>
   )

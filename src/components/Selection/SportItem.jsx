@@ -1,27 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // SVG
 import { Archery, Athletic, BMX, BMXFreestyle, Badminton, Basketball, Basketball3, Beachvolley, Boxing, Breakdance, Canoe, Climbing, Equestrian, Fencing, Football, Golf, Gymnastic, Handball, Hockey, Judo, MountainBike, OpenWaterSwimming, Pentathlon, RoadBike, Rowing, Rugby, Shooting, Skateboarding, IndoorSwimming, TableTennis, Taekwendo, Tennis, Track, Triathlon, Volleyball, Weightlifting, Wrestling, Waterpolo, Plunge, Synchronized } from '../../assets/icons/all-icons'
 
 
 
-const SportItem = ({ sport, color, handleSelect, isSelected }) => {
+const SportItem = ({ sport, color, updateSportSelection }) => {
   // PROPS
   const { name, id } = sport
 
   // STATE
-  // const [isSelected, setIsSelected] = useState(false)
+  const [isSelected, setIsSelected] = useState(false)
 
   // FUNCTIONS
   // To handle selected sport
   const handleSelectedSport = () => {
-    const sportsSelected = []
-    // setIsSelected(!isSelected)
-    // console.log(isSelected);
+    setIsSelected(!isSelected)
     if ({ isSelected }) {
-      sportsSelected.push(id) // données écrasées
+      updateSportSelection(id)
     }
-    console.log(sportsSelected);
   }
 
   // To handle icons sports and color onClick

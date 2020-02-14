@@ -5,18 +5,15 @@ import SportItem from './SportItem';
 
 
 
-const SportItems = ({ familySport }) => {
+const SportItems = ({ familySport, updateSportSelection }) => {
   // STATE
-  const [isSelected, setIsSelected] = useState(false)
   const [sports, setSports] = useState()
 
   // FUNCTIONS
-  // To handle selected sport
-  // const handleSelect = () => {
-  //   return (
-  //     setIsSelected(!isSelected)
-  //   )
-  // }
+  // To handle sports selected
+  const handleSelectedSport = (sport) => {
+    updateSportSelection(sport)
+  }
 
   // To display each family sport
   const displaySports = () => {
@@ -27,9 +24,7 @@ const SportItems = ({ familySport }) => {
             key={id}
             color={familySport.color}
             sport={sport}
-            // handleSelect={() => handleSelect()}
-            // onClick={() => handleSelectedSport()}
-            isSelected={isSelected}
+            updateSportSelection={handleSelectedSport}
           />
         )
       )
@@ -39,7 +34,6 @@ const SportItems = ({ familySport }) => {
   // To update data
   const updateData = () => {
     setSports(familySport.sports)
-    // setIsSelected()
   }
 
   useEffect(() => {

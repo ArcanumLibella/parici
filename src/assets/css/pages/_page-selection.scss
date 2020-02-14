@@ -5,12 +5,13 @@
 
   &__head {
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 650px;
   }
 
   &__title {
-    text-align: center;
     margin-bottom: 15px;
+    max-width: 500px;
+    text-align: center;
   }
 
   &__subtitle {

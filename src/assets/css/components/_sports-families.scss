@@ -1,10 +1,8 @@
 .sports-families {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 15px;
 
   margin: 40px 60px 0;
-  // height: calc(100% - 86px - 30px - 40px);
 }
