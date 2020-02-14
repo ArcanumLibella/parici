@@ -5,6 +5,7 @@ import Alert from '../components/Commons/Alert/Alert.jsx'
 import Menu from '../components/Navigation/Menu.jsx'
 // import Map from '../components/Map/Map'
 import Dashboard from '../components/Dashboard/Dashboard'
+import Map from '../components/Map/Map'
 
 
 const Home = (props) => {
@@ -15,8 +16,8 @@ const Home = (props) => {
     <main className='home'>
       <Alert />
       <Menu sportsList={sportsList} />
-      {/* <Map /> */}
-      <Dashboard />
+      <Map />
+      {/* <Dashboard /> */}
     </main>
   )
 }
