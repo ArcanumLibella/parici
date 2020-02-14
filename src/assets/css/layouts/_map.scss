@@ -1,0 +1,32 @@
+.svg {
+  height: 80vh;
+  margin: auto auto;
+
+  .cls-1 {
+    fill: none;
+    stroke: white;
+    stroke-width: 14px;
+  }
+  
+  .cls-1,.cls-3{
+    stroke-miterlimit:10;
+  }
+  
+  .cls-2{
+    filter: drop-shadow(15px 15px 20px rgba(68, 82, 197, 01));
+    stroke:white;
+    stroke-linejoin:round;
+    z-index: 1;
+    border-radius: 20px;
+  }
+  
+  .cls-2,.cls-3{
+    stroke-width:6px;
+  }
+  
+  .cls-3{
+    fill:#6ce3ff;
+    stroke:#fff;
+  }
+  
+}
