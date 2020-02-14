@@ -1,0 +1,23 @@
+.page-selection {
+  background-color: $purple6;
+  height: 100vh;
+  padding-top: 3%;
+
+  &__head {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  .content-wrapper {
+    max-width: 1400px;
+  }
+}

@@ -20,6 +20,8 @@
 @import 'components/_alert.scss';
 @import 'components/_icons-jo.scss';
 @import 'components/_menu-selection.scss';
+@import 'components/_sports-families.scss';
+@import 'components/_sports-family.scss';
 
 // LAYOUTS
 @import 'layouts/_header.scss';
@@ -28,8 +30,9 @@
 @import 'layouts/_dashboard.scss';
 
 // PAGES
-@import 'pages/_home.scss';
-@import 'pages/_landing.scss';
+@import 'pages/_page-home.scss';
+@import 'pages/_page-landing.scss';
+@import 'pages/_page-selection.scss';
 
 // SECTIONS
 @import 'sections/_hero.scss';

@@ -4,7 +4,7 @@ import axios from "axios";
 import './assets/css/app.scss';
 
 // ROUTES
-import { Landing, Home } from "./routes";
+import { Landing, Home, Selection } from "./routes";
 
 // DATA
 let olympicsList = require('./data/olympicsList');
@@ -39,7 +39,7 @@ function App() {
             // FIXME: later
             const familyId = sport.idFamily.replace("/api/families/", "")
             if (familyId == olympicsList.sportsCategory[i].id) {
-              sportsInFamily.push(sport.name)
+              sportsInFamily.push({ id: sport.idCompetition, name: sport.name })
               // We attribute that sport to a family so no need to keep it in sports array
               sports.slice(sport, 1)
             }
@@ -59,6 +59,9 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
+          <Route path="/selection">
+            <Selection sportsList={sportsList} />
+          </Route>
           <Route path="/home">
             <Home sportsList={sportsList} />
           </Route>

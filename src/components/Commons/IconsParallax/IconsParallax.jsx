@@ -10,43 +10,43 @@ const IconsParallax = () => {
   // Function to generate random icons
   const generateRandomIcons = () => {
     const iconsArray = [
-      <Archery/>, 
-      <Athletic/>, 
-      <BMX/>, 
-      <BMXFreestyle/>, 
-      <Badminton/>,
-      <Basketball/>,
-      <Basketball3/>,
-      <Beachvolley/>,
-      <Boxing/>,
-      <Breakdance/>,
-      <Canoe/>,
-      <Climbing/>,
-      <Equestrian/>,
-      <Fencing/>,
-      <Football/>,
-      <Golf/>,
-      <Gymnastic/>,
-      <Handball/>,
-      <Hockey/>,
-      <Judo/>,
-      <MountainBike/>,
-      <OpenWaterSwimming/>,
-      <Pentathlon/>,
-      <RoadBike/>,
-      <Rowing/>,
-      <Rugby/>,
-      <Shooting/>,
-      <Skateboarding/>,
-      <IndoorSwimming/>,
-      <TableTennis/>,
-      <Taekwendo/>,
-      <Tennis/>,
-      <Track/>,
-      <Triathlon/>,
-      <Volleyball/>,
-      <Weightlifting/>,
-      <Wrestling/>
+      <Archery />,
+      <Athletic />,
+      <BMX />,
+      <BMXFreestyle />,
+      <Badminton />,
+      <Basketball />,
+      <Basketball3 />,
+      <Beachvolley />,
+      <Boxing />,
+      <Breakdance />,
+      <Canoe />,
+      <Climbing />,
+      <Equestrian />,
+      <Fencing />,
+      <Football />,
+      <Golf />,
+      <Gymnastic />,
+      <Handball />,
+      <Hockey />,
+      <Judo />,
+      <MountainBike />,
+      <OpenWaterSwimming />,
+      <Pentathlon />,
+      <RoadBike />,
+      <Rowing />,
+      <Rugby />,
+      <Shooting />,
+      <Skateboarding />,
+      <IndoorSwimming />,
+      <TableTennis />,
+      <Taekwendo />,
+      <Tennis />,
+      <Track />,
+      <Triathlon />,
+      <Volleyball />,
+      <Weightlifting />,
+      <Wrestling />
     ]
     return (
       iconsArray[Math.floor(Math.random() * iconsArray.length)]
@@ -60,17 +60,17 @@ const IconsParallax = () => {
       speedArray[Math.floor(Math.random() * speedArray.length)]
     )
   }
-  
+
   // Function to generate icons with parallax
   const handleIconsParallax = () => {
-    const n = 50 // Number of icons in background (max 100)
+    const n = 20 // Number of icons in background (max 100)
     return ([...Array(n)].map
       (
         (icons, i) => (
-          <Parallax 
+          <Parallax
             key={i}
             speed={generateRandomSpeed()}
-            
+
           >
             {generateRandomIcons()}
           </Parallax>

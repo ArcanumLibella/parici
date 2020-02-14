@@ -6,7 +6,7 @@
         .icon {
           position: absolute;
           top: random(370) + vh;
-          left: random(25) + vw;
+          left: random(21) + vw;
           width: random(60) + px;
           min-width: 30px;
           height: auto;
@@ -22,7 +22,7 @@
         &:nth-child(#{$i}) {
   
           .icon {
-            right: random(25) + vw;
+            right: random(21) + vw;
             left: unset;
           }
         }

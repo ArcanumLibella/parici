@@ -14,6 +14,11 @@
   font-weight: bold;
 }
 
+.h4 {
+  font-size: rem(30px);
+  font-weight: bold;
+}
+
 .paragraph {
   font-size: rem(20px);
   font-weight: normal;
@@ -23,6 +28,22 @@
 .cta-text {
   font-size: rem(16px);
   font-weight: normal;
+}
+
+// SELECTION
+.family-title {
+  font-size: rem(18px);
+  font-weight: bold;
+}
+
+.family-label {
+  font-size: rem(12px);
+  font-weight: 600;
+}
+
+.sport-label {
+  font-size: rem(13px);
+  font-weight: 400;
 }
 
 // MENU
