@@ -45,8 +45,8 @@ $tablet-down: 767px;
 $desktop-up: 1200px;
 $desktop-down: 1199px;
 
-$big-desktop-up: 1440px;
-$big-desktop-down: 1339px;
+$big-desktop-up: 1600px;
+$big-desktop-down: 1599px;
 
 @mixin tablet-up {
   @media (min-width: $tablet-up) {
