@@ -1,8 +1,10 @@
-# Parici - Front
+# Olympics Optimized - Front
 The webapp to organize your trip during 2024 Olympic games in Paris.
 
+**You can take a look over here : https://olympics-optimized.netlify.com/ (WORK IN PROGRESS)**
 
-**You can take a look over here (desktop only) : https://parici.netlify.com/ (WORK IN PROGRESS)**
+### Repository for back-end :
+**https://github.com/InSecker/jo-server**
 
 ### Install project :
 `git clone` project
