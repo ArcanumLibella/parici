@@ -9,17 +9,25 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
+
+    @include tablet-up {
+      justify-content: space-between;
+    }
   }
 
   &__navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: none;
+
+    @include tablet-up {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
 
     .cta {
-      margin: 0 25px;
+      margin: 0 15px;
     }
   }
 

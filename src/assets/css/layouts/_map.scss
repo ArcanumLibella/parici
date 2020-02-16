@@ -1,10 +1,10 @@
-.svg {
+.map {
   height: 80vh;
-  margin: auto auto;
+  margin: auto 20px;
 
   .cls-1 {
     fill: none;
-    stroke: white;
+    stroke: $white;
     stroke-width: 14px;
   }
   
@@ -14,10 +14,10 @@
   
   .cls-2{
     filter: drop-shadow(15px 15px 20px rgba(68, 82, 197, 01));
-    stroke:white;
+    stroke:$white;
     stroke-linejoin:round;
-    z-index: 1;
     border-radius: 20px;
+    z-index: 1;
   }
   
   .cls-2,.cls-3{
@@ -26,6 +26,6 @@
   
   .cls-3{
     fill:#6ce3ff;
-    stroke:#fff;
+    stroke: $white;
   }
 }

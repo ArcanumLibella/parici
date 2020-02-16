@@ -1,11 +1,11 @@
 .alert {
-  @include desktop-up {
+  @include tablet-up {
     display: none;
   }
 }
 
 .alert {
-  @include desktop-down {
+  @include tablet-down {
     position: absolute;
     display: flex;
     align-items: center;

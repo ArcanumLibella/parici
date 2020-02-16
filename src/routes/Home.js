@@ -17,7 +17,7 @@ const Home = (props) => {
       <Alert />
       <Menu sportsList={sportsList} />
       <Map />
-      {/* <Dashboard /> */}
+      <Dashboard />
     </main>
   )
 }

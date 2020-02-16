@@ -13,8 +13,8 @@ const Header = () => {
     <div className='header__wrapper content-wrapper'>
       <Logo />
       <nav className='header__navigation'>
-        <Button textCta='Credits' linkCta='/credits'/>
-        <Button textCta='Go to map' linkCta='/home'/>
+        <Button textCta='Book my tickets' linkCta='/booking' />
+        <Button textCta='Select my olympics' linkCta='/selection' />
       </nav>
     </div>
   )

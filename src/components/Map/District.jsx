@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 
 const District = (props) => {
 
 
-  const handleClick = function() {
+  const handleClick = function () {
     console.log(props.number)
   }
 
   return (
-    <polygon onClick={() => {handleClick()}} id={props.number} data-name="20" className="cls-2" points={props.points} style={{fill: props.color}}/>
+    <polygon onClick={() => { handleClick() }} id={props.number} data-name="20" className="cls-2" points={props.points} style={{ fill: props.color }} />
   )
 }
 

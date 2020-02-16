@@ -1,25 +1,48 @@
 .cta {
   display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
   border-radius: 20px;
+  transition: all .4s ease-in-out;
   cursor: pointer;
-  transition: background 0.2s;
 
+  
   &--primary {
-    background-color: $purple5;
+    background: $gradient;
+    background-size: 120% 100%;
 
+    
     &:hover {
-      background-color: $purple1;
-
-      .cta__link {
-        color: $white;
+      background-position: right center;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+  
+      .icon {
+        transform: translateX(5px);
       }
     }
+
+    .cta__link {
+      color: $white;
+    }
   }
+
 
   &__link {
     display: block;
     padding: 8px 20px;
-    -webkit-appearance: none;
+    text-align: center;
     background: transparent;
+    -webkit-appearance: none;
+  }
+
+  .icon {
+    height: 12px;
+    width: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+    fill: $white;
+    transition: transform 1s;
   }
 }

@@ -1,18 +1,62 @@
 .hero {
-  padding: 200px 0;
+  padding: 150px 0;
   width: 100%;
 
-  &__title {
-    margin: 0 auto;
-    max-width: 750px;
-    text-align: center;
-    z-index: 99;
+  @include tablet-up {
+    padding: 180px 0;
   }
 
-  &__image {
-    padding-top: 100px;
+  @include big-desktop-up {
+    padding: 300px 0;
+  }
+
+  &__insert {
+    position: relative;
+    max-width: 440px;
     margin: 0 auto;
-    width: 100%;
-    max-width: 1000px;
+    padding: 10px;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0px 6.40746px 12.8149px rgba(68, 82, 197, 0.2);
+    z-index: 15;
+
+    @include tablet-up {
+      padding: 15px;
+    }
+  }
+
+  &__title {
+    max-width: 170px;
+    margin: 0 auto 15px;
+    z-index: 99;
+
+    @include tablet-up {
+      max-width: 270px;
+    }
+  }
+
+  &__subtitle {
+    letter-spacing: -1.6px;
+    text-align: center;
+  }
+
+  .icon-arrow {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    height: 160px;
+    width: 230px;
+    z-index: 10;
+  
+    @include tablet-up {
+      top: 90%;
+      left: 30%;
+      height: 260px;
+      width: 460px;
+    }
+  }
+
+  .content-wrapper {
+    position: relative;
   }
 }
