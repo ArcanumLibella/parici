@@ -1,7 +1,6 @@
 .page-selection {
   background-color: $purple6;
   height: 100vh;
-  padding-top: 3%;
 
   &__head {
     margin: 0 auto;
@@ -10,15 +9,20 @@
 
   &__title {
     margin-bottom: 15px;
-    max-width: 500px;
     text-align: center;
   }
 
   &__subtitle {
+    max-width: 500px;
+    margin: 0 auto;
     text-align: center;
   }
 
   .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
     max-width: 1400px;
   }
 }

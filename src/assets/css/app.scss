@@ -36,20 +36,24 @@
 
 // SECTIONS
 @import 'sections/_hero.scss';
-@import 'sections/_concept.scss';
-@import 'sections/_selection.scss';
+@import 'sections/_how-it-works.scss';
+@import 'sections/_switch.scss';
 
 
 body {
   overflow-x: hidden;
   color: $purple1;
   font-family: $font;
-  background-color: $white;
+  background-color: $background;
 }
 
 .content-wrapper {
-  // padding: 0 20px;
+  padding: 0 20px;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+
+  @include desktop-up {
+    padding: 0;
+  }
 }

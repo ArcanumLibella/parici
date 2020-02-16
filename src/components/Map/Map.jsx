@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 import District from './District'
 import axios from 'axios';
@@ -7,7 +7,7 @@ const Map = (props) => {
 
   const [pierre, setColors] = useState([])
 
-  const competitions = [28,32]
+  const competitions = [40, 32]
 
   const host = 'http://localhost:8000'
   const apiHeader = { headers: { accept: '*/json' } }
@@ -29,8 +29,8 @@ const Map = (props) => {
     })
   }
 
-  const rgbBuilder = function(r, g , b) {
-    return "rgb(" + Math.round(r) + "," + Math.round(g) + "," + Math.round(b) +")" 
+  const rgbBuilder = function (r, g, b) {
+    return "rgb(" + Math.round(r) + "," + Math.round(g) + "," + Math.round(b) + ")"
   }
 
   const green = {
@@ -43,31 +43,31 @@ const Map = (props) => {
     g: 82,
     b: 197
   }
-  const computeColors = function() {
-    let times = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  const computeColors = function () {
+    let times = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     travels.forEach(travel => {
       travel.data.forEach(row => {
-        times[row.area-1] += row.time
+        times[row.area - 1] += row.time
       })
     })
     for (let i = 0; i < times.length; i++) {
-      times[i] = times[i]/travels.length
+      times[i] = times[i] / travels.length
     }
     let min = Math.min.apply(null, times)
     let max = Math.max.apply(null, times)
     let diff = max - min
-    console.log("hello")
+    // console.log("hello")
 
     for (let i = 0; i < times.length; i++) {
 
-      let factorRB = (times[i]-min)/diff;
-      let factorG = ((min-times[i])/diff)+1;
+      let factorRB = (times[i] - min) / diff;
+      let factorG = ((min - times[i]) / diff) + 1;
 
       let diffRed = blue.r - green.r
       let diffGreen = green.g - blue.g
       let diffBlue = blue.b - green.b
 
-      colors[i] = rgbBuilder((diffRed*factorRB)+green.r, (diffGreen*factorG)+blue.g, (diffBlue*factorRB)+green.b)
+      colors[i] = rgbBuilder((diffRed * factorRB) + green.r, (diffGreen * factorG) + blue.g, (diffBlue * factorRB) + green.b)
     }
     setColors(colors)
   }
@@ -100,15 +100,15 @@ const Map = (props) => {
   ]
 
   const displayDistricts = () => {
-    return (districts.map( (district, index) => {
-      return <District number={index+1} points={districts[index]} color={pierre[index]}/>
+    return (districts.map((district, index) => {
+      return <District key={index} number={index + 1} points={districts[index]} color={pierre[index]} />
     }))
   }
 
   return (
-    <svg className="svg" viewBox="0 0 1215.4 966.98">
+    <svg className="map" viewBox="0 0 1215.4 966.98">
       {displayDistricts()}
-      <polyline className="cls-1" points="1026.96 856.15 834.75 628.04 788.3 584.96 688.37 535.25 602 477.5 517.18 437.29 494.51 426.42 373.92 428.93 332.41 440.76 288.25 492.68 172.41 627.67 82.33 762.99"/>
+      <polyline className="cls-1" points="1026.96 856.15 834.75 628.04 788.3 584.96 688.37 535.25 602 477.5 517.18 437.29 494.51 426.42 373.92 428.93 332.41 440.76 288.25 492.68 172.41 627.67 82.33 762.99" />
     </svg>
   )
 }

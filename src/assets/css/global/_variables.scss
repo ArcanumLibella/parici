@@ -5,6 +5,10 @@
 // PRIMARY :
 $black: #222222;
 $white: #FFFFFF;
+$background: #F8F8F8;
+$purple: #4452C5;
+$aquamarine: #64E0B9;
+
 $purple1: #4452C5;
 $purple2: #6975D1;
 $purple3: #8F97DC;
@@ -12,21 +16,20 @@ $purple4: #B4BAE8;
 $purple5: #DADCF3;
 $purple6: #F0F3F8;
 
+
 // SECONDARY
-$brown: #D29B85;
-$turquoise: #64E0B9;
-$blue: #95E1EC;
-$darkBlue: #219AAA;
-$yellow: #F4C61E;
-$lightPink: #F3A2A2;
-$marine: #2C3950;
-$pink: #E972DD;
-$orange: #FD8F51;
-$green: #06FB85;
+$blueDark: #0081E3;
+$blueMid: #00A6E2;
+$blueLight: #00C6CE;
+$greenMint: #64E0B9;
+
+$greenLight: #27FB6B;
 
 
 // GRADIENTS :
-$gradient: linear-gradient(90deg, #6B75CA 0%, rgba(240, 243, 248, 0) 100%);
+$gradient: linear-gradient(270deg, #64E0B9 0%, #4451C4 100%);
+$gradient2: linear-gradient(90deg, #4451C4 0%, #27FB6B 100%);
+$gradientLight: linear-gradient(270deg, rgba(100, 224, 185, 0.15) 0%, rgba(68, 81, 196, 0.15) 100%);
 
 /**
 * FONTS
@@ -41,6 +44,9 @@ $tablet-down: 767px;
 
 $desktop-up: 1200px;
 $desktop-down: 1199px;
+
+$big-desktop-up: 1440px;
+$big-desktop-down: 1339px;
 
 @mixin tablet-up {
   @media (min-width: $tablet-up) {
@@ -60,6 +66,17 @@ $desktop-down: 1199px;
 }
 @mixin desktop-down {
   @media (max-width: $desktop-down) {
+    @content;
+  }
+}
+
+@mixin big-desktop-up {
+  @media (min-width: $big-desktop-up) {
+    @content;
+  }
+}
+@mixin big-desktop-down {
+  @media (max-width: $big-desktop-down) {
     @content;
   }
 }
