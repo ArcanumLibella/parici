@@ -57,6 +57,7 @@ const SportCategoryItems = (props) => {
   // FUNCTIONS
   // To get each category sports of sportsList
   const displaySportCategories = () => {
+    // console.log(sportsList)
     return (
       sportsList && sportsList.map(
         (familySport, id) => (

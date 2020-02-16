@@ -13,7 +13,7 @@ const Home = (props) => {
   const { sportsList } = props
 
   return (
-    <main className='home'>
+    <main className='page-home'>
       <Alert />
       <Menu sportsList={sportsList} />
       <Map />
