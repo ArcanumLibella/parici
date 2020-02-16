@@ -153,7 +153,7 @@ const SportItem = ({ sport, color, updateSportSelection }) => {
     <li
       className={isSelected ? 'sports-family__item is-selected' : 'sports-family__item'}
       key={id}
-      onClick={() => handleSelectedSport()}
+      onClick={sport => handleSelectedSport(sport)}
     >
       {/* TODO: add an id for each sport and use it for id and htmlFor */}
       {/* <input className='dropdown__checkbox' type="checkbox" id={sportId} name={sportId}></input> */}

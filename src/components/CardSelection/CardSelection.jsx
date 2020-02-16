@@ -66,7 +66,7 @@ const CardSelection = ({ familySport, updateSportSelection }) => {
         <h5 className='sports-family__title family-title'>{name}</h5>
       </div>
 
-      <SportItems familySport={familySport} updateSportSelection={handleSelectedSport} />
+      <SportItems familySport={familySport} updateSportSelection={sport => handleSelectedSport(sport)} />
 
     </div>
   )

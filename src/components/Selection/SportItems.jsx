@@ -24,7 +24,7 @@ const SportItems = ({ familySport, updateSportSelection }) => {
             key={id}
             color={familySport.color}
             sport={sport}
-            updateSportSelection={handleSelectedSport}
+            updateSportSelection={sport => handleSelectedSport(sport)}
           />
         )
       )

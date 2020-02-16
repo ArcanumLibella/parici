@@ -15,7 +15,6 @@ const Selection = (props) => {
   // To handle sports selected
   const handleSelectedSport = (sport) => {
     setSportsSelection([...sportsSelection, sport])
-    console.log(sportsSelection)
   }
 
   const displayFamilies = () => {
@@ -25,7 +24,7 @@ const Selection = (props) => {
           <CardSelection
             key={i}
             familySport={familySport}
-            updateSportSelection={handleSelectedSport}
+            updateSportSelection={sport => handleSelectedSport(sport)}
           />
         )
       )
