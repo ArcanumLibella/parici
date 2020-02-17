@@ -1,7 +1,6 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
-import { colors } from '../../data/colors'
-
+// import { linearGradientDef } from '@nivo/core'
 
 
 const RestaurantChart = ( data ) => {
@@ -13,11 +12,22 @@ const RestaurantChart = ( data ) => {
       margin={{ top: 0, right: 0, bottom: 0, left: 45 }}
       padding={0.3}
       layout="horizontal"
-      colors={ colors }
+      defs={[
+        {
+            id: 'gradient',
+            type: 'linearGradient',
+            colors: [
+                { offset: 0, color: '#4452C5' },
+                { offset: 100, color: '#64E0B9' },
+            ],
+        }
+      ]}
+      fill={[
+        { match: '*', id: 'gradient' },
+      ]}
       borderRadius={5}
       borderWidth={0}
       enableGridY={false}
-      labelTextColor={colors[5]}
       axisLeft={{
           tickSize: 0,
           tickPadding: 5,

@@ -6,7 +6,7 @@ import { CardCount, CardRanking } from '../CardFront'
 import { RestaurantChart } from '../CardChart'
 
 // SVG
-import { Food, Hostel, Monument, Tree, Stadium } from '../../assets/icons/all-icons'
+import { Restaurant, Hostel, Nature, Culture, ReturnArrow } from '../../assets/icons/all-icons'
 
 // DATA
 import { restaurantPrices } from '../../data/restaurantPricesList'
@@ -20,13 +20,13 @@ const Card = (props) => {
   const handleCardIcon = (cardType) => {
     switch (cardType) {
       case 'culture':
-        return <Monument />
+        return <Culture />
       case 'restaurant':
-        return <Food />
+        return <Restaurant />
       case 'hostel':
         return <Hostel />
       case 'nature':
-        return <Tree />
+        return <Nature />
       default:
         return 'No icons'
     }
@@ -49,18 +49,6 @@ const Card = (props) => {
   }
 
   // Function to add icon-stadium to nature card 
-  const handleCardNature = (cardType) => {
-    if (cardType === 'nature') {
-      return (
-        <div className='card-front__stadium'>
-          <span>42x</span>
-          <Stadium />
-        </div>
-      )
-    }
-  }
-
-  // Function to add icon-stadium to nature card 
   const handleCardRestaurant = (cardType) => {
     if (cardType === 'restaurant') {
       return (
@@ -73,10 +61,13 @@ const Card = (props) => {
 
   return (
     <div className={'card card--' + cardType}>
+      
       {/* CARD-FRONT */}
       <div className='card__front card-front'>
         <h3 className='card-front__title card-title'>{cardType}</h3>
-
+        <span className='card-front__dash card-title'> - </span>
+        <CardRanking rankingType={rankingType} />
+        
         <div className='card-front__wrapper'>
           <CardCount dataType={dataType} />
 
@@ -84,12 +75,10 @@ const Card = (props) => {
             {handleCardIcon(cardType)}
           </div>
 
-          {handleCardNature(cardType)}
-
-          <CardRanking rankingType={rankingType} />
-
           {handleCardRestaurant(cardType)}
         </div>
+
+        <ReturnArrow/>
       </div>
 
       {/* CARD-BACK */}

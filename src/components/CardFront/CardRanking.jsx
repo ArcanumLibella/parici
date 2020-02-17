@@ -8,7 +8,7 @@ const CardRanking = (props) => {
   return(
     <div className='card-front__ranking'>
       <h4 className='card-ranking'>
-        <span>10<sup>th</sup></span>
+        10th
         {' ' + rankingType }
       </h4>
     </div>

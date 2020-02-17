@@ -6,7 +6,7 @@ import Button from '../components/Commons/Button/Button'
 import IconsParallax from '../components/Commons/IconsParallax/IconsParallax'
 
 // SVG
-import { Arrow, LittleArrow } from '../assets/icons/all-icons'
+import { Arrow } from '../assets/icons/all-icons'
 
 // IMAGES
 import Choose from '../assets/images/choose.png'

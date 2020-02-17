@@ -3,7 +3,9 @@
   height: 100%;
 
   &__title {
-
+    padding: 8px 10px;
+    background: $gradient;
+    border-radius: 5px 5px 0 0;
   }
 
   &__wrapper {
@@ -11,6 +13,6 @@
     align-items: flex-end;
     justify-content: space-around;
     width: 100%;
-    height: calc(100% - 8px);
+    height: calc(100% - 42px);
   }
 }

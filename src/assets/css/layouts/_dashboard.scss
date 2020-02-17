@@ -32,4 +32,22 @@
   &.is-closed {
     right: -550px;
   }
+
+  .cross {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 10;
+    
+    .icon {
+      width: 15px;
+      height: 15px;
+      transition: fill 0.3s;
+      fill: $white;
+  
+      &:hover {
+        fill: $purple1;
+      }
+    }
+  }
 }

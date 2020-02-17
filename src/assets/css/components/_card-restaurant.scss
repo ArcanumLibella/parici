@@ -4,7 +4,6 @@
   justify-content: space-between;
   width: 155px;
   height: 90%;
-  background-color: purple;
   border-radius: 5px;
 
   &__header {
@@ -19,7 +18,7 @@
   }
 
   &__title {
-    color: $purple1;
+    color: $black;
     font-size: rem(12px);
     font-weight: bold;
   }
@@ -32,7 +31,7 @@
 
   &__footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     height: 30px;
     background-color: $white;
@@ -52,6 +51,7 @@
     justify-content: center;
     width: 40px;
     color: $purple1;
+    font-size: rem(10px);
   }
 
   &__reviews {

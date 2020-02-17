@@ -29,21 +29,30 @@ const BackCulture = ( props ) => {
             {/* {handleIconCulture()} */}
             <Museum/>
           </div>
-          <p className='card-back__data card-data'>3 museum</p>
+          <p className='card-back__data card-data'>
+            <span>2</span>
+            museum
+          </p>
         </div>
         <div className='card-back__icon'>
           <div className='card-back__hexagon'>
             {/* {handleIconCulture()} */}
             <Theater/>
           </div>
-          <p className='card-back__data card-data'>2 theaters</p>
+          <p className='card-back__data card-data'>
+            <span>3</span>
+            theaters
+          </p>
         </div>
         <div className='card-back__icon'>
           <div className='card-back__hexagon'>
             {/* {handleIconCulture()} */}
             <Monument/>
           </div>
-          <p className='card-back__data card-data'>8 monuments</p>
+          <p className='card-back__data card-data'>
+            <span>8</span>
+            monuments
+          </p>
         </div>
 
       </div>

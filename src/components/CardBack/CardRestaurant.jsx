@@ -17,7 +17,7 @@ const CardRestaurant = () => {
 
       <div className='card-restaurant__footer'>
         <span className='card-restaurant__price restaurant-price'>€€€</span>
-        <span className='card-restaurant__rating'>****</span>
+        <span className='card-restaurant__rating'>★★★★★</span>
         <span className='card-restaurant__reviews restaurant-reviews'>(432)</span>
       </div>
     </div>

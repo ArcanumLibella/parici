@@ -34,9 +34,14 @@ $fourth: 55px;
   .icon {
     position: relative;
     right: -18px;
+    bottom: 2px;
     fill: $white;
 
-    &-food {
+    &-restaurant {
+      bottom: 0;
+    }
+
+    &-nature {
       bottom: -2px;
     }
   }

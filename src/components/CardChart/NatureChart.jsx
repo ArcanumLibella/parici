@@ -20,11 +20,10 @@ const NatureChart = ( data ) => {
         padAngle={1}
         cornerRadius={5}
         sortByValue={true}
-        colors='#FFFFFF'
+        colors={colors}
         borderWidth={0}
         radialLabelsSkipAngle={10}
         radialLabelsTextXOffset={3}
-        radialLabelsTextColor="#FFFFFF"
         radialLabelsLinkOffset={0}
         radialLabelsLinkDiagonalLength={12}
         radialLabelsLinkHorizontalLength={15}
