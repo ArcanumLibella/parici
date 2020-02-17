@@ -25,7 +25,7 @@ const Dashboard = (props) => {
           : 'dashboard is-closed'
       }
     >
-      <h2 className='dashboard__title dashboard-title'>8th district</h2>
+      {/* <h2 className='dashboard__title dashboard-title'>Paris 8th district ranking</h2> */}
       <div
         className='cross'
         onClick={() => handleDashboardDisplay()}
@@ -35,10 +35,10 @@ const Dashboard = (props) => {
       <div className='dashboard__wrapper cards'>
 
         <Podium cardType='podium' />
-        <Card cardType='nature' dataType=' of green space' rankingType='largest green spaces' />
-        <Card cardType='hostel' dataType='hostels' rankingType='most hotels' />
-        <Card cardType='culture' dataType='points of interest' rankingType='most points of interest' />
-        <Card cardType='restaurant' dataType='restaurants' rankingType='most restaurants' />
+        <Card cardType='nature' dataType=' of Green Space' rankingType='surface' />
+        <Card cardType='hostel' dataType='hostels' rankingType='count' />
+        <Card cardType='culture' dataType='points of interest' rankingType='count' />
+        <Card cardType='restaurant' dataType='restaurants' rankingType='count' />
 
       </div>
       <div className='tuto'>

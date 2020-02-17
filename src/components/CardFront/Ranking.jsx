@@ -1,7 +1,7 @@
 import React from 'react'
 
 // SVG
-import { Tree, Monument, Food, Hostel } from '../../assets/icons/all-icons'
+import { Nature, Culture, Restaurant, Hostel } from '../../assets/icons/all-icons'
 
 
 
@@ -11,13 +11,13 @@ const Ranking = (props) => {
   const handleIconRanking = (rankingType) => {
     switch (rankingType) {
       case 'culture':
-        return <Monument />
+        return <Culture />
       case 'restaurant':
-        return <Food />
+        return <Restaurant />
       case 'hostel':
         return <Hostel />
       case 'nature':
-        return <Tree />
+        return <Nature />
       default:
         return 'No icons'
     }

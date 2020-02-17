@@ -1,0 +1,37 @@
+@keyframes turn-arrow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-hexagon {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  70% {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+// @keyframes anim-gradient {
+//   from {
+    
+//   }
+
+//   to {
+
+//   }
+// }

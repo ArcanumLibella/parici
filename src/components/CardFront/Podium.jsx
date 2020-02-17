@@ -11,7 +11,7 @@ const Podium = (props) => {
   return (
     <div className={'card card--' + cardType}>
       <div className='podium'>
-        <h3 className='podium__title card-title'>Winner's Podium</h3>
+        <h3 className='podium__title podium-title'>Paris 8th district ranking</h3>
 
         <div className='podium__wrapper'>
           <Ranking rankingType='nature' dataRanking='1' />

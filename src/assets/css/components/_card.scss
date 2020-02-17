@@ -7,9 +7,12 @@
   padding: 8px 10px;
   background-color: $white;
   border-radius: 15px;
+  cursor: pointer;
   
   &--podium {
     grid-area: 1 / 1 / 2 / 3;
+    padding: 0;
+    cursor: default;
     // min-height: 120px;
   }
 

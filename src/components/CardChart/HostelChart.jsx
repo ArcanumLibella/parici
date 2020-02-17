@@ -12,9 +12,9 @@ const HostelChart = (data) => {
       data={data}
       keys={['total']}
       indexBy="stars"
-      margin={{ top: 20, right: 30, bottom: 20, left: 30 }}
+      margin={{ top: 10, right: 30, bottom: 30, left: 30 }}
       padding={0.1}
-      colors={colors[5]}
+      colors='#FFFFFF'
       borderRadius={5}
       borderWidth={0}
       axisLeft={null}

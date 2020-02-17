@@ -114,36 +114,42 @@
 
 .card-title {
   color: $black;
-  font-size: rem(16px);
-  font-weight: bold;
+  font-size: rem(22px);
+  font-weight: 600;
   text-transform: capitalize;
 }
 
-.card-count,
-.card-data {
-  font-size: rem(14px);
+.card-count {
+  color: $black;
+  font-size: rem(16px);
   font-weight: 600;
   text-transform: lowercase;
 
   span {
-    font-size: rem(20px);
+    color: $aquamarine;
+    font-size: rem(30px);
     font-weight: bold;
   }
 }
 
-.card-ranking {
-  font-size: rem(14px);
+.card-data {
+  font-size: rem(16px);
   font-weight: bold;
-  
-  span {
-    font-size: rem(50px);
-    font-weight: 900;
-  }
 
-  sup {
-    font-size: rem(14px);
-    vertical-align: super;
+  span {
+    color: $aquamarine;
   }
+}
+
+.card-ranking {
+  font-size: rem(18px);
+  font-weight: 900;
+}
+
+.podium-title {
+  color: $white;
+  font-size: rem(18px);
+  font-weight: 900;
 }
 
 .ranking-title {
