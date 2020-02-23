@@ -76,14 +76,13 @@
 
 // MENU
 .menu-title {
-  color: $purple1;
-  font-size: rem(12px);
+  font-size: rem(18px);
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .menu-subtitle {
-  color: $purple1;
+  color: $purple;
   font-size: rem(11px);
   font-weight: bold;
   text-transform: uppercase;
@@ -100,9 +99,16 @@
   font-weight: 600;
 }
 
+.dropdown-title {
+  font-size: rem(18px);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
 .dropdown-label {
   font-size: rem(12px);
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 // DASHBOARD
@@ -153,7 +159,7 @@
 }
 
 .ranking-title {
-  color: $purple1;
+  color: $purple;
   font-size: rem(12px);
   font-weight: 600;
   text-transform: uppercase;
@@ -172,13 +178,13 @@
 }
 
 .restaurant-price {
-  color: $purple1;
+  color: $purple;
   font-size: rem(12px);
   font-weight: bold;
 }
 
 .restaurant-reviews {
-  color: $purple1;
+  color: $purple;
   font-size: rem(10px);
   font-weight: normal;
 }

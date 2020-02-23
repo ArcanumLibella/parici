@@ -19,6 +19,7 @@ const SportItems = ({ familySport }) => {
             key={id}
             color={familySport.color}
             sport={sport}
+            familySport={familySport}
           />
         )
       )
@@ -36,8 +37,14 @@ const SportItems = ({ familySport }) => {
 
   return (
     <ul className='menu__dropdown dropdown'>
+      <p
+        className='dropdown__title dropdown-title'
+        style={{ color: familySport.color }}
+      >
+        {familySport.name}
+      </p>
       {displaySports()}
-    </ul>
+    </ul >
   )
 }
 

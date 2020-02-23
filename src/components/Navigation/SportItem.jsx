@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // SVG
-import { Archery, Athletic, BMX, BMXFreestyle, Badminton, Basketball, Basketball3, Beachvolley, Boxing, Breakdance, Canoe, Climbing, Equestrian, Fencing, Football, Golf, Gymnastic, Handball, Hockey, Judo, MountainBike, OpenWaterSwimming, Pentathlon, RoadBike, Rowing, Rugby, Shooting, Skateboarding, IndoorSwimming, TableTennis, Taekwendo, Tennis, Track, Triathlon, Volleyball, Weightlifting, Wrestling } from '../../assets/icons/all-icons'
+import { Archery, Athletic, BMX, BMXFreestyle, Badminton, Basketball, Basketball3, Beachvolley, Boxing, Breakdance, Canoe, Climbing, Equestrian, Fencing, Football, Golf, Gymnastic, Handball, Hockey, Judo, MountainBike, OpenWaterSwimming, Pentathlon, RoadBike, Rowing, Rugby, Shooting, Skateboarding, IndoorSwimming, TableTennis, Taekwendo, Tennis, Track, Triathlon, Volleyball, Weightlifting, Wrestling, Waterpolo, Plunge, Synchronized } from '../../assets/icons/all-icons'
 
 
 
@@ -19,118 +19,127 @@ const SportItem = ({ sport, color }) => {
   }
 
   // To handle icons sports and color onClick
-  const handleSportsIcon = (sport, color) => {
-    switch (sport.name) {
-      case 'Archery':
-        return <Archery className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+  const handleSportsIcon = (sport) => {
+    switch (name) {
+      case 'archery':
+        return <Archery className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Athletics':
-        return <Athletic className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'athletics':
+        return <Athletic className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'BMX':
-        return <BMX className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'BMX racing':
+        return <BMX className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Freestyle BMX':
-        return <BMXFreestyle className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'freestyle BMX':
+        return <BMXFreestyle className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Badminton':
-        return <Badminton className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'badminton':
+        return <Badminton className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Basket-ball':
-        return <Basketball className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'basketball':
+        return <Basketball className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Basket-ball 3X3':
-        return <Basketball3 className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'basketball 3X3':
+        return <Basketball3 className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Beach volley':
-        return <Beachvolley className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'beach volley':
+        return <Beachvolley className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Boxing':
-        return <Boxing className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'boxing':
+        return <Boxing className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Breakdance':
-        return <Breakdance className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'breakdance':
+        return <Breakdance className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Canoe Kayak':
-        return <Canoe className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'canoe kayak':
+        return <Canoe className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Climbing':
-        return <Climbing className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'sport climbing':
+        return <Climbing className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Horse riding':
-        return <Equestrian className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'equestrian':
+        return <Equestrian className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Fencing':
-        return <Fencing className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'fencing':
+        return <Fencing className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Football':
-        return <Football className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'football':
+        return <Football className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Golf':
-        return <Golf className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'golf':
+        return <Golf className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Gymnastic':
-        return <Gymnastic className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'gymnastic':
+        return <Gymnastic className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Handball':
-        return <Handball className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'handball':
+        return <Handball className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Filed hockey':
-        return <Hockey className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'hockey':
+        return <Hockey className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Judo':
-        return <Judo className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'judo':
+        return <Judo className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'VTT':
-        return <MountainBike className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'mountain bike':
+        return <MountainBike className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Open water swimming':
-        return <OpenWaterSwimming className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'open water swimming':
+        return <OpenWaterSwimming className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Modern pentathlon':
-        return <Pentathlon className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'modern pentathlon':
+        return <Pentathlon className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Road cycling':
-        return <RoadBike className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'road cycling':
+        return <RoadBike className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Rowing':
-        return <Rowing className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'rowing':
+        return <Rowing className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Rugby':
-        return <Rugby className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'rugby':
+        return <Rugby className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Shooting':
-        return <Shooting className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'shooting':
+        return <Shooting className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Skateboard':
-        return <Skateboarding className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'skateboarding':
+        return <Skateboarding className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Swimming':
-        return <IndoorSwimming className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'swimming':
+        return <IndoorSwimming className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Table tennis':
-        return <TableTennis className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'table tennis':
+        return <TableTennis className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Taekwondo':
-        return <Taekwendo className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'taekwondo':
+        return <Taekwendo className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Tennis':
-        return <Tennis className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'tennis':
+        return <Tennis className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Track cycling':
-        return <Track className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'track cycling':
+        return <Track className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Triathlon':
-        return <Triathlon className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'triathlon':
+        return <Triathlon className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Volley-ball indoor':
-        return <Volleyball className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'volleyball':
+        return <Volleyball className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Weightlifting':
-        return <Weightlifting className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'weightlifting':
+        return <Weightlifting className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
-      case 'Wrestling':
-        return <Wrestling className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: 'white' }} />
+      case 'wrestling':
+        return <Wrestling className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
+
+      case 'water-polo':
+        return <Waterpolo className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
+
+      case 'plunge':
+        return <Plunge className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
+
+      case 'synchronized swimming':
+        return <Synchronized className={isSelected ? 'is-selected' : ''} style={isSelected ? { fill: color } : { fill: '#222222' }} />
 
       default:
         return 'No icons ! '

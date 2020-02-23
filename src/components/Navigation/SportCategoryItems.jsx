@@ -83,7 +83,9 @@ const SportCategoryItems = (props) => {
   // }
 
   return (
-    <ul className='sports'>{displaySportCategories()}</ul>
+    <ul className='sports'>
+      {displaySportCategories()}
+    </ul>
   )
 }
 

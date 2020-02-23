@@ -27,6 +27,7 @@
 // LAYOUTS
 @import 'layouts/_header.scss';
 @import 'layouts/_menu.scss';
+@import 'layouts/_submenu.scss';
 @import 'layouts/_map.scss';
 @import 'layouts/_dashboard.scss';
 
@@ -43,7 +44,7 @@
 
 body {
   overflow-x: hidden;
-  color: $purple1;
+  color: $purple;
   font-family: $font;
   background-color: $background;
 }

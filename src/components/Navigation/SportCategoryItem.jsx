@@ -63,8 +63,8 @@ const SportCategoryItem = ({ familySport /*handleSelectedSportCategory , setItem
       className="menu__item menu__item--sport"
       style={
         isHovered
-          ? { borderLeft: '5px solid ' + color }
-          : { borderLeft: '5px solid transparent' }}
+          ? { borderRight: '5px solid ' + color }
+          : { borderRight: '5px solid transparent' }}
       // onClick={() => handleSportSelected() }
       onMouseEnter={() => handleHover()}
       onMouseLeave={() => handleHover()}>
@@ -73,7 +73,7 @@ const SportCategoryItem = ({ familySport /*handleSelectedSportCategory , setItem
         style={{ backgroundColor: color }}>
         {handleIconsSports(name)}
       </div>
-      <p className='menu__title menu-subtitle'>{name}</p>
+      <p className='menu__title menu-title'>{name}</p>
 
       <SportItems familySport={familySport} />
     </li >

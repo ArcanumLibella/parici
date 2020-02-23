@@ -1,9 +1,13 @@
 .dropdown {
   padding: 8px 12px;
-  min-width: 250px;
+  min-width: 198px;
   height: auto;
   background-color: $white;
   border-radius: 5px;
+
+  &__title {
+    margin-bottom: 5px;
+  }
 
   &__item {
     display: block;
@@ -18,9 +22,8 @@
     display: flex;
     align-items: center;
     margin-left: 5px;
-    transform: translate3d(0,0,0);
+    color: $black;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
   }
 
   &__checkbox {
@@ -49,7 +52,7 @@
     }
 
     path {
-      fill: $purple1;
+      fill: $black;
     }
   }
 }

@@ -5,8 +5,8 @@
   width: 100vw;
   max-width: 100%;
   height: 100vh;
-  background-color: $purple6;
-  // box-shadow: 0px 2px 20px rgba(107, 117, 202, 0.2);
+  background-color: $background;
+  box-shadow: 0px 2px 20px rgba(107, 117, 202, 0.2);
   transition: all 0.5s ease-in-out;
 
   @include desktop-up {
@@ -46,7 +46,7 @@
       fill: $white;
   
       &:hover {
-        fill: $purple1;
+        fill: $purple;
       }
     }
   }
