@@ -5,14 +5,18 @@ import SportItem from './SportItem';
 
 
 
-const SportItems = ({ familySport, updateSportSelection }) => {
+const SportItems = ({ familySport, updateSportSelection, removeSportSelection }) => {
   // STATE
   const [sports, setSports] = useState()
 
   // FUNCTIONS
   // To handle sports selected
-  const handleSelectedSport = (sport) => {
+  const handleSportSelection = (sport) => {
     updateSportSelection(sport)
+  }
+
+  const removeSport = (e) => {
+    removeSportSelection(e)
   }
 
   // To display each family sport
@@ -24,7 +28,8 @@ const SportItems = ({ familySport, updateSportSelection }) => {
             key={id}
             color={familySport.color}
             sport={sport}
-            updateSportSelection={sport => handleSelectedSport(sport)}
+            updateSportSelection={sport => handleSportSelection(sport)}
+            removeSportSelection={sport => removeSport(sport)}
           />
         )
       )

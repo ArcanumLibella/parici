@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { Provider } from './Context'
+
 import axios from "axios";
 import './assets/css/app.scss';
 
@@ -36,7 +38,6 @@ function App() {
           let sportsInFamily = []
           sports.forEach((sport) => {
             // The api response with route instead of id
-            // FIXME: later
             const familyId = sport.idFamily.replace("/api/families/", "")
             if (familyId == olympicsList.sportsCategory[i].id) {
               sportsInFamily.push({ id: sport.idCompetition, name: sport.name })
@@ -55,14 +56,29 @@ function App() {
     fetchSportsList()
   }, [])
 
+  // // STATE
+  // const [sportsSelection, setSportsSelection] = useState([])
+
+  // // FUNCTIONS
+  // // To handle sports selected
+  // const handleSelectedSport = (sport) => {
+  //   console.log(sport);
+  //   setSportsSelection([...sportsSelection, sport])
+  //   console.log(sportsSelection);
+  // }
+
   return (
+    // <Provider value={sportsList}>
     <Router>
       <div className="App">
         <Switch>
           <Route path="/selection">
-            <Selection sportsList={sportsList} />
+            <Selection
+              sportsList={sportsList}
+            // updateSportSelection={sport => handleSelectedSport(sport)}
+            />
           </Route>
-          <Route path="/home">
+          <Route path="/app">
             <Home sportsList={sportsList} />
           </Route>
           <Route path="/">
@@ -70,10 +86,11 @@ function App() {
           </Route>
           <Route path='/*'>
             404 - Sorry no content
-          </Route>
+            </Route>
         </Switch>
       </div>
     </Router>
+    // </Provider>
   );
 }
 

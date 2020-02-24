@@ -1,18 +1,25 @@
 .page-selection {
-  background-color: $background;
+  background: $gradientLight;
   height: 100vh;
 
   &__head {
     margin: 0 auto;
-    max-width: 650px;
   }
 
   &__title {
     margin-bottom: 15px;
     text-align: center;
+
+    strong {
+      background: linear-gradient(270deg, #64E0B9 0%, #4451C4 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &__subtitle {
+    font-weight: 600;
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
@@ -24,5 +31,9 @@
     justify-content: center;
     height: 100%;
     max-width: 1400px;
+  }
+
+  .cta {
+    margin-top: 20px;
   }
 }

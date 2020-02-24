@@ -10,7 +10,8 @@ const Button = (props) => {
   return (
     <div
       className={
-        linkCta === '/selection'
+        linkCta === '/selection' ||
+          linkCta === '/app'
           ? 'cta cta--primary'
           : 'cta'}
     >

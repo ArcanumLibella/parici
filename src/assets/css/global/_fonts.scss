@@ -28,7 +28,7 @@
 
 .h4 {
   font-size: rem(22px);
-  font-weight: 500;
+  font-weight: 600;
 
   @include tablet-up {
     font-size: rem(32px);
@@ -107,7 +107,7 @@
 
 .dropdown-label {
   font-size: rem(12px);
-  font-weight: bold;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
