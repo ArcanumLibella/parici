@@ -14,7 +14,7 @@ function App() {
   const [sportsList, setSportsList] = useState()
 
   // API
-  const host = 'http://localhost:8000'
+  const host = 'https://jo-server.herokuapp.com:8000'
   const apiHeader = { headers: { accept: '*/json' } }
   const apiFamilies = '/api/families'
   const apiCompetitions = '/api/competitions'
