@@ -16,8 +16,9 @@ const CardSelection = ({ familySport, updateSportSelection, removeSportSelection
     updateSportSelection(sport)
   }
 
-  const removeSport = (e) => {
-    removeSportSelection(e)
+  // To remove sport from the list
+  const removeSport = (sport) => {
+    removeSportSelection(sport)
   }
 
   // To update data

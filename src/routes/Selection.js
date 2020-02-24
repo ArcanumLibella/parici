@@ -4,35 +4,41 @@ import React, { useState } from 'react'
 import CardSelection from '../components/CardSelection/CardSelection'
 import Button from '../components/Commons/Button/Button'
 
-const Selection = (props/* , { updateSportSelection } */) => {
+const Selection = (props, { updateSportSelection, removeSportSelection }) => {
   // PROPS
   const { sportsList } = props
 
-  // STATE
-  const [sportsSelection, setSportsSelection] = useState([])
+  // // STATE
+  // const [sportsSelection, setSportsSelection] = useState([])
+
+  // // FUNCTIONS
+  // // To handle sports selected
+  // const handleSportSelection = (sport) => {
+  //   setSportsSelection([...sportsSelection, sport])
+  // }
+
+  // // To remove sport from the list
+  // const removeSport = (sport) => {
+  //   let newSportsSelection = [...sportsSelection] // make a separate copy of the array
+  //   let index = newSportsSelection.indexOf(sport)
+  //   if (index !== -1) {
+  //     newSportsSelection.splice(index, 1);
+  //     setSportsSelection([...newSportsSelection])
+  //   }
+  // }
+
+  // console.log(sportsSelection)
 
   // FUNCTIONS
   // To handle sports selected
   const handleSportSelection = (sport) => {
-    setSportsSelection([...sportsSelection, sport])
+    updateSportSelection(sport)
   }
 
   // To remove sport from the list
   const removeSport = (sport) => {
-    let newSportsSelection = [...sportsSelection] // make a separate copy of the array
-    let index = newSportsSelection.indexOf(sport)
-    if (index !== -1) {
-      newSportsSelection.splice(index, 1);
-      setSportsSelection([...newSportsSelection])
-    }
+    removeSportSelection(sport)
   }
-
-
-  // // FUNCTIONS
-  // // To handle sports selected
-  // const handleSelectedSport = (sport) => {
-  //   updateSportSelection(sport)
-  // }
 
   const displayFamilies = () => {
     return (

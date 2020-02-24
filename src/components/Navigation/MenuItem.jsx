@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // SVG
-import { Logo, Home, Burger } from '../../assets/icons/all-icons'
+import { Logo, Home } from '../../assets/icons/all-icons'
 
 
 

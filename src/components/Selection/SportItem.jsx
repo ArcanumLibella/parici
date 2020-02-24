@@ -156,8 +156,6 @@ const SportItem = ({ sport, color, updateSportSelection, removeSportSelection })
       key={id}
       onClick={sport => handleSportSelection(sport)}
     >
-      {/* TODO: add an id for each sport and use it for id and htmlFor */}
-      {/* <input className='dropdown__checkbox' type="checkbox" id={sportId} name={sportId}></input> */}
       <label className='sports-family__label sport-label' htmlFor={id} >
         {handleSportsIcon(sport)}
         {name}

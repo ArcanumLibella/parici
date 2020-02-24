@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import { Provider } from './Context'
+import { SportProvider } from './SportContext'
 
 import axios from "axios";
 import './assets/css/app.scss';
@@ -56,41 +56,52 @@ function App() {
     fetchSportsList()
   }, [])
 
-  // // STATE
-  // const [sportsSelection, setSportsSelection] = useState([])
+  // STATE
+  const [sportsSelection, setSportsSelection] = useState([])
 
-  // // FUNCTIONS
-  // // To handle sports selected
-  // const handleSelectedSport = (sport) => {
-  //   console.log(sport);
-  //   setSportsSelection([...sportsSelection, sport])
-  //   console.log(sportsSelection);
-  // }
+  // FUNCTIONS
+  // To handle sports selected
+  const handleSportSelection = (sport) => {
+    setSportsSelection([...sportsSelection, sport])
+  }
+
+  // To remove sport from the list
+  const removeSport = (sport) => {
+    let newSportsSelection = [...sportsSelection] // make a separate copy of the array
+    let index = newSportsSelection.indexOf(sport)
+    if (index !== -1) {
+      newSportsSelection.splice(index, 1);
+      setSportsSelection([...newSportsSelection])
+    }
+  }
+
+  console.log(sportsSelection)
 
   return (
-    // <Provider value={sportsList}>
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/selection">
-            <Selection
-              sportsList={sportsList}
-            // updateSportSelection={sport => handleSelectedSport(sport)}
-            />
-          </Route>
-          <Route path="/app">
-            <Home sportsList={sportsList} />
-          </Route>
-          <Route path="/">
-            <Landing />
-          </Route>
-          <Route path='/*'>
-            404 - Sorry no content
+    <SportProvider value={sportsSelection}>
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route path="/selection">
+              <Selection
+                sportsList={sportsList}
+                updateSportSelection={sport => handleSportSelection(sport)}
+                removeSportSelection={sport => removeSport(sport)}
+              />
             </Route>
-        </Switch>
-      </div>
-    </Router>
-    // </Provider>
+            <Route path="/app">
+              <Home sportsList={sportsList} />
+            </Route>
+            <Route path="/">
+              <Landing />
+            </Route>
+            <Route path='/*'>
+              404 - Sorry no content
+                </Route>
+          </Switch>
+        </div>
+      </Router>
+    </SportProvider>
   );
 }
 
