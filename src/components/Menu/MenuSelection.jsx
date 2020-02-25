@@ -3,7 +3,7 @@ import React from 'react'
 const MenuSelection = () => {
   return (
     <div className='menu-selection'>
-      <p className='menu-selection__title menu-selection-title'>My selection</p>
+      <p className='menu-selection__title menu-selection-title'>Your selection</p>
       <ul className='menu-selection__sports'>
         <li className='menu-selection__sport menu-selection-subtitle'>
           <span className='menu-selection__icon'></span>

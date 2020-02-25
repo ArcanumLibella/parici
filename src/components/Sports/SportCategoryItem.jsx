@@ -7,14 +7,23 @@ import { SportItems } from './'
 import { Artistic, Athletics, Biking, Fight, Others, Racket, Sailing, Shoot, Swimming, Team } from '../../assets/icons/all-icons'
 
 
-const SportCategoryItem = ({ familySport /*handleSelectedSportCategory , setItemSelected,*/, selected }) => {
+const SportCategoryItem = ({ familySport, updateSportSelection, removeSportSelection }) => {
   // STATES
   const [isHovered, setIsHovered] = useState(false)
   const [name, setName] = useState(false)
   const [color, setColor] = useState(false)
-  // const [isSelected, setIsSelected] = useState(selected)
 
   // FUNCTIONS
+  // To handle sports selected
+  const handleSportSelection = (sport) => {
+    updateSportSelection(sport)
+  }
+
+  // To remove sport from the list
+  const removeSport = (sport) => {
+    removeSportSelection(sport)
+  }
+
   // To handle hover on menu__item--sport
   const handleHover = () => {
     setIsHovered(!isHovered)
@@ -60,12 +69,11 @@ const SportCategoryItem = ({ familySport /*handleSelectedSportCategory , setItem
 
   return (
     <li
-      className="menu__item menu__item--sport"
+      className="menu__item menu__item--sport sports-family"
       style={
         isHovered
           ? { borderRight: '5px solid ' + color }
           : { borderRight: '5px solid transparent' }}
-      // onClick={() => handleSportSelected() }
       onMouseEnter={() => handleHover()}
       onMouseLeave={() => handleHover()}>
       <div
@@ -75,7 +83,11 @@ const SportCategoryItem = ({ familySport /*handleSelectedSportCategory , setItem
       </div>
       <p className='menu__title menu-title'>{name}</p>
 
-      <SportItems familySport={familySport} />
+      <SportItems
+        familySport={familySport}
+        updateSportSelection={sport => handleSportSelection(sport)}
+        removeSportSelection={sport => removeSport(sport)}
+      />
     </li >
   )
 }

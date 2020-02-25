@@ -72,6 +72,7 @@
 .sport-label {
   font-size: rem(13px);
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 // MENU
@@ -90,12 +91,12 @@
 
 .menu-selection-title {
   color: $black;
-  font-size: rem(12px);
+  font-size: rem(16px);
   font-weight: bold;
 }
 
 .menu-selection-subtitle {
-  font-size: rem(12px);
+  font-size: rem(14px);
   font-weight: 600;
 }
 
@@ -105,11 +106,11 @@
   text-transform: capitalize;
 }
 
-.dropdown-label {
-  font-size: rem(12px);
-  font-weight: 600;
-  text-transform: capitalize;
-}
+// .dropdown-label {
+//   font-size: rem(12px);
+//   font-weight: 600;
+//   text-transform: capitalize;
+// }
 
 // DASHBOARD
 .dashboard-title {

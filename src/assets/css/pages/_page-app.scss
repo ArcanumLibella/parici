@@ -1,0 +1,64 @@
+.page-app {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  .dropdown {
+    padding: 8px 12px;
+    min-width: 198px;
+    height: auto;
+    background-color: $white;
+    border-radius: 5px;
+  
+    &__title {
+      margin-bottom: 5px;
+    }
+  
+    &__item {
+      display: block;
+      margin-bottom: 5px;
+  
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  
+    &__label {
+      display: flex;
+      align-items: center;
+      margin-left: 5px;
+      color: $black;
+      cursor: pointer;
+    }
+  
+    &__checkbox {
+      display: none;
+    }
+  
+    .icon {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      
+      &:not(.is-selected) {
+        circle {
+          fill: $white;
+        }
+      }
+      
+      &.is-selected {
+        path {
+          fill: $white;
+        }
+      }
+  
+      circle, path {
+        stroke: none;
+      }
+  
+      path {
+        fill: $black;
+      }
+    }
+  }
+}

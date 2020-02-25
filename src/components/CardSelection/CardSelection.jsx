@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 // COMPONENTS
-import SportItems from '../Selection/SportItems'
+import { SportItems } from '../Sports'
 
 // SVG
 import { Shoot, Artistic, Athletics, Biking, Fight, Others, Racket, Sailing, Swimming, Team } from '../../assets/icons/all-icons'

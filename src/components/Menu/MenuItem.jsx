@@ -21,7 +21,7 @@ const MenuItem = (props) => {
   }
 
   return (
-    <div className='menu__item'>
+    <div className={label !== 'logo' ? 'menu__item' : 'menu__item menu__item--logo'}>
       <div className='menu__icon'>
         {handleIconMenu()}
       </div>

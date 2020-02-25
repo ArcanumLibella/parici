@@ -152,11 +152,11 @@ const SportItem = ({ sport, color, updateSportSelection, removeSportSelection })
 
   return (
     <li
-      className={isSelected ? 'sports-family__item is-selected' : 'sports-family__item'}
+      className={isSelected ? 'sports-family__item dropdown__item is-selected' : 'sports-family__item dropdown__item'}
       key={id}
       onClick={sport => handleSportSelection(sport)}
     >
-      <label className='sports-family__label sport-label' htmlFor={id} >
+      <label className='sports-family__label dropdown__label sport-label' htmlFor={id}>
         {handleSportsIcon(sport)}
         {name}
       </label>
