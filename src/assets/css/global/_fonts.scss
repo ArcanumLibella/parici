@@ -28,7 +28,7 @@
 
 .h4 {
   font-size: rem(22px);
-  font-weight: 500;
+  font-weight: 600;
 
   @include tablet-up {
     font-size: rem(32px);
@@ -72,18 +72,18 @@
 .sport-label {
   font-size: rem(13px);
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 // MENU
 .menu-title {
-  color: $purple1;
-  font-size: rem(12px);
+  font-size: rem(18px);
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .menu-subtitle {
-  color: $purple1;
+  color: $purple;
   font-size: rem(11px);
   font-weight: bold;
   text-transform: uppercase;
@@ -91,19 +91,26 @@
 
 .menu-selection-title {
   color: $black;
-  font-size: rem(12px);
+  font-size: rem(16px);
   font-weight: bold;
 }
 
 .menu-selection-subtitle {
-  font-size: rem(12px);
+  font-size: rem(14px);
   font-weight: 600;
 }
 
-.dropdown-label {
-  font-size: rem(12px);
-  font-weight: bold;
+.dropdown-title {
+  font-size: rem(18px);
+  font-weight: 600;
+  text-transform: capitalize;
 }
+
+// .dropdown-label {
+//   font-size: rem(12px);
+//   font-weight: 600;
+//   text-transform: capitalize;
+// }
 
 // DASHBOARD
 .dashboard-title {
@@ -153,7 +160,7 @@
 }
 
 .ranking-title {
-  color: $purple1;
+  color: $purple;
   font-size: rem(12px);
   font-weight: 600;
   text-transform: uppercase;
@@ -172,13 +179,13 @@
 }
 
 .restaurant-price {
-  color: $purple1;
+  color: $purple;
   font-size: rem(12px);
   font-weight: bold;
 }
 
 .restaurant-reviews {
-  color: $purple1;
+  color: $purple;
   font-size: rem(10px);
   font-weight: normal;
 }

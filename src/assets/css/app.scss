@@ -17,21 +17,20 @@
 @import 'components/_podium.scss';
 @import 'components/_ranking.scss';
 @import 'components/_sports.scss';
-@import 'components/_dropdown.scss';
 @import 'components/_alert.scss';
 @import 'components/_icons-jo.scss';
 @import 'components/_menu-selection.scss';
 @import 'components/_sports-families.scss';
-@import 'components/_sports-family.scss';
 
 // LAYOUTS
 @import 'layouts/_header.scss';
 @import 'layouts/_menu.scss';
+@import 'layouts/_submenu.scss';
 @import 'layouts/_map.scss';
 @import 'layouts/_dashboard.scss';
 
 // PAGES
-@import 'pages/_page-home.scss';
+@import 'pages/_page-app.scss';
 @import 'pages/_page-landing.scss';
 @import 'pages/_page-selection.scss';
 
@@ -43,7 +42,7 @@
 
 body {
   overflow-x: hidden;
-  color: $purple1;
+  color: $black;
   font-family: $font;
   background-color: $background;
 }

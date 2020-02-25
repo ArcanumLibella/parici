@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from 'react'
 
 // COMPONENTS
-import SportItems from '../Selection/SportItems'
+import { SportItems } from '../Sports'
 
 // SVG
 import { Shoot, Artistic, Athletics, Biking, Fight, Others, Racket, Sailing, Swimming, Team } from '../../assets/icons/all-icons'
 
-const CardSelection = ({ familySport, updateSportSelection }) => {
+const CardSelection = ({ familySport, updateSportSelection, removeSportSelection }) => {
   const [name, setName] = useState(false)
   const [color, setColor] = useState(false)
 
   // FUNCTIONS
   // To handle sports selected
-  const handleSelectedSport = (sport) => {
+  const handleSportSelection = (sport) => {
     updateSportSelection(sport)
+  }
+
+  // To remove sport from the list
+  const removeSport = (sport) => {
+    removeSportSelection(sport)
   }
 
   // To update data
@@ -66,7 +71,11 @@ const CardSelection = ({ familySport, updateSportSelection }) => {
         <h5 className='sports-family__title family-title'>{name}</h5>
       </div>
 
-      <SportItems familySport={familySport} updateSportSelection={sport => handleSelectedSport(sport)} />
+      <SportItems
+        familySport={familySport}
+        updateSportSelection={sport => handleSportSelection(sport)}
+        removeSportSelection={sport => removeSport(sport)}
+      />
 
     </div>
   )

@@ -18,7 +18,7 @@ const Dashboard = (props) => {
   }
 
   return (
-    <section
+    <aside
       className={
         isClosed
           ? 'dashboard'
@@ -44,7 +44,7 @@ const Dashboard = (props) => {
       <div className='tuto'>
         <Tuto />
       </div>
-    </section>
+    </aside>
   )
 }
 

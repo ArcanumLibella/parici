@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react'
 
 // COMPONENT
-import SportItem from './SportItem';
+import { SportItem } from '.';
 
 
 
-const SportItems = ({ familySport, updateSportSelection }) => {
+const SportItems = ({ familySport, updateSportSelection, removeSportSelection }) => {
   // STATE
   const [sports, setSports] = useState()
 
   // FUNCTIONS
   // To handle sports selected
-  const handleSelectedSport = (sport) => {
+  const handleSportSelection = (sport) => {
     updateSportSelection(sport)
+  }
+
+  // To remove sport from the list
+  const removeSport = (sport) => {
+    removeSportSelection(sport)
   }
 
   // To display each family sport
@@ -24,7 +29,8 @@ const SportItems = ({ familySport, updateSportSelection }) => {
             key={id}
             color={familySport.color}
             sport={sport}
-            updateSportSelection={sport => handleSelectedSport(sport)}
+            updateSportSelection={sport => handleSportSelection(sport)}
+            removeSportSelection={sport => removeSport(sport)}
           />
         )
       )
@@ -41,9 +47,16 @@ const SportItems = ({ familySport, updateSportSelection }) => {
   })
 
   return (
-    <ul className='sports-family__items'>
+    <ul className='sports-family__items menu__dropdown dropdown'>
+      {/* title only in page-app */}
+      <p
+        className='dropdown__title dropdown-title'
+        style={{ color: familySport.color }}
+      >
+        {familySport.name}
+      </p>
       {displaySports()}
-    </ul>
+    </ul >
   )
 }
 

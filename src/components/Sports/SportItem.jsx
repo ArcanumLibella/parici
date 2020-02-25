@@ -5,7 +5,7 @@ import { Archery, Athletic, BMX, BMXFreestyle, Badminton, Basketball, Basketball
 
 
 
-const SportItem = ({ sport, color, updateSportSelection }) => {
+const SportItem = ({ sport, color, updateSportSelection, removeSportSelection }) => {
   // PROPS
   const { name, id } = sport
 
@@ -14,10 +14,11 @@ const SportItem = ({ sport, color, updateSportSelection }) => {
 
   // FUNCTIONS
   // To handle selected sport
-  const handleSelectedSport = () => {
+  const handleSportSelection = () => {
     setIsSelected(!isSelected)
     if ({ isSelected }) {
       updateSportSelection(id)
+      removeSportSelection(id)
     }
   }
 
@@ -151,13 +152,11 @@ const SportItem = ({ sport, color, updateSportSelection }) => {
 
   return (
     <li
-      className={isSelected ? 'sports-family__item is-selected' : 'sports-family__item'}
+      className={isSelected ? 'sports-family__item dropdown__item is-selected' : 'sports-family__item dropdown__item'}
       key={id}
-      onClick={sport => handleSelectedSport(sport)}
+      onClick={sport => handleSportSelection(sport)}
     >
-      {/* TODO: add an id for each sport and use it for id and htmlFor */}
-      {/* <input className='dropdown__checkbox' type="checkbox" id={sportId} name={sportId}></input> */}
-      <label className='sports-family__label sport-label' htmlFor={id} >
+      <label className='sports-family__label dropdown__label sport-label' htmlFor={id}>
         {handleSportsIcon(sport)}
         {name}
       </label>

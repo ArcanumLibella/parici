@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { SportProvider } from './SportContext'
+
 import axios from "axios";
 import './assets/css/app.scss';
 
@@ -36,7 +38,6 @@ function App() {
           let sportsInFamily = []
           sports.forEach((sport) => {
             // The api response with route instead of id
-            // FIXME: later
             const familyId = sport.idFamily.replace("/api/families/", "")
             if (familyId == olympicsList.sportsCategory[i].id) {
               sportsInFamily.push({ id: sport.idCompetition, name: sport.name })
@@ -55,14 +56,40 @@ function App() {
     fetchSportsList()
   }, [])
 
+  // // STATE
+  // const [sportsSelection, setSportsSelection] = useState([])
+
+  // // FUNCTIONS
+  // // To handle sports selected
+  // const handleSportSelection = (sport) => {
+  //   setSportsSelection([...sportsSelection, sport])
+  // }
+
+  // // To remove sport from the list
+  // const removeSport = (sport) => {
+  //   let newSportsSelection = [...sportsSelection] // make a separate copy of the array
+  //   let index = newSportsSelection.indexOf(sport)
+  //   if (index !== -1) {
+  //     newSportsSelection.splice(index, 1);
+  //     setSportsSelection([...newSportsSelection])
+  //   }
+  // }
+
+  // console.log(sportsSelection)
+
   return (
+    // <SportProvider value={sportsSelection}>
     <Router>
       <div className="App">
         <Switch>
           <Route path="/selection">
-            <Selection sportsList={sportsList} />
+            <Selection
+              sportsList={sportsList}
+            // updateSportSelection={sport => handleSportSelection(sport)}
+            // removeSportSelection={sport => removeSport(sport)}
+            />
           </Route>
-          <Route path="/home">
+          <Route path="/app">
             <Home sportsList={sportsList} />
           </Route>
           <Route path="/">
@@ -70,10 +97,11 @@ function App() {
           </Route>
           <Route path='/*'>
             404 - Sorry no content
-          </Route>
+                  </Route>
         </Switch>
       </div>
     </Router>
+    // </SportProvider>
   );
 }
 
