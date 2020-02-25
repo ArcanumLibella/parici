@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 // COMPONENTS
 import Header from '../components/Commons/Header/Header'
 import Button from '../components/Commons/Button/Button'
-import IconsParallax from '../components/Commons/IconsParallax/IconsParallax'
+import IconsBubble from '../components/Commons/IconsParallax/IconsBubble'
 
 // SVG
 import { Arrow } from '../assets/icons/all-icons'
@@ -17,41 +17,19 @@ import Switch from '../assets/images/switch.png'
 
 const Landing = (props) => {
   const ref = useRef();
-  const [isScrolling, SetIsScrolling] = useState(false);
-
-  // Scroll listener
-  const handleScroll = () => {
-    const posY = ref.current.getBoundingClientRect().top;
-    const offset = window.pageYOffset - posY;
-
-    // To check if header is scrolling
-    if (offset !== 0) {
-      SetIsScrolling(true)
-    } else {
-      SetIsScrolling(false)
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  });
 
   return (
     <main className='page-landing' ref={ref}>
       <header
-        className={isScrolling ? 'header is-scrolling' : 'header'}
-        onScroll={() => handleScroll()}>
+        className={ 'header'}>
         <Header />
       </header>
 
       <div className='icons-jo'>
-        <IconsParallax />
+        <IconsBubble />
       </div>
       <div className='icons-jo icons-jo--right'>
-        <IconsParallax />
+        <IconsBubble />
       </div>
 
       <section className='hero'>

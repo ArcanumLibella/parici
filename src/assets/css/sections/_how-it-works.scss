@@ -3,6 +3,7 @@
   background: $gradientLight;
   margin-top: -80px;
 
+
   @include tablet-up {
     margin-top: -10px;
   }
@@ -88,6 +89,7 @@
   }
 
   .content-wrapper {
+    z-index: 1000;
     padding: 80px 45px;
   }
 }

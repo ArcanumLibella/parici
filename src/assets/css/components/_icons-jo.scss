@@ -1,34 +1,95 @@
+@keyframes mooveBubble {
+  0% {
+    margin-top: 700px;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.5;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: -100%;
+  }
+}
+
+@keyframes bubble-anim {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scaleY(0.95) scaleX(0.95);
+  }
+  48% {
+    transform: scaleY(0.9) scaleX(0.9);
+  }
+  68% {
+    transform: scaleY(0.98) scaleX(0.98);
+  }
+  80% {
+    transform: scaleY(1.02) scaleX(1.02);
+  }
+  97%, 100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sideWays-left {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+
+@keyframes sideWays-right {
+  0% {
+    margin-right: 0px;
+  }
+  100% {
+    margin-right: 50px;
+  }
+}
+
+
+
 .icons-jo {
   display: none;
 
   @include tablet-up {
     display: block;
-    
+
     @for $i from 1 through 100 {
-      div[data-rellax-speed] {
+      div {
         &:nth-child(#{$i}) {
-  
+
           .icon {
             position: absolute;
-            top: random(370) + vh;
             left: random(15) + vw;
             width: random(60) + px;
             min-width: 30px;
             height: auto;
             opacity: random();
+            animation: mooveBubble  random(30) + 15 + s linear infinite, bubble-anim 3s infinite,  sideWays-left random(6) + 3 + s ease-in-out infinite alternate;
             fill: $white;
-            z-index: 10;
+
           }
         }
       }
   
       &--right {
-        div[data-rellax-speed] {
+        div {
           &:nth-child(#{$i}) {
-    
+
             .icon {
               right: random(15) + vw;
               left: unset;
+              animation: mooveBubble  random(30) + 15 + s linear infinite, bubble-anim 3s infinite,  sideWays-right random(6) + 3 + s ease-in-out infinite alternate;
             }
           }
         }
