@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react'
-// import SportContext from '../SportContext'
+import React, { useContext } from 'react'
+import SportContext from '../SportContext'
 
 // COMPONENTS
 import Alert from '../components/Commons/Alert/Alert.jsx'
@@ -10,34 +10,20 @@ import MenuSelection from '../components/Menu/MenuSelection'
 
 
 
-const Home = (props, /* { updateSportSelection, removeSportSelection } */) => {
-  // PROPS
-  const { sportsList } = props
-
+const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   // CONTEXT
-  // const sportsSelection = useContext(SportContext)
-  // console.log(sportsSelection)
+  const sportsSelection = useContext(SportContext)
+  console.log(sportsSelection)
 
-  // STATE
-  const [sportsSelection, setSportsSelection] = useState([])
-
-  // FUNCTIONS
   // To handle sports selected
   const handleSportSelection = (sport) => {
-    setSportsSelection([...sportsSelection, sport])
+    updateSportSelection(sport)
   }
 
   // To remove sport from the list
   const removeSport = (sport) => {
-    let newSportsSelection = [...sportsSelection] // make a separate copy of the array
-    let index = newSportsSelection.indexOf(sport)
-    if (index !== -1) {
-      newSportsSelection.splice(index, 1);
-      setSportsSelection([...newSportsSelection])
-    }
+    removeSportSelection(sport)
   }
-
-  console.log(sportsSelection)
 
   return (
     <main className='page-app'>

@@ -7,10 +7,7 @@ import { SportCategoryItems } from '../Sports'
 
 
 
-const Menu = (props, { updateSportSelection, removeSportSelection }) => {
-  // PROPS
-  const { sportsList } = props
-
+const Menu = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   // FUNCTIONS
   // To handle sports selected
   const handleSportSelection = (sport) => {

@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
+import SportContext from '../../SportContext'
 
 import District from './District'
 import axios from 'axios';
 
 const Map = (props) => {
+  // CONTEXT
+  const sportsSelection = useContext(SportContext)
+  console.log(sportsSelection)
 
+  // STATES
   const [pierre, setColors] = useState([])
 
-  const competitions = [40, 32]
-
+  // API
   const host = 'http://localhost:8000'
   const apiHeader = { headers: { accept: '*/json' } }
   const apiTravel = '/api/travels'
@@ -16,13 +20,13 @@ const Map = (props) => {
   let travels = []
   let colors = []
   const foo = () => {
-    competitions.forEach(competition => {
-      let url = "http://localhost:8000/api/travels/?idCompetition=" + competition
+    sportsSelection.forEach(competition => {
+      let url = host + apiTravel + '/?idCompetition=' + competition
       axios
         .get(url, apiHeader)
         .then(res => {
           travels.push(res)
-          if (travels.length === competitions.length) {
+          if (travels.length === sportsSelection.length) {
             computeColors()
           }
         })
@@ -74,7 +78,7 @@ const Map = (props) => {
 
   useEffect(() => {
     foo()
-  }, [])
+  })
 
   const districts = [
     "606.46 469.65 521.07 429.17 552.31 361.85 567.81 357.74 586.88 379.8 736.77 433.22 730.18 451.68 692.9 527.45 606.46 469.65",

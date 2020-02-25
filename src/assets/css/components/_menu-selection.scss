@@ -3,9 +3,7 @@
   left: 50px;
   padding: 10px;
   margin: 10px;
-  height: 185px;
   width: 188px;
-  overflow: hidden;
   background-color: $white;
   border-radius: 5px;
 
@@ -17,6 +15,8 @@
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+    max-height: 120px;
+    overflow: scroll;
     cursor: pointer;
   }
 
@@ -27,5 +27,18 @@
     height: 20px;
     background-color: $purple;
     border-radius: 50%;
+  }
+
+  &__more {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+
+    .icon {
+      width: 12px;
+      height: 12px;
+      transform: rotate(90deg);
+      fill: $black;
+    }
   }
 }
