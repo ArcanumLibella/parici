@@ -1,45 +1,26 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import SportContext from '../SportContext'
+
 
 // COMPONENTS
 import CardSelection from '../components/CardSelection/CardSelection'
 import Button from '../components/Commons/Button/Button'
 
-const Selection = (props, /* { updateSportSelection, removeSportSelection } */) => {
-  // PROPS
-  const { sportsList } = props
-
-  // STATE
-  const [sportsSelection, setSportsSelection] = useState([])
+const Selection = ({ sportsList, updateSportSelection, removeSportSelection }) => {
+  // CONTEXT
+  const sportsSelection = useContext(SportContext)
+  console.log(sportsSelection)
 
   // FUNCTIONS
-  // TODO: Faire remonter les données jusque dans App.js
   // To handle sports selected
   const handleSportSelection = (sport) => {
-    setSportsSelection([...sportsSelection, sport])
+    updateSportSelection(sport)
   }
 
   // To remove sport from the list
   const removeSport = (sport) => {
-    let newSportsSelection = [...sportsSelection] // make a separate copy of the array
-    let index = newSportsSelection.indexOf(sport)
-    if (index !== -1) {
-      newSportsSelection.splice(index, 1);
-      setSportsSelection([...newSportsSelection])
-    }
+    removeSportSelection(sport)
   }
-
-  console.log(sportsSelection)
-
-  // // FUNCTIONS
-  // // To handle sports selected
-  // const handleSportSelection = (sport) => {
-  //   updateSportSelection(sport)
-  // }
-
-  // // To remove sport from the list
-  // const removeSport = (sport) => {
-  //   removeSportSelection(sport)
-  // }
 
   const displayFamilies = () => {
     return (

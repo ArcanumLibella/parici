@@ -1,5 +1,8 @@
 import React from 'react'
 
+// COMPONENTS
+import { LittleArrow } from '../../assets/icons/all-icons'
+
 const MenuSelection = () => {
   return (
     <div className='menu-selection'>
@@ -26,6 +29,10 @@ const MenuSelection = () => {
           Mountain Bike
         </li>
       </ul>
+      {/* TODO: if less than 5 sports selected -> display: none */}
+      <div className='menu-selection__more'>
+        <LittleArrow />
+      </div>
     </div>
   )
 }

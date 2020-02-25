@@ -5,10 +5,7 @@ import { SportCategoryItem } from './';
 
 
 
-const SportCategoryItems = (props, { updateSportSelection, removeSportSelection }) => {
-  // PROPS
-  const { sportsList } = props
-
+const SportCategoryItems = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   // FUNCTIONS
   // To handle sports selected
   const handleSportSelection = (sport) => {
