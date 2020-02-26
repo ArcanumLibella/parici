@@ -36,7 +36,7 @@ const Dashboard = (props) => {
 
         <Podium cardType='podium' />
         <Card cardType='nature' dataType=' of Green Space' rankingType='surface' />
-        <Card cardType='hostel' dataType='hostels' rankingType='count' />
+        <Card cardType='hotel' dataType='hotels' rankingType='count' />
         <Card cardType='culture' dataType='points of interest' rankingType='count' />
         <Card cardType='restaurant' dataType='restaurants' rankingType='count' />
 

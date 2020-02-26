@@ -7,7 +7,7 @@ import axios from 'axios';
 const Map = (props) => {
   // CONTEXT
   const sportsSelection = useContext(SportContext)
-  console.log(sportsSelection)
+  // console.log(sportsSelection)
 
   // STATES
   const [pierre, setColors] = useState([])
@@ -42,11 +42,13 @@ const Map = (props) => {
     g: 251,
     b: 107
   }
+
   const blue = {
     r: 68,
     g: 82,
     b: 197
   }
+
   const computeColors = function () {
     let times = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     travels.forEach(travel => {
@@ -76,10 +78,6 @@ const Map = (props) => {
     setColors(colors)
   }
 
-  useEffect(() => {
-    foo()
-  })
-
   const districts = [
     "606.46 469.65 521.07 429.17 552.31 361.85 567.81 357.74 586.88 379.8 736.77 433.22 730.18 451.68 692.9 527.45 606.46 469.65",
     "736.77 433.22 760.91 365.61 715.65 352.26 655.4 334.5 567.81 357.74 586.88 379.8 736.77 433.22",
@@ -108,6 +106,10 @@ const Map = (props) => {
       return <District key={index} number={index + 1} points={districts[index]} color={pierre[index]} />
     }))
   }
+
+  useEffect(() => {
+    foo()
+  }, [])
 
   return (
     <svg className="map" viewBox="0 0 1215.4 966.98">

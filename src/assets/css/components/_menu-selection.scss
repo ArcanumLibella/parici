@@ -3,7 +3,6 @@
   left: 50px;
   padding: 10px;
   margin: 10px;
-  width: 188px;
   background-color: $white;
   border-radius: 5px;
 
@@ -11,34 +10,44 @@
     margin-bottom: 10px;
   }
 
+  &__sports {
+    max-height: 120px;
+    overflow: scroll;
+  }
+
   &__sport {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
-    max-height: 120px;
-    overflow: scroll;
     cursor: pointer;
   }
 
   &__icon {
-    margin-right: 5px;
-    width: 20px;
-    min-width: 20px;
-    height: 20px;
-    background-color: $purple;
-    border-radius: 50%;
+    margin-right: 8px;
+
+    .icon {
+      height: 20px;
+      width: 20px;
+    }
+
+    path {
+      fill: $white;
+    }
   }
 
   &__more {
-    margin: 0 auto;
+    margin: 0 auto -10px;
     width: 100%;
     text-align: center;
 
     .icon {
-      width: 12px;
-      height: 12px;
+      width: 8px;
+      height: 8px;
       transform: rotate(90deg);
       fill: $black;
     }
+  }
+
+  &.is-hidden {
+    display: none;
   }
 }

@@ -13,7 +13,7 @@ import MenuSelection from '../components/Menu/MenuSelection'
 const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   // CONTEXT
   const sportsSelection = useContext(SportContext)
-  console.log(sportsSelection)
+  // console.log(sportsSelection)
 
   // To handle sports selected
   const handleSportSelection = (sport) => {
@@ -33,7 +33,11 @@ const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
         updateSportSelection={sport => handleSportSelection(sport)}
         removeSportSelection={sport => removeSport(sport)}
       />
-      <MenuSelection />
+      <MenuSelection
+        sportsList={sportsList}
+      // updateSportSelection={sport => handleSportSelection(sport)}
+      // removeSportSelection={sport => removeSport(sport)}
+      />
       <Map />
       <Dashboard />
     </main>

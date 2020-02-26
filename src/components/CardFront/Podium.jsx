@@ -15,7 +15,7 @@ const Podium = (props) => {
 
         <div className='podium__wrapper'>
           <Ranking rankingType='nature' dataRanking='1' />
-          <Ranking rankingType='hostel' dataRanking='12' />
+          <Ranking rankingType='hotel' dataRanking='12' />
           <Ranking rankingType='culture' dataRanking='8' />
           <Ranking rankingType='restaurant' dataRanking='4' />
         </div>

@@ -14,7 +14,7 @@ const Ranking = (props) => {
         return <Culture />
       case 'restaurant':
         return <Restaurant />
-      case 'hostel':
+      case 'hotel':
         return <Hostel />
       case 'nature':
         return <Nature />
@@ -23,7 +23,7 @@ const Ranking = (props) => {
     }
   }
 
-  
+
 
   return (
     <div className='ranking'>

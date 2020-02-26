@@ -75,8 +75,6 @@ function App() {
     }
   }
 
-  console.log(sportsSelection)
-
   return (
     <SportProvider value={sportsSelection}>
       <Router>
