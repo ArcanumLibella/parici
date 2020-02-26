@@ -4,56 +4,50 @@ import { SportProvider } from './SportContext'
 
 import axios from "axios";
 import './assets/css/app.scss';
+import {axiosQuery} from './Helpers'
 
 // ROUTES
 import { Landing, Home, Selection } from "./routes";
-
-// DATA
-let olympicsList = require('./data/olympicsList');
 
 function App() {
   // STATE
   const [sportsList, setSportsList] = useState()
 
-  // API
-  const host = 'https://jo-server.herokuapp.com'
-  const apiHeader = { headers: { accept: '*/json' } }
-  const apiFamilies = '/api/families'
-  const apiCompetitions = '/api/competitions'
-  const requestFamilies = axios.get(host + apiFamilies, apiHeader)
-  const requestCompetitions = axios.get(host + apiCompetitions, apiHeader)
+  let familyColors = [
+    '#64E0B9',
+    '#2C3950',
+    '#219AAA',
+    '#AF4751',
+    '#E7904D',
+    '#D29B85',
+    '#95E1EC',
+    '#F3A2A2',
+    '#F7D55B',
+    '#8D488B',
+  ]
 
-  const fetchSportsList = () => {
-    axios
-      .all([requestFamilies, requestCompetitions])
-      .then(axios.spread((...res) => {
-        // Responses arrays
-        const families = res[0].data
-        const sports = res[1].data
-
-        families.forEach((family, i) => {
-          // Set category name key/value
-          olympicsList.sportsCategory[i].name = family.name
-
-          let sportsInFamily = []
-          sports.forEach((sport) => {
-            // The api response with route instead of id
-            const familyId = sport.idFamily.replace("/api/families/", "")
-            if (familyId == olympicsList.sportsCategory[i].id) {
-              sportsInFamily.push({ id: sport.idCompetition, name: sport.name })
-              // We attribute that sport to a family so no need to keep it in sports array
-              sports.slice(sport, 1)
-            }
-          })
-          // Set sports for a family
-          olympicsList.sportsCategory[i].sports = sportsInFamily
-          setSportsList(olympicsList.sportsCategory)
-        });
-      }))
+  // API CALL
+  const retrieveSportList = async function() {
+    let competitionsList = []
+    // Retrieve all families
+    let families = await axiosQuery('/api/families')
+    families.forEach((family, i) => {
+      competitionsList.push({ name: family.name, color: familyColors[i], sports : []})
+    });
+    // Retrieve all competitions and store them in competitionsList
+    let competitions = await axiosQuery('/api/competitions')
+    competitions.forEach(competition => {
+      let index = competitionsList.indexOf(competitionsList.find(competitionsList => competitionsList.name === competition.family.name))
+      competitionsList[index].sports.push({
+        name: competition.name,
+        id: competition.id
+      })
+    });
+    setSportsList(competitionsList)
   }
 
   useEffect(() => {
-    fetchSportsList()
+    retrieveSportList()
   }, [])
 
   // STATE
