@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useEffect, useState} from 'react'
 
 
 // SVG
@@ -44,6 +44,8 @@ import {
 
 
 const IconsBubble = () => {
+
+
     // Function to generate random icons
     const generateRandomIcons = () => {
         const iconsArray = [
@@ -90,30 +92,40 @@ const IconsBubble = () => {
         )
     }
 
+    useEffect(() => {
+        const interval = setTimeout(() => {
+            callBubble();
+
+        }, 1000);
+        return clearTimeout(interval);
+    });
+
     // Function to generate icons
 
-    const interval = () => {
-      setInterval(function handleIconsParallax() {
-        const n = 5 // Number of icons in background (max 100)
-        console.log('coucou')
+    const callBubble = () => {
+        let n = 5 // Number of icons in background (max 100)
+        if (n < 10) {
+            n += 1;
+        }
         return ([...Array(n)].map
             (
-
                 (icons, i) => (
                     <div>{generateRandomIcons()}</div>
-
-
                 )
-
             )
+
         )
-    }, 1000) }
+    }
 
 
     return (
+
         <Fragment>
-            {interval()}
+            {
+                callBubble()
+            }
         </Fragment>
+
     )
 }
 
