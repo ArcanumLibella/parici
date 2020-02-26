@@ -1,8 +1,6 @@
 import React from 'react'
 
 const District = (props) => {
-
-
   const handleClick = function () {
     console.log(props.number)
   }
