@@ -1,8 +1,9 @@
 import React from 'react'
+import {numberToRank} from '../../Helpers'
 
 // COMPONENTS
 import { BackCulture, BackHostel, BackRestaurant, BackNature } from '../CardBack'
-import { CardCount, CardRanking } from '../CardFront'
+import { CardCount } from '../CardFront'
 import { RestaurantChart } from '../CardChart'
 
 // SVG
@@ -14,7 +15,7 @@ import { restaurantPrices } from '../../data/restaurantPricesList'
 
 
 const Card = (props) => {
-  const { cardType, dataType, rankingType } = props
+  const { cardType, dataType, rankingType, data } = props
 
   // Function to handle card icon
   const handleCardIcon = (cardType) => {
@@ -34,17 +35,20 @@ const Card = (props) => {
 
   // Function to check card type
   const handleCardBack = (cardType) => {
-    switch (cardType) {
-      case 'culture':
-        return <BackCulture cardType={cardType} />
-      case 'restaurant':
-        return <BackRestaurant cardType={cardType} />
-      case 'hostel':
-        return <BackHostel cardType={cardType} />
-      case 'nature':
-        return <BackNature cardType={cardType} />
-      default:
-        return 'Error back card'
+    if (data) {
+      switch (cardType) {
+        case 'culture':
+          return <BackCulture cardType={cardType} data={data} />
+        case 'restaurant':
+          return <BackRestaurant cardType={cardType} />
+        case 'hostel':
+          return <BackHostel cardType={cardType} data={data}/>
+        case 'nature':
+          console.log(data.nature)
+          return <BackNature cardType={cardType} data={data}/>
+        default:
+          return 'Error back card'
+      }
     }
   }
 
@@ -59,6 +63,18 @@ const Card = (props) => {
     }
   }
 
+  const handleRank = () => {
+    if (data) {
+      return data.rank + numberToRank(data.rank)
+    }
+  }
+
+  const handleCount = () => {
+    if (data) {
+      return data.total
+    }
+  }
+
   return (
     <div className={'card card--' + cardType}>
       
@@ -66,10 +82,15 @@ const Card = (props) => {
       <div className='card__front card-front'>
         <h3 className='card-front__title card-title'>{cardType}</h3>
         <span className='card-front__dash card-title'> - </span>
-        <CardRanking rankingType={rankingType} />
+        <div className='card-front__ranking'>
+          <h4 className='card-ranking'>
+            {handleRank()}
+            {' ' + rankingType }
+          </h4>
+        </div>
         
         <div className='card-front__wrapper'>
-          <CardCount dataType={dataType} />
+          <CardCount cardType={cardType} dataType={dataType} count={handleCount()} />
 
           <div className='card-front__icon'>
             {handleCardIcon(cardType)}
