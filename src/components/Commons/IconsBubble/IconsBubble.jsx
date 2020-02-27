@@ -52,7 +52,6 @@ const IconsBubble = () => {
         return clearTimeout(interval);
     });
 
-    // Function to generate random icons
     const generateRandomIcons = () => {
         const iconsArray = [
             <Archery/>,
@@ -98,10 +97,8 @@ const IconsBubble = () => {
         )
     }
 
-    // Function to generate icons
-
     const callBubble = () => {
-        let n = 5 // Number of icons in background (max 100)
+        let n = 5;
         if (n < 10) {
             n += 1;
         }

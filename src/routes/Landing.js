@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 // COMPONENTS
 import Header from '../components/Commons/Header/Header'
 import Button from '../components/Commons/Button/Button'
-import IconsBubble from '../components/Commons/IconsParallax/IconsBubble'
+import IconsBubble from '../components/Commons/IconsBubble/IconsBubble'
 
 // SVG
 import { Arrow } from '../assets/icons/all-icons'
