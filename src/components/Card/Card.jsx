@@ -36,10 +36,10 @@ const Card = (props) => {
           return <BackCulture cardType={cardType} data={data} />
         case 'restaurant':
           return <BackRestaurant cardType={cardType} />
-        case 'hostel':
+        case 'hotel':
           return <BackHostel cardType={cardType} data={data} />
         case 'nature':
-          return <BackNature cardType={cardType} data={data}/>
+          return <BackNature cardType={cardType} data={data} />
         default:
           return 'Error back card'
       }

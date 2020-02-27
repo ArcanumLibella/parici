@@ -8,9 +8,10 @@ import { Podium } from '../CardFront'
 // SVG
 import { Tuto, Cross } from '../../assets/icons/all-icons'
 
-const Dashboard = ({district}) => {
+const Dashboard = ({ district }) => {
   const arrondi = district ? district : null
 
+  // STATES
   const [isClosed, setIsClosed] = useState('true')
   const [podium, setPodium] = useState()
   const [nature, setNature] = useState()
@@ -18,15 +19,9 @@ const Dashboard = ({district}) => {
   const [culture, setCulture] = useState()
   const [restaurant, setRestaurant] = useState()
 
-  // function to toggle dashboard display
-  const handleDashboardDisplay = () => {
-    district = null
-    setIsClosed(!isClosed)
-  }
-
   // API CALL
-const retrieveDashboardData = async function() {
-    if (district)  {
+  const retrieveDashboardData = async function () {
+    if (district) {
       let dashboardData = await axiosQuery('/api/districts')
       buildPodium(dashboardData)
       buildNature(dashboardData)
@@ -36,6 +31,14 @@ const retrieveDashboardData = async function() {
     }
   }
 
+  // FUNCTIONS
+  // To toggle dashboard display
+  const handleDashboardDisplay = () => {
+    district = null
+    setIsClosed(!isClosed)
+  }
+
+  // To generate podium
   const buildPodium = function (data) {
     let podium = []
     data.forEach(district => {
@@ -47,21 +50,27 @@ const retrieveDashboardData = async function() {
       })
     });
     setPodium(podium)
+    // console.log('podium', podium);
   }
 
+  // To generate nature data card
   const buildNature = function (data) {
     setNature(data[arrondi - 1].nature)
   }
 
+  // To generate hotel data card
   const buildHotel = function (data) {
     setHotel(data[arrondi - 1].hotel)
   }
 
+  // To generate culture data card
   const buildCulture = function (data) {
     setCulture(data[arrondi - 1].culture)
   }
-  const buildRestaurant = function(data) {
-    setRestaurant(data[arrondi-1].restaurant)
+
+  // To generate restaurant data card
+  const buildRestaurant = function (data) {
+    setRestaurant(data[arrondi - 1].restaurant)
   }
 
   useEffect(() => {
@@ -72,28 +81,22 @@ const retrieveDashboardData = async function() {
   }, [district])
 
   return (
-    <aside
-      className={
-        isClosed
-          ? 'dashboard is-closed'
-          : 'dashboard'
-      }
-    >
+    <aside className={isClosed ? 'dashboard is-closed' : 'dashboard'}>
       <div
         className='cross'
         onClick={() => handleDashboardDisplay()}
       >
         <Cross />
       </div>
-      <div className='dashboard__wrapper cards'>
 
+      <div className='dashboard__wrapper cards'>
         <Podium district={arrondi} data={podium} cardType='podium' />
         <Card data={nature} cardType='nature' dataType=' of Green Space' rankingType='surface' />
         <Card data={hotel} cardType='hotel' dataType='hotels' rankingType='count' />
         <Card data={culture} cardType='culture' dataType='points of interest' rankingType='count' />
         <Card data={restaurant} cardType='restaurant' dataType='restaurants' rankingType='count' />
-
       </div>
+
       <div className='tuto'>
         <Tuto />
       </div>

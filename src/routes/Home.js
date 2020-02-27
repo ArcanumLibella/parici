@@ -13,6 +13,7 @@ import MenuSelection from '../components/Menu/MenuSelection'
 const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   // CONTEXT
   const sportsSelection = useContext(SportContext)
+  console.log(sportsSelection)
 
   const [selectedDistrict, setSelectedDistrict] = useState(false)
 
@@ -38,13 +39,13 @@ const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
         updateSportSelection={sport => handleSportSelection(sport)}
         removeSportSelection={sport => removeSport(sport)}
       />
-      <MenuSelection 
+      <MenuSelection
         sportsList={sportsList}
         updateSportSelection={sport => handleSportSelection(sport)}
         removeSportSelection={sport => removeSport(sport)}
       />
       <Map onDistrictClick={handleClick} />
-      <Dashboard district={selectedDistrict}/>
+      <Dashboard district={selectedDistrict} />
     </main>
   )
 }
