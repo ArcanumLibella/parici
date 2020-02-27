@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import SportContext from '../SportContext'
 
 // COMPONENTS
@@ -15,9 +15,15 @@ const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   const sportsSelection = useContext(SportContext)
   // console.log(sportsSelection)
 
+  const [selectedDistrict, setSelectedDistrict] = useState(false)
+
   // To handle sports selected
   const handleSportSelection = (sport) => {
     updateSportSelection(sport)
+  }
+
+  const handleClick = function (number) {
+    setSelectedDistrict(number)
   }
 
   // To remove sport from the list
@@ -33,13 +39,9 @@ const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
         updateSportSelection={sport => handleSportSelection(sport)}
         removeSportSelection={sport => removeSport(sport)}
       />
-      <MenuSelection
-        sportsList={sportsList}
-      // updateSportSelection={sport => handleSportSelection(sport)}
-      // removeSportSelection={sport => removeSport(sport)}
-      />
-      <Map />
-      <Dashboard />
+      <MenuSelection />
+      <Map onDistrictClick={handleClick} />
+      <Dashboard district={selectedDistrict}/>
     </main>
   )
 }

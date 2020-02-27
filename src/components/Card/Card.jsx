@@ -44,8 +44,7 @@ const Card = (props) => {
         case 'hostel':
           return <BackHostel cardType={cardType} data={data} />
         case 'nature':
-          console.log(data.nature)
-          return <BackNature cardType={cardType} data={data} />
+          return <BackNature cardType={cardType} data={data}/>
         default:
           return 'Error back card'
       }
