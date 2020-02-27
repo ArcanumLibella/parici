@@ -45,6 +45,12 @@ import {
 
 const IconsBubble = () => {
 
+    useEffect(() => {
+        const interval = setTimeout(() => {
+            callBubble();
+        }, 1000);
+        return clearTimeout(interval);
+    });
 
     // Function to generate random icons
     const generateRandomIcons = () => {
@@ -92,15 +98,7 @@ const IconsBubble = () => {
         )
     }
 
-    useEffect(() => {
-        const interval = setTimeout(() => {
-            callBubble();
-
-        }, 1000);
-        return clearTimeout(interval);
-    });
-
-    // Function to generate icons
+    // Function to generate iconsr
 
     const callBubble = () => {
         let n = 5 // Number of icons in background (max 100)
@@ -117,15 +115,10 @@ const IconsBubble = () => {
         )
     }
 
-
     return (
-
         <Fragment>
-            {
-                callBubble()
-            }
+            {callBubble()}
         </Fragment>
-
     )
 }
 
