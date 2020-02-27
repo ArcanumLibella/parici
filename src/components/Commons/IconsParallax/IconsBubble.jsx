@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from 'react'
+import React, {Fragment, useEffect} from 'react'
 
 
 // SVG
@@ -48,7 +48,7 @@ const IconsBubble = () => {
     useEffect(() => {
         const interval = setTimeout(() => {
             callBubble();
-        }, 1000);
+        }, 500);
         return clearTimeout(interval);
     });
 
@@ -98,20 +98,20 @@ const IconsBubble = () => {
         )
     }
 
-    // Function to generate iconsr
+    // Function to generate icons
 
     const callBubble = () => {
         let n = 5 // Number of icons in background (max 100)
         if (n < 10) {
             n += 1;
         }
+
         return ([...Array(n)].map
             (
                 (icons, i) => (
                     <div>{generateRandomIcons()}</div>
                 )
             )
-
         )
     }
 
