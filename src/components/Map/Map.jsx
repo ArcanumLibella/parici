@@ -4,7 +4,7 @@ import SportContext from '../../SportContext'
 import District from './District'
 import axios from 'axios';
 
-const Map = ({onDistrictClick}) => {
+const Map = ({ onDistrictClick }) => {
   // CONTEXT
   const sportsSelection = useContext(SportContext)
 
@@ -12,7 +12,8 @@ const Map = ({onDistrictClick}) => {
   const [pierre, setColors] = useState([])
 
   // API
-  const host = 'https://jo-server.herokuapp.com'
+  // const host = 'https://jo-server.herokuapp.com'
+  const host = 'http://localhost:8000'
   const apiHeader = { headers: { accept: '*/json' } }
   const apiTravel = '/api/travels'
 
@@ -65,7 +66,6 @@ const Map = ({onDistrictClick}) => {
     let min = Math.min.apply(null, times)
     let max = Math.max.apply(null, times)
     let diff = max - min
-    // console.log("hello")
 
     for (let i = 0; i < times.length; i++) {
 
@@ -119,8 +119,8 @@ const Map = ({onDistrictClick}) => {
   }, [sportsSelection])
 
   return (
-    <div className='map__wrapper'>
-      <svg className="map" viewBox="0 0 1215.4 966.98">
+    <div className='map'>
+      <svg className="map__wrapper" viewBox="0 0 1215.4 966.98">
         {displayDistricts()}
         <polyline className="cls-1" points="1026.96 856.15 834.75 628.04 788.3 584.96 688.37 535.25 602 477.5 517.18 437.29 494.51 426.42 373.92 428.93 332.41 440.76 288.25 492.68 172.41 627.67 82.33 762.99" />
       </svg>

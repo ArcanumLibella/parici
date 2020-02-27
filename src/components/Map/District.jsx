@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-const District = ({number, points, color, onDistrictClick}) => {
+const District = ({ number, points, color, onDistrictClick }) => {
 
   const handleClick = function () {
     onDistrictClick(number)
-    console.log(number)
+    console.log('N°', number)
   }
 
   return (
