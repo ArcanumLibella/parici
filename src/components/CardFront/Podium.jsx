@@ -4,8 +4,11 @@ import { numberToRank } from '../../Helpers'
 // COMPONENTS
 import { Ranking } from './'
 
+
+
 const Podium = (props) => {
   const { cardType, district, data } = props
+  let districtNumber = district + numberToRank(district)
 
   const handleRanking = (type) => {
     if (data) {
@@ -24,41 +27,27 @@ const Podium = (props) => {
     }
   }
 
-  const sortRanking = () => {
-    if (data) {
-      let dataRanking = data[district - 1]
-      let arrayRanking = []
-
-      for (let [key, value] of Object.entries(dataRanking)) {
-        arrayRanking.push(value)
-        arrayRanking.sort(function (a, b) {
-          return a - b
-        });
-        console.log('tableau trié -> ', arrayRanking);
-      }
-      // return arrayRanking
-      arrayRanking.forEach((ranking, i) => {
-        // console.log(i + 1);
-        return i + 1
-      })
-    }
-  }
-
+  // FIXME: Manage podium
   // const rankingIndex = () => {
-  //   // Récupération d'un tableau trié
-  //   // console.log(sortRanking())
-  //   // Pour chacun élément du tableau retourner son index + 1
-  //   sortRanking.forEach((ranking, i) => {
-  //     return i + 1
-  //   })
-  //   console.log(rankingIndex)
+  //   if (data) {
+  //     let dataRankingNature = data[district - 1].natureRank
+  //     // let dataRankingHotel = data[district - 1].hotelRank
+  //     // let dataRankingCulture = data[district - 1].cultureRank
+  //     // let dataRankingRestaurant = data[district - 1].restaurantRank
+  //     console.log(dataRankingNature);
+  //     switch (dataRankingNature) {
+  //       case (dataRankingNature < 5):
+  //         return 'first'
+  //       case (dataRankingNature < 10):
+  //         return 'second'
+  //       case (dataRankingNature < 15):
+  //         return 'third'
+  //       default:
+  //         return 'fourth'
+  //     }
+  //   }
   // }
-
-  // rankingIndex()
-  // sortRanking()
-  console.log(sortRanking())
-
-  let districtNumber = district + numberToRank(district)
+  // console.log(rankingIndex());
 
   return (
     <div className={'card card--' + cardType}>
@@ -68,26 +57,18 @@ const Podium = (props) => {
         <div className='podium__wrapper'>
 
           <Ranking
-            // Si rankingIndex = 1 alors on ajoute la class .first
-            // Si rankingIndex = 2 alors on ajoute la class .second
-            // Si rankingIndex = 3 alors on ajoute la class .third
-            // Si rankingIndex = 4 alors on ajoute la class .fourth
-            /* rankingIndex={rankingIndex} */
             rankingType='nature'
             dataRanking={handleRanking("nature")}
           />
           <Ranking
-            /* rankingIndex={rankingIndex} */
             rankingType='hotel'
             dataRanking={handleRanking("hotel")}
           />
           <Ranking
-            /* rankingIndex={rankingIndex} */
             rankingType='culture'
             dataRanking={handleRanking("culture")}
           />
           <Ranking
-            /* rankingIndex={rankingIndex} */
             rankingType='restaurant'
             dataRanking={handleRanking("restaurant")}
           />

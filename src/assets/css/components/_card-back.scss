@@ -13,6 +13,10 @@
     .card-back--culture & {
       height: calc(100% + 5px);
     }
+
+    .card-back--nature & {
+      flex-direction: column;
+    }
   }
 
   &__icon {
@@ -50,14 +54,6 @@
         font-family: $font !important;
         font-size: rem(12px) !important;
         fill: $white !important;
-
-        // &::before {
-        //   display: block;
-        //   width: 16px;
-        //   height: 16px;
-        //   background-size: 16px 16px;
-        //   content: url("../../icons/flower.svg");
-        // }
       }
 
       text[text-anchor="middle"] {

@@ -13,7 +13,16 @@ const Map = ({onDistrictClick, minAndMax}) => {
   // STATES
   const [pierre, setColors] = useState([])
 
-  // API CALL
+  // API
+  const host = 'https://jo-server.herokuapp.com'
+  // const host = 'http://localhost:8000'
+  const apiHeader = { headers: { accept: '*/json' } }
+  const apiTravel = '/api/travels'
+
+  const handleClick = function (number) {
+    onDistrictClick(number)
+  }
+
   let travels = []
   let colors = []
   const travelTimes = () => {
