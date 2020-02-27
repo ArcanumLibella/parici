@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export async function axiosQuery(route, parameters) {
-  let url = 'http://localhost:8000' + route
+  let url = 'https://jo-server.herokuapp.com' + route
   let res = await axios.get(url, { headers: { accept: '*/json' }})
   return res.data
 }
