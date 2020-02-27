@@ -34,3 +34,13 @@
     stroke: $white;
   }
 }
+
+.pin__content {
+  display:none;
+}
+
+.pin:hover {
+  .pin__content {
+    display: block;
+  }
+}

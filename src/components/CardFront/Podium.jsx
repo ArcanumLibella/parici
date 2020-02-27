@@ -16,6 +16,8 @@ const Podium = (props) => {
           return data[district - 1].hotelRank
         case "culture":
           return data[district - 1].cultureRank
+        case "restaurant":
+          return data[district - 1].restaurantRank
         default:
           return '?'
       }

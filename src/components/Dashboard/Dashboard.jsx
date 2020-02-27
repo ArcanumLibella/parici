@@ -45,7 +45,8 @@ const Dashboard = ({ district }) => {
       podium.push({
         natureRank: district.nature.rank,
         cultureRank: district.culture.rank,
-        hotelRank: district.hotel.rank
+        hotelRank: district.hotel.rank,
+        restaurantRank: district.restaurant.rank
       })
     });
     setPodium(podium)
