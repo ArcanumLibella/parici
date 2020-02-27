@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext, foo } from 'react'
 import SportContext from '../../SportContext'
 
 import District from './District'
 import axios from 'axios';
 
-const Map = (props) => {
+const Map = ({onDistrictClick}) => {
   // CONTEXT
   const sportsSelection = useContext(SportContext)
-  console.log(sportsSelection)
 
   // STATES
   const [pierre, setColors] = useState([])
@@ -16,6 +15,10 @@ const Map = (props) => {
   const host = 'http://localhost:8000'
   const apiHeader = { headers: { accept: '*/json' } }
   const apiTravel = '/api/travels'
+
+  const handleClick = function (number) {
+    onDistrictClick(number)
+  }
 
   let travels = []
   let colors = []
@@ -78,7 +81,7 @@ const Map = (props) => {
 
   useEffect(() => {
     foo()
-  })
+  }, [sportsSelection])
 
   const districts = [
     "606.46 469.65 521.07 429.17 552.31 361.85 567.81 357.74 586.88 379.8 736.77 433.22 730.18 451.68 692.9 527.45 606.46 469.65",
@@ -105,7 +108,7 @@ const Map = (props) => {
 
   const displayDistricts = () => {
     return (districts.map((district, index) => {
-      return <District key={index} number={index + 1} points={districts[index]} color={pierre[index]} />
+      return <District key={index} number={index + 1} points={districts[index]} color={pierre[index]} onDistrictClick={handleClick} />
     }))
   }
 
