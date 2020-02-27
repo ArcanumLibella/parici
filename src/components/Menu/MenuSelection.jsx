@@ -192,8 +192,6 @@ const MenuSelection = ({ sportsList, updateSportSelection, removeSportSelection 
     )
   }
 
-  // console.log(sportSelected)
-
   return (
     <div className='menu-selection'>
       <p className='menu-selection__title menu-selection-title'>Your selection</p>

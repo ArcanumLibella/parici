@@ -65,8 +65,8 @@ const Dashboard = (props) => {
     <aside
       className={
         isClosed
-          ? 'dashboard'
-          : 'dashboard is-closed'
+          ? 'dashboard is-closed'
+          : 'dashboard'
       }
     >
       <div
