@@ -1,4 +1,4 @@
-@keyframes mooveBubble {
+@keyframes moveBubble {
   0% {
     margin-top: 700px;
     opacity: 0;
@@ -75,7 +75,7 @@
             min-width: 30px;
             height: auto;
             opacity: random();
-            animation: mooveBubble  random(30) + 15 + s linear infinite, bubble-anim 3s infinite,  sideWays-left random(6) + 3 + s ease-in-out infinite alternate;
+            animation: moveBubble  random(10) + 10 + s linear infinite, bubble-anim 3s infinite,  sideWays-left random(6) + 3 + s ease-in-out infinite alternate;
             fill: $white;
 
           }
@@ -89,7 +89,7 @@
             .icon {
               right: random(15) + vw;
               left: unset;
-              animation: mooveBubble  random(30) + 15 + s linear infinite, bubble-anim 3s infinite,  sideWays-right random(6) + 3 + s ease-in-out infinite alternate;
+              animation: moveBubble  random(10) + 10 + s linear infinite, bubble-anim 3s infinite,  sideWays-right random(6) + 3 + s ease-in-out infinite alternate;
             }
           }
         }
