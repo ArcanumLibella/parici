@@ -1,5 +1,5 @@
 import React from 'react'
-import {numberToRank} from '../../Helpers'
+import { numberToRank } from '../../Helpers'
 
 // COMPONENTS
 import { BackCulture, BackHostel, BackRestaurant, BackNature } from '../CardBack'
@@ -24,7 +24,7 @@ const Card = (props) => {
         return <Culture />
       case 'restaurant':
         return <Restaurant />
-      case 'hostel':
+      case 'hotel':
         return <Hostel />
       case 'nature':
         return <Nature />
@@ -42,7 +42,7 @@ const Card = (props) => {
         case 'restaurant':
           return <BackRestaurant cardType={cardType} />
         case 'hostel':
-          return <BackHostel cardType={cardType} data={data}/>
+          return <BackHostel cardType={cardType} data={data} />
         case 'nature':
           return <BackNature cardType={cardType} data={data}/>
         default:
@@ -76,18 +76,19 @@ const Card = (props) => {
 
   return (
     <div className={'card card--' + cardType}>
-      
+
       {/* CARD-FRONT */}
       <div className='card__front card-front'>
         <h3 className='card-front__title card-title'>{cardType}</h3>
         <span className='card-front__dash card-title'> - </span>
+
         <div className='card-front__ranking'>
           <h4 className='card-ranking'>
             {handleRank()}
-            {' ' + rankingType }
+            {' ' + rankingType}
           </h4>
         </div>
-        
+
         <div className='card-front__wrapper'>
           <CardCount cardType={cardType} dataType={dataType} count={handleCount()} />
 
@@ -98,7 +99,7 @@ const Card = (props) => {
           {handleCardRestaurant(cardType)}
         </div>
 
-        <ReturnArrow/>
+        <ReturnArrow />
       </div>
 
       {/* CARD-BACK */}

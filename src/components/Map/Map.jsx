@@ -45,11 +45,13 @@ const Map = ({onDistrictClick}) => {
     g: 251,
     b: 107
   }
+
   const blue = {
     r: 68,
     g: 82,
     b: 197
   }
+
   const computeColors = function () {
     let times = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     travels.forEach(travel => {
@@ -112,11 +114,17 @@ const Map = ({onDistrictClick}) => {
     }))
   }
 
+  useEffect(() => {
+    foo()
+  }, [sportsSelection])
+
   return (
-    <svg className="map" viewBox="0 0 1215.4 966.98">
-      {displayDistricts()}
-      <polyline className="cls-1" points="1026.96 856.15 834.75 628.04 788.3 584.96 688.37 535.25 602 477.5 517.18 437.29 494.51 426.42 373.92 428.93 332.41 440.76 288.25 492.68 172.41 627.67 82.33 762.99" />
-    </svg>
+    <div className='map__wrapper'>
+      <svg className="map" viewBox="0 0 1215.4 966.98">
+        {displayDistricts()}
+        <polyline className="cls-1" points="1026.96 856.15 834.75 628.04 788.3 584.96 688.37 535.25 602 477.5 517.18 437.29 494.51 426.42 373.92 428.93 332.41 440.76 288.25 492.68 172.41 627.67 82.33 762.99" />
+      </svg>
+    </div>
   )
 }
 

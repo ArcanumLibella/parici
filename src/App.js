@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { SportProvider } from './SportContext'
 
-import axios from "axios";
 import './assets/css/app.scss';
-import {axiosQuery} from './Helpers'
+import { axiosQuery } from './Helpers'
 
 // ROUTES
 import { Landing, Home, Selection } from "./routes";
@@ -27,12 +26,12 @@ function App() {
   ]
 
   // API CALL
-  const retrieveSportList = async function() {
+  const retrieveSportList = async function () {
     let competitionsList = []
     // Retrieve all families
     let families = await axiosQuery('/api/families')
     families.forEach((family, i) => {
-      competitionsList.push({ name: family.name, color: familyColors[i], sports : []})
+      competitionsList.push({ name: family.name, color: familyColors[i], sports: [] })
     });
     // Retrieve all competitions and store them in competitionsList
     let competitions = await axiosQuery('/api/competitions')
@@ -68,8 +67,6 @@ function App() {
       setSportsSelection([...newSportsSelection])
     }
   }
-
-  console.log(sportsSelection)
 
   return (
     <SportProvider value={sportsSelection}>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {axiosQuery} from '../../Helpers'
+import { axiosQuery } from '../../Helpers'
 
 // COMPONENTS
 import Card from '../../components/Card/Card'
@@ -25,7 +25,7 @@ const Dashboard = ({district}) => {
   }
 
   // API CALL
-  const retrieveDashboardData = async function() {
+const retrieveDashboardData = async function() {
     if (district)  {
       let dashboardData = await axiosQuery('/api/districts')
       buildPodium(dashboardData)
@@ -36,7 +36,7 @@ const Dashboard = ({district}) => {
     }
   }
 
-  const buildPodium = function(data) {
+  const buildPodium = function (data) {
     let podium = []
     data.forEach(district => {
       podium.push({
@@ -48,16 +48,16 @@ const Dashboard = ({district}) => {
     setPodium(podium)
   }
 
-  const buildNature = function(data) {
-    setNature(data[arrondi-1].nature)
+  const buildNature = function (data) {
+    setNature(data[arrondi - 1].nature)
   }
 
-  const buildHotel = function(data) {
-    setHotel(data[arrondi-1].hotel)
+  const buildHotel = function (data) {
+    setHotel(data[arrondi - 1].hotel)
   }
 
-  const buildCulture = function(data) {
-    setCulture(data[arrondi-1].culture)
+  const buildCulture = function (data) {
+    setCulture(data[arrondi - 1].culture)
   }
   const buildRestaurant = function(data) {
     setRestaurant(data[arrondi-1].restaurant)
@@ -74,7 +74,7 @@ const Dashboard = ({district}) => {
     <aside
       className={
         isClosed
-          ? 'dashboard  is-closed'
+          ? 'dashboard is-closed'
           : 'dashboard'
       }
     >
@@ -88,7 +88,7 @@ const Dashboard = ({district}) => {
 
         <Podium district={arrondi} data={podium} cardType='podium' />
         <Card data={nature} cardType='nature' dataType=' of Green Space' rankingType='surface' />
-        <Card data={hotel} cardType='hostel' dataType='hotels' rankingType='count' />
+        <Card data={hotel} cardType='hotel' dataType='hotels' rankingType='count' />
         <Card data={culture} cardType='culture' dataType='points of interest' rankingType='count' />
         <Card data={restaurant} cardType='restaurant' dataType='restaurants' rankingType='count' />
 
