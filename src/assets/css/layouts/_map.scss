@@ -1,10 +1,58 @@
 .map {
   display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
 
   &__wrapper {
     height: 77vh;
     margin: auto auto;  
+  }
+
+  &__title {
+    max-width: 250px;
+    margin-top: 20px;
+    font-size: rem(30px);
+    font-weight: bold;
+    text-align: center;
+
+    .highlight {
+      background: linear-gradient(270deg, #64E0B9 0%, #4451C4 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .scale {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    &__title {
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+    }
+  
+    &__legend {
+      width: 300px;
+      border-radius: 5px;
+      border: 2px white;
+      height: 30px;
+      background: $gradient3;
+      margin: 0 10px;
+    }
+
+    &__value {
+      font-weight: 600;
+    }
+    
   }
 
   .cls-1 {

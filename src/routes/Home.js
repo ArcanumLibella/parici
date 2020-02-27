@@ -20,8 +20,8 @@ const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   const [max, setMax] = useState(0)
 
   const handleValues = function (minimum, maximum) {
-    setMin(Math.round(minimum- 30))
-    setMax(Math.round(maximum- 30))
+    setMin(Math.round(minimum - 30))
+    setMax(Math.round(maximum - 30))
   }
 
   // To handle sports selected
@@ -51,13 +51,9 @@ const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
         updateSportSelection={sport => handleSportSelection(sport)}
         removeSportSelection={sport => removeSport(sport)}
       />
-      <Map onDistrictClick={handleClick} minAndMax={handleValues}/>
-      <div className="scale">
-        <p className="scale__value">{min}mins</p>
-        <div className="scale__container"></div>
-        <p className="scale__value">{max}mins</p>
-      </div>
-      <Dashboard district={selectedDistrict}/>
+      <Map onDistrictClick={handleClick} minAndMax={handleValues} min={min} max={max} />
+
+      <Dashboard district={selectedDistrict} />
     </main>
   )
 }
