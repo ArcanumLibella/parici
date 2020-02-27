@@ -13,7 +13,7 @@ const Map = ({onDistrictClick}) => {
   const [pierre, setColors] = useState([])
 
   // API
-  const host = 'http://localhost:8000'
+  const host = 'https://jo-server.herokuapp.com'
   const apiHeader = { headers: { accept: '*/json' } }
   const apiTravel = '/api/travels'
 
