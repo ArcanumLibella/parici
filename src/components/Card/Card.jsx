@@ -51,18 +51,20 @@ const Card = (props) => {
     if (cardType === 'restaurant' && data) {
       return (
         <div className='card-front__graphic'>
-          <RestaurantChart data={data}/>
+          <RestaurantChart data={data} />
         </div>
       )
     }
   }
 
+  // Function to handle rank
   const handleRank = () => {
     if (data) {
       return data.rank + numberToRank(data.rank)
     }
   }
 
+  // Function to handle count
   const handleCount = () => {
     if (data) {
       return data.total

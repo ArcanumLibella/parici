@@ -1,15 +1,19 @@
 import React, { useContext } from 'react'
+import { Link } from "react-router-dom";
 import SportContext from '../SportContext'
-
 
 // COMPONENTS
 import CardSelection from '../components/CardSelection/CardSelection'
 import Button from '../components/Commons/Button/Button'
 
+// SVG
+import { Logo } from '../assets/icons/all-icons'
+
+
 const Selection = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   // CONTEXT
   const sportsSelection = useContext(SportContext)
-  console.log(sportsSelection)
+  // console.log(sportsSelection)
 
   // FUNCTIONS
   // To handle sports selected
@@ -40,15 +44,24 @@ const Selection = ({ sportsList, updateSportSelection, removeSportSelection }) =
   return (
     <main className='page-selection'>
       <div className='content-wrapper'>
+
+        <Link to="/">
+          <Logo />
+        </Link>
+
         <div className='page-selection__head'>
           <h4 className='page-selection__title h4'>Select the <strong>Olympics events</strong> you wish to attend  </h4>
           <p className='page-selection__subtitle paragraph'>We will compare and tell you wich district of Paris allows you to get there the fastest</p>
         </div>
+
         <div className='sports-families'>
           {displayFamilies()}
         </div>
+
         <Button textCta='Validate choice' linkCta='/app' />
+
       </div>
+
     </main>
   )
 }

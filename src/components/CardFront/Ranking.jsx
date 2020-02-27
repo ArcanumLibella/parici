@@ -1,5 +1,5 @@
 import React from 'react'
-import {numberToRank} from '../../Helpers'
+import { numberToRank } from '../../Helpers'
 
 // SVG
 import { Nature, Culture, Restaurant, Hostel } from '../../assets/icons/all-icons'
@@ -27,7 +27,8 @@ const Ranking = (props) => {
 
 
   return (
-    <div className='ranking'>
+    <div
+      className='ranking'>
       <p className='ranking__title ranking-title'>{rankingType}</p>
       <div className='ranking__inner'>
         <span className='ranking__data ranking-data'>{dataRanking}<sup>{numberToRank(dataRanking)}</sup></span>

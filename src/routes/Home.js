@@ -13,7 +13,7 @@ import MenuSelection from '../components/Menu/MenuSelection'
 const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   // CONTEXT
   const sportsSelection = useContext(SportContext)
-  console.log(sportsSelection)
+  // console.log(sportsSelection)
 
   const [selectedDistrict, setSelectedDistrict] = useState(false)
 

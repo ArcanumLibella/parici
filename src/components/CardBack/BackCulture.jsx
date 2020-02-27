@@ -5,18 +5,18 @@ import { Museum, Monument, Theater } from '../../assets/icons/all-icons'
 
 
 
-const BackCulture = ( props ) => {
+const BackCulture = (props) => {
   const { cardType, data } = props
 
   return (
     <div className={'card-back card-back--' + cardType}>
-      <h3 className='card-back__title card-title'>{ cardType }</h3>
+      <h3 className='card-back__title card-title'>{cardType}</h3>
 
       <div className='card-back__wrapper'>
 
         <div className='card-back__icon'>
           <div className='card-back__hexagon'>
-            <Museum/>
+            <Museum />
           </div>
           <p className='card-back__data card-data'>
             <span>{data.museum}</span>
@@ -25,7 +25,7 @@ const BackCulture = ( props ) => {
         </div>
         <div className='card-back__icon'>
           <div className='card-back__hexagon'>
-            <Theater/>
+            <Theater />
           </div>
           <p className='card-back__data card-data'>
             <span>{data.theater}</span>
@@ -34,7 +34,7 @@ const BackCulture = ( props ) => {
         </div>
         <div className='card-back__icon'>
           <div className='card-back__hexagon'>
-            <Monument/>
+            <Monument />
           </div>
           <p className='card-back__data card-data'>
             <span>{data.monument}</span>
