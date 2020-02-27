@@ -8,7 +8,7 @@ const District = ({number, points, color, onDistrictClick}) => {
   }
 
   return (
-    <polygon onClick={() => { handleClick() }} id={number} data-name="20" className="cls-2" points={points} style={{ fill: color }} />
+    <path onClick={() => { handleClick() }} id={number} data-name="20" className="cls-2" d={points} style={{ fill: color }} />
   )
 }
 
