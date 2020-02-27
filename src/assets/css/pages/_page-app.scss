@@ -62,3 +62,22 @@
     }
   }
 }
+
+.scale {
+  position: absolute;
+  left: calc(50vw - 190px);
+  bottom: 20px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+
+  .scale__container {
+    width: 300px;
+    border-radius: 5px;
+    border: 2px white;
+    height: 30px;
+    background: $gradient3;
+    margin: 0 10px;
+  }
+
+}
