@@ -1,12 +1,36 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 // import { linearGradientDef } from '@nivo/core'
 
 
-const RestaurantChart = ( data ) => {
+const RestaurantChart = (props) => {
+
+  const { data } = props
+
+  console.log(data)
+
+  let restaurantPrices = [
+    {
+      "price": "?",
+      "total": data.unknownPrices
+    },
+    {
+      "price": "€",
+      "total": data.lowPrices
+    },
+    {
+      "price": "€€",
+      "total": data.mediumPrices
+    },
+    {
+      "price": "€€€",
+      "total": data.highPrices
+    }
+  ]
+
   return(
     <ResponsiveBar
-      data={data}
+      data={restaurantPrices}
       keys={[ 'total' ]}
       indexBy="price"
       margin={{ top: 0, right: 0, bottom: 0, left: 45 }}
@@ -38,6 +62,7 @@ const RestaurantChart = ( data ) => {
       motionStiffness={90}
       motionDamping={15}
       isInteractive={false}
+      labelSkipWidth={10}
     />
   )
 }

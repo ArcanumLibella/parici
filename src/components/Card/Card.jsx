@@ -9,11 +9,6 @@ import { RestaurantChart } from '../CardChart'
 // SVG
 import { Restaurant, Hostel, Nature, Culture, ReturnArrow } from '../../assets/icons/all-icons'
 
-// DATA
-import { restaurantPrices } from '../../data/restaurantPricesList'
-
-
-
 const Card = (props) => {
   const { cardType, dataType, rankingType, data } = props
 
@@ -53,10 +48,10 @@ const Card = (props) => {
 
   // Function to add icon-stadium to nature card 
   const handleCardRestaurant = (cardType) => {
-    if (cardType === 'restaurant') {
+    if (cardType === 'restaurant' && data) {
       return (
         <div className='card-front__graphic'>
-          {RestaurantChart(restaurantPrices)}
+          <RestaurantChart data={data}/>
         </div>
       )
     }
