@@ -9,6 +9,8 @@ import { RestaurantChart } from '../CardChart'
 // SVG
 import { Restaurant, Hostel, Nature, Culture, ReturnArrow } from '../../assets/icons/all-icons'
 
+
+
 const Card = (props) => {
   const { cardType, dataType, rankingType, data } = props
 

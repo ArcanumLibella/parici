@@ -10,7 +10,6 @@ const MenuSelection = ({ sportsList, updateSportSelection, removeSportSelection 
 
   // CONTEXT
   const sportsSelection = useContext(SportContext)
-  // console.log(sportsSelection)
 
   // STATE
   const [isSelected, setIsSelected] = useState(false)

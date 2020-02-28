@@ -6,7 +6,10 @@ import { SportItems } from '../Sports'
 // SVG
 import { Shoot, Artistic, Athletics, Biking, Fight, Others, Racket, Sailing, Swimming, Team } from '../../assets/icons/all-icons'
 
+
+
 const CardSelection = ({ familySport, updateSportSelection, removeSportSelection }) => {
+  // STATE
   const [name, setName] = useState(false)
   const [color, setColor] = useState(false)
 

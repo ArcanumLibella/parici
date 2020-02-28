@@ -1,15 +1,22 @@
 # Olympics Optimized - Front
 The webapp to organize your trip during 2024 Olympic games in Paris.
 
-**You can take a look over here : https://olympics-optimized.netlify.com/ (WORK IN PROGRESS)**
+#### **You can take a look over here :**
+- https://olympics-optimized.netlify.com/ (WORK IN PROGRESS)
 
-### Repository for back-end :
+## Expertise Front :
+
+- Fiona Roux
+- Quentin Monteferrario
+
+## Repository for back-end :
 **https://github.com/InSecker/jo-server**
 
-### Install project :
-`git clone` project
+## Install project :
+- `git clone` project
 
-`npm install`
+- `npm install`
+- `npm install axios`
 
 
 ## Available Scripts

@@ -15,6 +15,7 @@ import Explore from '../assets/images/explore.png'
 import Switch from '../assets/images/switch.png'
 
 
+
 const Landing = (props) => {
   const ref = useRef();
   const [isScrolling, SetIsScrolling] = useState(false);

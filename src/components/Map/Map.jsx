@@ -1,30 +1,25 @@
 import React, { useState, useEffect, useContext } from 'react'
+import { axiosQuery, rgbBuilder } from '../../Helpers'
 import SportContext from '../../SportContext'
 
+// COMPONENTS
 import District from './District'
 import Pin from './Pin'
-import { axiosQuery, rgbBuilder } from '../../Helpers'
 const districts = require('../../data/districtPoints')
+
+
 
 const Map = ({ onDistrictClick, minAndMax, min, max }) => {
   // CONTEXT
   const sportsSelection = useContext(SportContext)
 
   // STATES
-  const [pierre, setColors] = useState([])
+  const [colors, setColors] = useState([])
 
-  // API
-  const host = 'https://jo-server.herokuapp.com'
-  // const host = 'http://localhost:8000'
-  const apiHeader = { headers: { accept: '*/json' } }
-  const apiTravel = '/api/travels'
-
-  const handleClick = function (number) {
-    onDistrictClick(number)
-  }
-
+  // FUNCTIONS
+  // To retrieve travel times
   let travels = []
-  let colors = []
+  let colorsArr = []
   const travelTimes = () => {
     sportsSelection.forEach(competition => {
       axiosQuery('/api/travels/?idCompetition=' + competition)
@@ -37,11 +32,11 @@ const Map = ({ onDistrictClick, minAndMax, min, max }) => {
     })
   }
 
-  // GRADIENT COLORS
+  // Gradient colors
   const green = { r: 39, g: 251, b: 107 }
   const blue = { r: 68, g: 82, b: 197 }
 
-  // COLORS LOGIC
+  // To handle color logic
   const computeColors = function () {
     let times = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     travels.forEach(travel => {
@@ -63,15 +58,16 @@ const Map = ({ onDistrictClick, minAndMax, min, max }) => {
       let diffRed = blue.r - green.r
       let diffGreen = green.g - blue.g
       let diffBlue = blue.b - green.b
-      colors[i] = rgbBuilder((diffRed * factorRB) + green.r, (diffGreen * factorG) + blue.g, (diffBlue * factorRB) + green.b)
+      colorsArr[i] = rgbBuilder((diffRed * factorRB) + green.r, (diffGreen * factorG) + blue.g, (diffBlue * factorRB) + green.b)
     }
-    setColors(colors)
+    setColors(colorsArr)
   }
 
   useEffect(() => {
     travelTimes()
   }, [sportsSelection])
 
+  // To display tags
   const displayTags = () => {
     return (sportsSelection.map((district) => {
       return (
@@ -80,10 +76,16 @@ const Map = ({ onDistrictClick, minAndMax, min, max }) => {
     }))
   }
 
+  // To display each districts
   const displayDistricts = () => {
     return (districts.points.map((district, index) => {
-      return <District key={index} number={index + 1} points={districts.points[index]} color={pierre[index]} onDistrictClick={handleClick} />
+      return <District key={index} number={index + 1} points={districts.points[index]} color={colors[index]} onDistrictClick={handleClick} />
     }))
+  }
+
+  // To handle click on each district and display dashboard
+  const handleClick = function (number) {
+    onDistrictClick(number)
   }
 
   return (

@@ -48,7 +48,6 @@ const SportItems = ({ familySport, updateSportSelection, removeSportSelection })
 
   return (
     <ul className='sports-family__items menu__dropdown dropdown'>
-      {/* title only in page-app */}
       <p
         className='dropdown__title dropdown-title'
         style={{ color: familySport.color }}

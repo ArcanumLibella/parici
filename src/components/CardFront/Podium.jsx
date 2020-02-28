@@ -7,9 +7,12 @@ import { Ranking } from './'
 
 
 const Podium = (props) => {
+  // PROPS
   const { cardType, district, data } = props
-  let districtNumber = district + numberToRank(district)
 
+  // FUNCTIONS
+  // To handle ranking
+  let districtNumber = district + numberToRank(district)
   const handleRanking = (type) => {
     if (data) {
       switch (type) {
@@ -26,28 +29,6 @@ const Podium = (props) => {
       }
     }
   }
-
-  // FIXME: Manage podium
-  // const rankingIndex = () => {
-  //   if (data) {
-  //     let dataRankingNature = data[district - 1].natureRank
-  //     // let dataRankingHotel = data[district - 1].hotelRank
-  //     // let dataRankingCulture = data[district - 1].cultureRank
-  //     // let dataRankingRestaurant = data[district - 1].restaurantRank
-  //     console.log(dataRankingNature);
-  //     switch (dataRankingNature) {
-  //       case (dataRankingNature < 5):
-  //         return 'first'
-  //       case (dataRankingNature < 10):
-  //         return 'second'
-  //       case (dataRankingNature < 15):
-  //         return 'third'
-  //       default:
-  //         return 'fourth'
-  //     }
-  //   }
-  // }
-  // console.log(rankingIndex());
 
   return (
     <div className={'card card--' + cardType}>

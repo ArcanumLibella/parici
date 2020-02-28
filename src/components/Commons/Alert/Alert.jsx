@@ -1,11 +1,9 @@
 import React from 'react'
 
-// SVG
-// import { Logo } from '../../assets/icons/all-icons'
 
 
 const Alert = () => {
-  return(
+  return (
     <div className='alert'>
       {/* <Logo/> */}
       <p className='alert__text'>

@@ -7,6 +7,7 @@ import { SportItems } from './'
 import { Artistic, Athletics, Biking, Fight, Others, Racket, Sailing, Shoot, Swimming, Team } from '../../assets/icons/all-icons'
 
 
+
 const SportCategoryItem = ({ familySport, updateSportSelection, removeSportSelection }) => {
   // STATES
   const [isHovered, setIsHovered] = useState(false)

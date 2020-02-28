@@ -9,6 +9,8 @@ const MenuItem = (props) => {
   // PROPS
   const { label } = props
 
+  // FUNCTIONS
+  // To handle icon menu
   const handleIconMenu = () => {
     switch (label) {
       case 'logo':

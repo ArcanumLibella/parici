@@ -12,6 +12,7 @@ function App() {
   // STATE
   const [sportsList, setSportsList] = useState()
 
+  // DATA with family colors
   let familyColors = [
     '#64E0B9',
     '#2C3950',

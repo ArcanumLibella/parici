@@ -1,7 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 const pins = require("../../data/pins.js")
 
-const District = ({id}) => {
+
+
+const District = ({ id }) => {
 
   const data = pins.tag
   var parser = new DOMParser();

@@ -6,6 +6,7 @@ import { Museum, Monument, Theater } from '../../assets/icons/all-icons'
 
 
 const BackCulture = (props) => {
+  // PROPS
   const { cardType, data } = props
 
   return (

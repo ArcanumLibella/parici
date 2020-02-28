@@ -1,14 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
-// import { linearGradientDef } from '@nivo/core'
+
 
 
 const RestaurantChart = (props) => {
-
+  // PROPS
   const { data } = props
 
-  console.log(data)
-
+  // DATA WITH RESTAURANTS PRICES
   let restaurantPrices = [
     {
       "price": "?",
@@ -28,22 +27,22 @@ const RestaurantChart = (props) => {
     }
   ]
 
-  return(
+  return (
     <ResponsiveBar
       data={restaurantPrices}
-      keys={[ 'total' ]}
+      keys={['total']}
       indexBy="price"
       margin={{ top: 0, right: 0, bottom: 0, left: 45 }}
       padding={0.3}
       layout="horizontal"
       defs={[
         {
-            id: 'gradient',
-            type: 'linearGradient',
-            colors: [
-                { offset: 0, color: '#4452C5' },
-                { offset: 100, color: '#64E0B9' },
-            ],
+          id: 'gradient',
+          type: 'linearGradient',
+          colors: [
+            { offset: 0, color: '#4452C5' },
+            { offset: 100, color: '#64E0B9' },
+          ],
         }
       ]}
       fill={[
@@ -53,9 +52,9 @@ const RestaurantChart = (props) => {
       borderWidth={0}
       enableGridY={false}
       axisLeft={{
-          tickSize: 0,
-          tickPadding: 5,
-          tickRotation: 0
+        tickSize: 0,
+        tickPadding: 5,
+        tickRotation: 0
       }}
       legends={[]}
       animate={true}

@@ -2,9 +2,13 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { colors } from '../../data/colors'
 
-const BackHostel = ( props ) => {
+
+
+const BackHostel = (props) => {
+  // PROPS
   const { cardType, data } = props
 
+  // DATA
   const stars = [
     {
       "stars": "★",
@@ -54,7 +58,7 @@ const BackHostel = ( props ) => {
 
   return (
     <div className={'card-back card-back--' + cardType}>
-      <h3 className='card-back__title card-title'>{ cardType }</h3>  
+      <h3 className='card-back__title card-title'>{cardType}</h3>
       <div className='card-back__graphic'>
         {chart()}
       </div>

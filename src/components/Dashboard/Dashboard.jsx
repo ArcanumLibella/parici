@@ -8,6 +8,8 @@ import { Podium } from '../CardFront'
 // SVG
 import { Tuto, Cross } from '../../assets/icons/all-icons'
 
+
+
 const Dashboard = ({ district }) => {
   const arrondi = district ? district : null
 
@@ -50,7 +52,6 @@ const Dashboard = ({ district }) => {
       })
     });
     setPodium(podium)
-    // console.log('podium', podium);
   }
 
   // To generate nature data card

@@ -13,12 +13,14 @@ import MenuSelection from '../components/Menu/MenuSelection'
 const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   // CONTEXT
   const sportsSelection = useContext(SportContext)
-  // console.log(sportsSelection)
 
+  // STATE
   const [selectedDistrict, setSelectedDistrict] = useState(false)
   const [min, setMin] = useState(0)
   const [max, setMax] = useState(0)
 
+  // FUNCTIONS
+  // To calculate minimum and maximum time
   const handleValues = function (minimum, maximum) {
     setMin(Math.round(minimum - 30))
     setMax(Math.round(maximum - 30))
@@ -29,6 +31,7 @@ const Home = ({ sportsList, updateSportSelection, removeSportSelection }) => {
     updateSportSelection(sport)
   }
 
+  // To handle click on map and open dashboard
   const handleClick = function (number) {
     setSelectedDistrict(number)
   }

@@ -7,8 +7,11 @@ import { Nature, Culture, Restaurant, Hostel } from '../../assets/icons/all-icon
 
 
 const Ranking = (props) => {
+  // PROPS
   const { rankingType, dataRanking } = props
 
+  // FUNCTIONS
+  // To handle icon ranking
   const handleIconRanking = (rankingType) => {
     switch (rankingType) {
       case 'culture':
@@ -23,8 +26,6 @@ const Ranking = (props) => {
         return 'No icons'
     }
   }
-
-
 
   return (
     <div

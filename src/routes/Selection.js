@@ -10,10 +10,10 @@ import Button from '../components/Commons/Button/Button'
 import { Logo } from '../assets/icons/all-icons'
 
 
+
 const Selection = ({ sportsList, updateSportSelection, removeSportSelection }) => {
   // CONTEXT
   const sportsSelection = useContext(SportContext)
-  // console.log(sportsSelection)
 
   // FUNCTIONS
   // To handle sports selected
@@ -26,6 +26,7 @@ const Selection = ({ sportsList, updateSportSelection, removeSportSelection }) =
     removeSportSelection(sport)
   }
 
+  // To display each families in card
   const displayFamilies = () => {
     return (
       sportsList && sportsList.map(

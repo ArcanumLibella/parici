@@ -10,7 +10,7 @@ const CardRestaurant = () => {
     <div className='card-restaurant'>
       <div className='card-restaurant__header'>
         <h4 className='card-restaurant__title'>Nom du restaurant</h4>
-        <Share/>
+        <Share />
       </div>
 
       <div className='card-restaurant__image'></div>

@@ -2,5 +2,5 @@
 import RestaurantChart from './RestaurantChart'
 
 export {
-  RestaurantChart,
+  RestaurantChart
 }

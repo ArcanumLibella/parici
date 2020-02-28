@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 // SVG
 import { LittleArrow } from '../../../assets/icons/all-icons'
 
+
+
 const Button = (props) => {
+  // PROPS
   const { textCta, linkCta } = props
 
   return (
