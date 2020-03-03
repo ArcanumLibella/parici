@@ -22,7 +22,7 @@ const Map = ({ onDistrictClick, minAndMax, min, max }) => {
   let colorsArr = []
   const travelTimes = () => {
     sportsSelection.forEach(competition => {
-      axiosQuery('/api/travels/?idCompetition=' + competition)
+      axiosQuery('/api/travels', {idCompetition: competition})
         .then(res => {
           travels.push(res)
           if (travels.length === sportsSelection.length) {

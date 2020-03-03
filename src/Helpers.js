@@ -2,10 +2,15 @@ import axios from "axios";
 
 // FUNCTIONS
 // To make axios queries
-export async function axiosQuery(route, parameters) {
+export async function axiosQuery(route, params) {
   let url = 'https://jo-server.herokuapp.com' + route
   // let url = 'http://localhost:8000' + route
-  let res = await axios.get(url, { headers: { accept: '*/json' } })
+  let res;
+  if (params) {
+    res = await axios.get(url, { headers: { accept: '*/json' }, params: params })
+  } else {
+    res = await axios.get(url, { headers: { accept: '*/json' } })
+  }
   return res.data
 }
 
