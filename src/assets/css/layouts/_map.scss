@@ -5,6 +5,7 @@
   width: 100%;
 
   &__wrapper {
+    filter: drop-shadow(15px 15px 20px rgba(68, 82, 197, 0.3));
     height: 77vh;
     margin: auto auto;  
   }
@@ -66,7 +67,6 @@
   }
   
   .cls-2{
-    filter: drop-shadow(15px 15px 20px rgba(68, 82, 197, 01));
     stroke:$white;
     stroke-linejoin:round;
     border-radius: 20px;
